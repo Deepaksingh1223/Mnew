@@ -17,8 +17,7 @@ export default function RootLayout({ children }) {
         
         <link rel="stylesheet" href="/style.css" />
               <link rel="stylesheet" href="/style2.css" />
-<link rel="stylesheet" href="/style3.css" />
-<link rel="stylesheet" href="/banner-animation.css" />
+<link rel="stylesheet" href="/style3.css" /> 
         <link rel="stylesheet" href="/phosphor-icons.css" />
  
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"></link>

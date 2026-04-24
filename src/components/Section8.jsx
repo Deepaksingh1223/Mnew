@@ -38,7 +38,7 @@ export default function Section8() {
             >
               <img 
                 className="mxd-move" 
-                src="img/new-img-section.webp" 
+                src="img/section8-img1.png" 
                 alt="Hero image"
                 loading="lazy"
               />
@@ -82,7 +82,7 @@ export default function Section8() {
               <div className="mxd-hero-05-videoblock__video">
                 <video 
               ref={videoRef}
-              src="/img/new-videos-section.webm"
+              src="/img/trading-video.mp4"
               className="parallax-img"
               autoPlay
               loop

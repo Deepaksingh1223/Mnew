@@ -9,40 +9,40 @@ const testimonialsData = [
     id: 1,
     avatar: "img/men.webp",
     logo: "img/mudra-logo.png",
-    text: "The Rayo team nailed it! They understood our vision and delivered a sleek, intuitive site that our clients love.",
-    name: "Lea Tomato",
-    role: "Senior designer in",
-    company: "The Way",
+    text: "MUDRA's ecosystem gave me the tools to grow globally. The blockchain solutions are truly innovative and accessible for everyone.",
+    name: "Rajiv Sharma",
+    role: "Community Partner in",
+    company: "MUDRA World",
     link: "#0",
   },
   {
     id: 2,
     avatar: "img/woman.webp",
     logo: "img/mudra-logo.png",
-    text: "The team's attention to detail, creativity, and technical expertise exceeded our expectations. We've received so much positive feedback from our customers already.",
-    name: "Ashley Cherry",
-    role: "SEO in",
-    company: "Eye Candy",
+    text: "The regular leader meetings and technology flow have transformed my business. I've built a strong international team with MUDRA.",
+    name: "Priya Kaur",
+    role: "Regional Leader in",
+    company: "MUDRA Community",
     link: "#0",
   },
   {
     id: 3,
     avatar: "img/men.webp",
     logo: "img/mudra-logo.png",
-    text: "Amazing experience working with Rayo! They made the process smooth and gave us a website that truly reflects our brand.",
-    name: "Patrick Pineapple",
-    role: "SEO in",
-    company: "Instant Design",
+    text: "Being part of MUDRA since 2022 has been life-changing. The token locking mechanism and cross-chain swaps provide unmatched transparency.",
+    name: "Amit Singh",
+    role: "Early Adopter in",
+    company: "MDR Holders",
     link: "#0",
   },
   {
     id: 4,
     avatar: "img/woman.webp",
     logo: "img/mudra-logo.png",
-    text: "Working with Rayo team was an absolute pleasure! They took the time to understand our business needs and translated them into a beautifully designed, user-friendly website.",
-    name: "John Lemon",
-    role: "Brand Manager in",
-    company: "Instant Design",
+    text: "From MUDRA Games to NFT platform, every feature is designed for real utility. This is the future of crypto communities.",
+    name: "Neha Verma",
+    role: "Blockchain Enthusiast in",
+    company: "MUDRA Ecosystem",
     link: "#0",
   },
 ];
@@ -123,22 +123,22 @@ export default function Expertise() {
                             >
                               <h2 className="reveal-type">
                                 <div className="word" style={{ display: "inline-block" }}>
-                                  {["W","h","a","t"].map((char, idx) => (
+                                  {["J","o","i","n"].map((char, idx) => (
                                     <div key={idx} className="char" style={{ display: "inline-block", opacity: 1 }}>{char}</div>
                                   ))}
                                 </div>{" "}
                                 <div className="word" style={{ display: "inline-block" }}>
-                                  {["o","u","r"].map((char, idx) => (
+                                  {["t","h","e"].map((char, idx) => (
                                     <div key={idx} className="char" style={{ display: "inline-block", opacity: 1 }}>{char}</div>
                                   ))}
                                 </div>{" "}
                                 <div className="word" style={{ display: "inline-block" }}>
-                                  {["c","l","i","e","n","t","s"].map((char, idx) => (
+                                  {["M","U","D","R","A"].map((char, idx) => (
                                     <div key={idx} className="char" style={{ display: "inline-block", opacity: 1 }}>{char}</div>
                                   ))}
                                 </div>{" "}
                                 <div className="word" style={{ display: "inline-block" }}>
-                                  {["s","a","y"].map((char, idx) => (
+                                  {["W","o","r","l","d"].map((char, idx) => (
                                     <div key={idx} className="char" style={{ display: "inline-block", opacity: 1 }}>{char}</div>
                                   ))}
                                 </div>
@@ -157,9 +157,7 @@ export default function Expertise() {
                                   opacity: 1,
                                 }}
                               >
-                                We're more than just executors — we're your creative
-                                partners. Don't just take our word for it, see what clients
-                                have to say about working with us.
+                                Your age, experience, level of education and wealth don't matter — we give everyone a chance to build a better future. Join 10,000+ members already growing with us!
                               </p>
                             </div>
                           </div>
@@ -170,7 +168,7 @@ export default function Expertise() {
                                 href="#"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Clutch Link"
+                                aria-label="MUDRA Social Link"
                               >
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
@@ -245,7 +243,7 @@ export default function Expertise() {
                                   />
                                 </div>
                                 <div className="mxd-testimonials-card__company">
-                                  <img src={testimonial.logo} alt="Company Logo" />
+                                  <img src={testimonial.logo} alt="MUDRA Logo" />
                                 </div>
                               </div>
                               <div className="mxd-testimonials-card__text">
@@ -274,12 +272,12 @@ export default function Expertise() {
                                 >
                                   <span className="btn-caption">
                                     <div className="btn-anim__block">
-                                      {["P","r","o","j","e","c","t"," ","P","a","g","e"].map((letter, idx) => (
+                                      {["J","o","i","n"," ","M","U","D","R","A"].map((letter, idx) => (
                                         <span key={idx} className="btn-anim__letter">{letter}</span>
                                       ))}
                                     </div>
                                     <div className="btn-anim__block">
-                                      {["P","r","o","j","e","c","t"," ","P","a","g","e"].map((letter, idx) => (
+                                      {["J","o","i","n"," ","M","U","D","R","A"].map((letter, idx) => (
                                         <span key={idx} className="btn-anim__letter">{letter}</span>
                                       ))}
                                     </div>

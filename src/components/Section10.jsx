@@ -2,268 +2,185 @@
 
 import { useRef, useEffect, useState } from 'react';
 
-export default function Expertise() {
-  const sectionRef = useRef(null);
-  const headingRef = useRef(null);
-  const headingContainerRef = useRef(null);
-  const cardsRef = useRef([]);
-  const [visibleElements, setVisibleElements] = useState({});
-  const [visibleCards, setVisibleCards] = useState({});
-  const [isSticky, setIsSticky] = useState(false);
+const plans = [
+  {
+    id: 'essentials',
+    name: 'Essentials Plan',
+    price: '$140',
+    period: 'Per Month',
+    featured: false,
+    features: [
+      'Global Corporate Cards',
+      'Business Account And Bill Pay',
+      'Real-Time Spend Reporting',
+      'Billing In 50+ Countries',
+      'Dedicated Support For Admins',
+    ],
+  },
+  {
+    id: 'premium',
+    name: 'Premium Plan',
+    price: '$160',
+    period: 'Per Month',
+    featured: true,
+    features: [
+      'Up To 10 Team Members',
+      'Unlimited Usage',
+      'Unlimited Drive Storage',
+      'Concierge Help Center',
+      'Custom AI Brand Models',
+    ],
+  },
+  {
+    id: 'enterprise',
+    name: 'Enterprise Plan',
+    price: '$180',
+    period: 'Per Month',
+    featured: false,
+    features: [
+      'Wallet management',
+      'Secure protocols',
+      'Transaction editing',
+      'Enhanced security',
+      'Advanced reporting',
+    ],
+  },
+];
 
-  // Sticky heading functionality (desktop only)
-  useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-    
-    if (!isMobile && headingContainerRef.current && sectionRef.current) {
-      const handleScroll = () => {
-        const section = sectionRef.current;
-        const headingContainer = headingContainerRef.current;
-        const scrollSection = document.querySelector('.mxd-pinned-universal__scroll');
-        
-        if (!section || !headingContainer || !scrollSection) return;
-        
-        const sectionRect = section.getBoundingClientRect();
-        const scrollSectionRect = scrollSection.getBoundingClientRect();
-        
-        // Calculate when to pin
-        const shouldSticky = sectionRect.top <= 0 && scrollSectionRect.bottom > window.innerHeight;
-        
-        if (shouldSticky) {
-          setIsSticky(true);
-          headingContainer.style.position = 'fixed';
-          headingContainer.style.top = '100px';
-          headingContainer.style.left = `${sectionRect.left}px`;
-          headingContainer.style.width = `${sectionRect.width}px`;
-          headingContainer.style.zIndex = '100';
-        } else {
-          setIsSticky(false);
-          headingContainer.style.position = 'relative';
-          headingContainer.style.top = 'auto';
-          headingContainer.style.left = 'auto';
-          headingContainer.style.width = 'auto';
-        }
-      };
-      
-      window.addEventListener('scroll', handleScroll);
-      window.addEventListener('resize', handleScroll);
-      handleScroll();
-      
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-        window.removeEventListener('resize', handleScroll);
-      };
-    }
-  }, []);
-
-  useEffect(() => {
-    // Create intersection observer for reverse animations
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const id = entry.target.getAttribute('data-id');
-          if (id) {
-            if (entry.isIntersecting) {
-              // Element entered viewport - ANIMATE IN
-              if (id.startsWith('card-')) {
-                setVisibleCards((prev) => ({ ...prev, [id]: true }));
-              } else {
-                setVisibleElements((prev) => ({ ...prev, [id]: true }));
-              }
-            } else {
-              // Element left viewport - REVERSE ANIMATION (ANIMATE OUT)
-              if (id.startsWith('card-')) {
-                setVisibleCards((prev) => ({ ...prev, [id]: false }));
-              } else {
-                setVisibleElements((prev) => ({ ...prev, [id]: false }));
-              }
-            }
-          }
-        });
-      },
-      { 
-        threshold: 0.3,
-        rootMargin: "0px 0px -50px 0px"
-      }
-    );
-
-    // Observe heading
-    if (headingRef.current) {
-      headingRef.current.setAttribute('data-id', 'heading');
-      observer.observe(headingRef.current);
-    }
-
-    // Observe cards
-    cardsRef.current.forEach((card, index) => {
-      if (card) {
-        card.setAttribute('data-id', `card-${index}`);
-        observer.observe(card);
-      }
-    });
-
-    return () => {
-      // Cleanup observer
-      if (headingRef.current) observer.unobserve(headingRef.current);
-      cardsRef.current.forEach((card) => {
-        if (card) observer.unobserve(card);
-      });
-    };
-  }, []);
-
-  // Function to add cards to refs
-  const addToCardRef = (el) => {
-    if (el && !cardsRef.current.includes(el)) {
-      cardsRef.current.push(el);
-    }
-  };
-
-  // Get animation styles based on visibility
-  const getAnimationStyle = (id, delay = 0) => {
-    const isVisible = visibleElements[id];
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-    
-    return {
-      opacity: isVisible ? 1 : 0,
-      transform: isVisible ? 'translateY(0)' : `translateY(${isMobile ? 50 : 100}px)`,
-      transition: `all ${isMobile ? 0.8 : 1.5}s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s`,
-    };
-  };
-
-  // Get card animation styles with different directions
-  const getCardAnimationStyle = (index, isVisible) => {
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-    
-    if (isMobile) {
-      // Mobile: Simple fade up
-      return {
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.9)',
-        transition: `all 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.05}s`,
-      };
-    }
-    
-    // Desktop: Different directions based on position
-    const fromX = index % 2 === 0 ? -50 : 50;
-    const fromY = Math.floor(index / 2) % 2 === 0 ? -30 : 30;
-    
-    return {
-      opacity: isVisible ? 1 : 0,
-      transform: isVisible 
-        ? 'translateX(0) translateY(0) scale(1)' 
-        : `translateX(${fromX}px) translateY(${fromY}px) scale(0.8)`,
-      transition: `all 1s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.05}s`,
-    };
-  };
-
-  // Get icon animation style
-  const getIconAnimationStyle = (index, isVisible) => {
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-    
-    if (isMobile) {
-      return {
-        transform: isVisible ? 'scale(1)' : 'scale(0.8)',
-        transition: `all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) ${index * 0.05}s`,
-      };
-    }
-    
-    return {
-      transform: isVisible ? 'scale(1) rotate(0deg)' : 'scale(0.5) rotate(-180deg)',
-      transition: `all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) ${index * 0.05}s`,
-    };
-  };
-
-  const techCards = [
-    { name: 'Photoshop', img: 'https://rayo-nextjs-creative-template.netlify.app/img/tech/icon-photoshop.svg' },
-    { name: 'Figma', img: 'https://rayo-nextjs-creative-template.netlify.app/img/tech/icon-figma.svg' },
-    { name: 'Illustrator', img: 'https://rayo-nextjs-creative-template.netlify.app/img/tech/icon-illustrator.svg' },
-    { name: 'Sketch', img: 'https://rayo-nextjs-creative-template.netlify.app/img/tech/icon-scketch.svg' },
-    { name: 'Blender', img: 'https://rayo-nextjs-creative-template.netlify.app/img/tech/icon-blender.svg' },
-    { name: 'HTML5', img: 'https://rayo-nextjs-creative-template.netlify.app/img/tech/icon-html.svg' },
-    { name: 'CSS3', img: 'https://rayo-nextjs-creative-template.netlify.app/img/tech/icon-css.svg' },
-    { name: 'Notion', img: 'https://rayo-nextjs-creative-template.netlify.app/img/tech/icon-notion.svg' }
-  ];
-
+function BankCardMini({ featured }) {
   return (
-    <div className="mxd-section padding-grid-pre-pinned add-margin-top" ref={sectionRef}>
-      <div className="mxd-container grid-container">
-        <div className="mxd-block">
-          <div className="mxd-pinned-universal">
-            <div className="container-fluid px-0">
-              <div className="row gx-0">
-
-                <div className="col-12 col-xl-5 mxd-pinned-universal__static">
-                  <div 
-                    className="mxd-pinned-universal__static-inner no-margin" 
-                    ref={headingContainerRef}
-                    style={{
-                      transition: 'all 0.3s ease',
-                      zIndex: 100
-                    }}
-                  >
-                    <div className="mxd-section-title h2-only no-margin-desktop">
-                      <div className="container-fluid p-0">
-                        <div className="row g-0">
-                          <div className="col-12 mxd-grid-item no-margin">
-                            <div className="mxd-section-title__title card-split-title">
-                              <h2 
-                                className="reveal-type" 
-                                ref={headingRef}
-                                style={getAnimationStyle('heading', 0)}
-                              >
-                                My favorite<br />stack
-                              </h2>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="col-12 col-xl-7 mxd-pinned-universal__scroll">
-                  <div className="mxd-pinned-universal__scroll-inner mxd-grid-item no-margin">
-                    <div className="mxd-tech-stack-cards grid-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))', gap: '20px' }}>
-                      {techCards.map((card, index) => {
-                        const isCardVisible = visibleCards[`card-${index}`];
-                        return (
-                          <div 
-                            key={index}
-                            className="mxd-tech-stack-cards__item animate-card-4"
-                            ref={addToCardRef}
-                            style={getCardAnimationStyle(index, isCardVisible)}
-                          >
-                            <div className="mxd-tech-stack-cards__inner-v2">
-                              <div 
-                                className="mxd-tech-stack-cards__icon"
-                                style={getIconAnimationStyle(index, isCardVisible)}
-                              >
-                                <img
-                                  alt={card.name}
-                                  loading="lazy"
-                                  width="300"
-                                  height="300"
-                                  decoding="async"
-                                  data-nimg="1"
-                                  style={{ color: "transparent", width: '60px', height: '60px', objectFit: 'contain' }}
-                                  src={card.img}
-                                />
-                              </div>
-                              <div className="mxd-tech-stack-cards__title">
-                                <p className="t-bright t-caption">{card.name}</p>
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
+    <div style={{
+      background: '#198754',
+      borderRadius: '10px',
+      padding: '10px 14px',
+      width: '45%',
+      flexShrink: 0,
+      position: 'relative',
+      overflow: 'hidden',
+    }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+        <span style={{ fontSize: '9px', color: '#fff', letterSpacing: '0.3px' }}>Balance</span>
+        <div style={{ display: 'flex' }}>
+          <div style={{ width: '14px', height: '14px', borderRadius: '50%', background: '#eb001b', marginRight: '-5px', zIndex: 1 }} />
+          <div style={{ width: '14px', height: '14px', borderRadius: '50%', background: '#f79e1b' }} />
         </div>
       </div>
+      <div style={{ fontSize: '12px', fontWeight: 800, color: '#fff', marginBottom: '4px', letterSpacing: '-0.3px' }}>$ 3,403.09</div>
+      <div style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
+        <span style={{ fontSize: '8px', color: '#fff' }}>$10,000</span>
+        <span style={{ fontSize: '8px', color: '#fff' }}>Card limit</span>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <span style={{ fontSize: '9px', color: '#fff', fontWeight: 700 }}>Finto</span>
+        <span style={{ fontSize: '9px', color: '#fff' }}>04/25</span>
+      </div>
+      <div style={{
+        position: 'absolute', right: '-14px', bottom: '-14px',
+        width: '50px', height: '50px', borderRadius: '50%',
+        background: 'rgba(141,198,63,0.15)'
+      }} />
     </div>
+  );
+}
+
+export default function PricingSection() {
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+  const [cardVisible, setCardVisible] = useState([false, false, false]);
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const observers = cardRefs.current.map((el, i) => {
+      if (!el) return null;
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          setCardVisible((prev) => {
+            const next = [...prev];
+            next[i] = entry.isIntersecting;
+            return next;
+          });
+        },
+        { threshold: 0.2 }
+      );
+      obs.observe(el);
+      return obs;
+    });
+    return () => observers.forEach((o) => o && o.disconnect());
+  }, []);
+
+  return (
+    <> 
+      <section className="pricing-section" ref={sectionRef}>
+        {/* HEADER */}
+        <div className={`pricing-header ${visible ? 'visible' : ''}`}>
+          <p className="pricing-label">Pricing Plan</p>
+          <h2 className="pricing-title">
+            Choose The Best <span className="highlight">Plans</span><br />
+            Which For You
+          </h2>
+        </div>
+
+        {/* CARDS */}
+        <div className="pricing-grid mxd-container">
+          {plans.map((plan, i) => (
+            <div
+              key={plan.id}
+              ref={(el) => (cardRefs.current[i] = el)}
+              className={`pricing-card ${plan.featured ? 'featured' : ''} ${cardVisible[i] ? 'visible' : ''}`}
+              style={{ transitionDelay: `${i * 0.12}s` }}
+            >
+              {/* CARD HEADER */}
+              <div className="pricing-card-header">
+                <div>
+                  <p className="plan-name">{plan.name}</p>
+                  <div className="plan-price-row">
+                    <span className="plan-price">{plan.price}</span>
+                    <span className="plan-price-slash">/</span>
+                    <span className="plan-period">{plan.period}</span>
+                  </div>
+                </div>
+                <BankCardMini featured={plan.featured} />
+              </div>
+
+              {/* DIVIDER */}
+              <div className="pricing-divider" />
+
+              {/* FEATURES */}
+              <div className="pricing-features">
+                {plan.features.map((feat, fi) => (
+                  <div className="pricing-feature" key={fi}>
+                    <div className="feature-icon">
+                      <svg viewBox="0 0 12 12">
+                        <polyline points="1,6 4.5,9.5 11,2" />
+                      </svg>
+                    </div>
+                    {feat}
+                  </div>
+                ))}
+              </div>
+
+              {/* BUTTON */}
+              <div className="pricing-btn-wrap">
+<a class="btn-anim btn btn-anim btn-default btn-outline slide-right-up w-100" aria-label="Portfolio" href="/portfolio">
+<span class="btn-caption"><div class="btn-anim__block"> Get Started</div>
+<div class="btn-anim__block" aria-hidden="true"> Get Started</div>
+</span><i class="ph-bold ph-arrow-up-right"></i></a>
+
+                
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

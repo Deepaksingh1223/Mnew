@@ -58138,12 +58138,7 @@ img.mfp-img {
     }
 }
 .btn-rotating__image {
-    width: 80px;
-    padding: 5px;
-    background: #faf7f6;
-    border-radius: 20px;
-    height: 60px;
-    border: 1px solid #0202023d;
+    width: 80px; 
 }
 @media (max-width: 900px) {
     .mfp-arrow {

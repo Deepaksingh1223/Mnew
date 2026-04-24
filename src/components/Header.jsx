@@ -662,11 +662,7 @@ export default function Header() {
               className="btn-rotating__image"
               src="/img/mudra-logo.png"
             />
-            <span className="mxd-logo__text">
-              Mudra
-              <br />
-              Pro
-            </span>
+            
           </Link>
         </div>
         <div className="mxd-header__controls ">

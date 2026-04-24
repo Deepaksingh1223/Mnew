@@ -146,27 +146,57 @@ export default function Section9() {
     return {};
   };
 
+  // Updated content based on https://www.redotpay.com/
+  // Company name remains MUDRA
   const experienceItems = [
     {
-      title: 'Illustrator',
-      source: 'Creative Mind',
-      sourceLabel: 'Illustrator',
-      descr: 'I created original images for a range of digital and printed products.',
-      year: '2019 - 2021'
+      title: 'Fast & Secure Stablecoin Transfers',
+      source: 'MUDRA',
+      sourceLabel: 'Transfers',
+      descr: 'Send and receive funds using secure stablecoin rails for near-instant, low-cost global payments.',
+      year: 'Active'
     },
     {
-      title: 'Graphic designer',
-      source: 'Moon Light',
-      sourceLabel: 'Graphic designer',
-      descr: 'My job was to create adverts, branding, signage and other media products.',
-      year: '2021 - 2024'
+      title: 'Multi-Currency Wallet',
+      source: 'MUDRA',
+      sourceLabel: 'Wallet',
+      descr: 'Manage your stablecoins and local currency all in one app, bridging crypto and everyday life.',
+      year: 'Available'
     },
     {
-      title: 'UI/UX designer',
-      source: 'Moon Light',
-      sourceLabel: 'UI/UX designer',
-      descr: 'I am actively involved in creating user interfaces for mobile apps and websites.',
-      year: '2024 - now'
+      title: 'Convenient Stablecoin Access',
+      source: 'MUDRA',
+      sourceLabel: 'P2P',
+      descr: 'Get stablecoins easily via a peer-to-peer marketplace powered by real-time settlements.',
+      year: 'Buy & Sell'
+    },
+    {
+      title: 'Spend Stablecoins Instantly',
+      source: 'MUDRA',
+      sourceLabel: 'Card',
+      descr: 'Buy coffee, shop online or pay bills with your stablecoins using our digital-first spending card.',
+      year: 'Everyday'
+    },
+    {
+      title: 'International Transfer',
+      source: 'MUDRA',
+      sourceLabel: 'Send',
+      descr: 'Send crypto, receive local currency. Hassle-free sending with protected transactions to recipients anywhere.',
+      year: 'Global'
+    },
+    {
+      title: 'Credit (Crypto-Backed)',
+      source: 'MUDRA',
+      sourceLabel: 'Credit',
+      descr: 'Access instant funds using your crypto as collateral, with flexible repayment options and no credit checks.',
+      year: 'Unlock Power'
+    },
+    {
+      title: 'Earn & Swap',
+      source: 'MUDRA',
+      sourceLabel: 'Grow',
+      descr: 'Put your crypto to work with daily rewards and convert assets with competitive rates and minimal friction.',
+      year: 'Rewards'
     }
   ];
 
@@ -196,7 +226,7 @@ export default function Section9() {
                                 ref={headingRef}
                                 style={getAnimationStyle('heading', 0, 'fade-up')}
                               >
-                                Experience
+                                Our Features
                               </h2>
                             </div>
                           </div>
@@ -228,7 +258,7 @@ export default function Section9() {
                             <div className="mxd-res-list__data">
                               <div className="mxd-res-list__title">
                                 <h4>{item.title}</h4>
-                                <p className="mxd-res-list__source">in the <a href="#" target="_blank">{item.source}</a> agency</p>
+                                <p className="mxd-res-list__source">by <a href="#" target="_blank">{item.source}</a></p>
                               </div>
                               <div className="mxd-res-list__descr">
                                 <p>{item.descr}</p>

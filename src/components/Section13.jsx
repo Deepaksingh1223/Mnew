@@ -200,15 +200,7 @@ export default function Section13() {
                           transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
                         }}
                       ></div>
-                      <div 
-                        className="mxd-preview-hover"
-                        style={{
-                          opacity: hoveredCard === index ? 1 : 0,
-                          transition: 'opacity 0.3s ease'
-                        }}
-                      >
-                        <i className="mxd-preview-hover__icon"><PiEye size={38} style={{ height: '21px' }} /></i>
-                      </div>
+                     
                       <div className="mxd-blog-preview__tags">
                         {item.tags.map((tag, tagIndex) => (
                           <span key={tagIndex} className="tag tag-default tag-permanent">{tag}</span>

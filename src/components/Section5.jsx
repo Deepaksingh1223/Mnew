@@ -1,289 +1,191 @@
 'use client';
 
 import { useRef, useEffect, useState } from 'react';
+import Image from 'next/image';
+
+const tabs = [
+  { id: 'mission', label: 'Our Mission' },
+  { id: 'quality', label: 'Our Quality' },
+  { id: 'vision', label: 'Our Vision' },
+  { id: 'security', label: 'Top Security' },
+];
+
+const tabContent = {
+  mission: {
+    heading: 'Passionate For Your Financial Support Here',
+    description:
+      'With a robust suite of products ranging from digital banking and payment processing to wealth management and blockchain applications.',
+    points: [
+      'Pay Bills On Time Without Missing A Beat',
+      'Create And Send Invoices In Seconds',
+      'Control Your Cash Flow On Demand',
+    ],
+  },
+  quality: {
+    heading: 'Delivering Quality In Every Transaction',
+    description:
+      'We ensure every product and service meets the highest standards, giving you confidence and reliability in your financial journey.',
+    points: [
+      'Industry-Leading Security Protocols',
+      'Real-Time Transaction Monitoring',
+      'Certified Financial Grade Infrastructure',
+    ],
+  },
+  vision: {
+    heading: 'A Vision For A Smarter Financial Future',
+    description:
+      'Our vision is to democratize finance — making powerful tools accessible to everyone, regardless of background or location.',
+    points: [
+      'Global Reach With Local Understanding',
+      'AI-Powered Financial Insights',
+      'Inclusive Banking For Everyone',
+    ],
+  },
+  security: {
+    heading: 'Top-Tier Security You Can Trust',
+    description:
+      'Your assets are protected by bank-grade encryption, multi-factor authentication, and 24/7 fraud monitoring systems.',
+    points: [
+      '256-Bit Bank-Grade Encryption',
+      'Multi-Factor Authentication',
+      '24/7 Fraud Detection & Alerts',
+    ],
+  },
+};
 
 export default function Section5() {
+  const [activeTab, setActiveTab] = useState('mission');
+  const [animating, setAnimating] = useState(false);
   const sectionRef = useRef(null);
-  const headingRef = useRef(null);
-  const paragraphRef = useRef(null);
-  const listItemsRef = useRef([]);
-  const buttonsRef = useRef([]);
-  const [visibleElements, setVisibleElements] = useState({});
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Create intersection observer for reverse animations
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const id = entry.target.getAttribute('data-id');
-          if (id) {
-            if (entry.isIntersecting) {
-              // Element entered viewport - ANIMATE IN
-              setVisibleElements((prev) => ({ ...prev, [id]: true }));
-            } else {
-              // Element left viewport - REVERSE ANIMATION (ANIMATE OUT)
-              setVisibleElements((prev) => ({ ...prev, [id]: false }));
-            }
-          }
-        });
-      },
-      { 
-        threshold: 0.3, // 30% visible hone par trigger
-        rootMargin: "0px 0px -50px 0px"
-      }
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.15 }
     );
-
-    // Observe heading
-    if (headingRef.current) {
-      headingRef.current.setAttribute('data-id', 'heading');
-      observer.observe(headingRef.current);
-    }
-
-    // Observe paragraph
-    if (paragraphRef.current) {
-      paragraphRef.current.setAttribute('data-id', 'paragraph');
-      observer.observe(paragraphRef.current);
-    }
-
-    // Observe list items
-    listItemsRef.current.forEach((item, index) => {
-      if (item) {
-        item.setAttribute('data-id', `list-${index}`);
-        observer.observe(item);
-      }
-    });
-
-    // Observe buttons
-    buttonsRef.current.forEach((button, index) => {
-      if (button) {
-        button.setAttribute('data-id', `button-${index}`);
-        observer.observe(button);
-      }
-    });
-
-    return () => {
-      // Cleanup observer
-      if (headingRef.current) observer.unobserve(headingRef.current);
-      if (paragraphRef.current) observer.unobserve(paragraphRef.current);
-      listItemsRef.current.forEach((item) => {
-        if (item) observer.unobserve(item);
-      });
-      buttonsRef.current.forEach((button) => {
-        if (button) observer.unobserve(button);
-      });
-    };
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
   }, []);
 
-  // Function to add items to refs
-  const addToListRef = (el) => {
-    if (el && !listItemsRef.current.includes(el)) {
-      listItemsRef.current.push(el);
-    }
+  const handleTabChange = (id) => {
+    if (id === activeTab) return;
+    setAnimating(true);
+    setTimeout(() => {
+      setActiveTab(id);
+      setAnimating(false);
+    }, 200);
   };
 
-  const addToButtonRef = (el) => {
-    if (el && !buttonsRef.current.includes(el)) {
-      buttonsRef.current.push(el);
-    }
-  };
-
-  // Get animation styles based on visibility
-  const getAnimationStyle = (id, delay = 0, type = 'fade-up') => {
-    const isVisible = visibleElements[id];
-    
-    if (type === 'fade-up') {
-      return {
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateY(0)' : 'translateY(60px)',
-        transition: `all 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s`,
-      };
-    }
-    
-    if (type === 'fade-up-fast') {
-      return {
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateY(0)' : 'translateY(40px)',
-        transition: `all 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s`,
-      };
-    }
-    
-    return {};
-  };
+  const content = tabContent[activeTab];
 
   return (
-    <div className="mxd-section padding-pre-grid" ref={sectionRef}>
-      <div className="mxd-container grid-container">
-        <div className="mxd-block">
-          <div className="container-fluid px-0">
-            <div className="row gx-0">
-              <div className="col-12 col-xl-5 mxd-grid-item no-margin">
-                <div className="mxd-block__name">
-                  <h2 
-                    className="reveal-type anim-uni-in-up" 
-                    ref={headingRef}
-                    style={getAnimationStyle('heading', 0, 'fade-up')}
+    <>
+
+
+      <section className="s5-section" ref={sectionRef}>
+        {/* TOP HEADER */}
+        <div className={`s5-top s5-fade-in mxd-hero-04__wrap loading-wrap ${visible ? 'visible' : ''}`}>
+          <div className="reveal-type">
+            <h2>
+              <span>Leveraging Technology For</span>
+              <span>
+                <span className="underline-green">Secure</span> &amp; Banking
+              </span>
+            </h2>
+          </div>
+          <div className="s5-top-right">
+            <p>
+              By integrating advanced technology with financial expertise we provide a comprehensive
+              suite of services that cater to both individuals and businesses.
+            </p>
+          </div>
+        </div>
+
+        {/* CARD SECTION */}
+        <div className="s5-card mxd-hero-04__wrap loading-wrap">
+          <div className={`s5-card-inner s5-fade-in ${visible ? 'visible' : ''}`} style={{ transitionDelay: '0.15s' }}>
+
+            {/* LEFT */}
+            <div>
+              {/* TABS */}
+              <div className="s5-tabs">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab.id}
+                    className={`s5-tab ${activeTab === tab.id ? 'active' : ''}`}
+                    onClick={() => handleTabChange(tab.id)}
                   >
-                    Approach and philosophy
-                  </h2>
-                </div>
+                    {tab.label}
+                  </button>
+                ))}
               </div>
-              <div className="col-12 col-xl-6 mxd-grid-item no-margin">
-                <div className="mxd-block__content">
-                  <div className="mxd-block__paragraph">
-                    <p 
-                      className="t-large t-bright anim-uni-in-up" 
-                      ref={paragraphRef}
-                      style={getAnimationStyle('paragraph', 0.1, 'fade-up')}
-                    >
-                      From pixel-perfect designs to flawless code, every aspect of my projects is crafted with care to ensure the highest standards of quality.
-                    </p>
-                    <div className="mxd-paragraph__lists">
-                      <div className="container-fluid p-0">
-                        <div className="row g-0">
-                          <div className="col-6 col-xl-5">
-                            <ul>
-                              <li ref={addToListRef}>
-                                <p 
-                                  className="anim-uni-in-up"
-                                  style={getAnimationStyle('list-0', 0.2, 'fade-up-fast')}
-                                >
-                                  Innovations
-                                </p>
-                              </li>
-                              <li ref={addToListRef}>
-                                <p 
-                                  className="anim-uni-in-up"
-                                  style={getAnimationStyle('list-1', 0.3, 'fade-up-fast')}
-                                >
-                                  Excellence
-                                </p>
-                              </li>
-                              <li ref={addToListRef}>
-                                <p 
-                                  className="anim-uni-in-up"
-                                  style={getAnimationStyle('list-2', 0.4, 'fade-up-fast')}
-                                >
-                                  Creativity
-                                </p>
-                              </li>
-                              <li ref={addToListRef}>
-                                <p 
-                                  className="anim-uni-in-up"
-                                  style={getAnimationStyle('list-3', 0.5, 'fade-up-fast')}
-                                >
-                                  Experience
-                                </p>
-                              </li>
-                              <li ref={addToListRef}>
-                                <p 
-                                  className="anim-uni-in-up"
-                                  style={getAnimationStyle('list-4', 0.6, 'fade-up-fast')}
-                                >
-                                  Competence
-                                </p>
-                              </li>
-                              <li ref={addToListRef}>
-                                <p 
-                                  className="anim-uni-in-up"
-                                  style={getAnimationStyle('list-5', 0.7, 'fade-up-fast')}
-                                >
-                                  Passion
-                                </p>
-                              </li>
-                            </ul>
-                          </div>
-                          <div className="col-6 col-xl-5">
-                            <ul>
-                              <li ref={addToListRef}>
-                                <p 
-                                  className="anim-uni-in-up"
-                                  style={getAnimationStyle('list-6', 0.2, 'fade-up-fast')}
-                                >
-                                  Web design
-                                </p>
-                              </li>
-                              <li ref={addToListRef}>
-                                <p 
-                                  className="anim-uni-in-up"
-                                  style={getAnimationStyle('list-7', 0.3, 'fade-up-fast')}
-                                >
-                                  UI/UX
-                                </p>
-                              </li>
-                              <li ref={addToListRef}>
-                                <p 
-                                  className="anim-uni-in-up"
-                                  style={getAnimationStyle('list-8', 0.4, 'fade-up-fast')}
-                                >
-                                  App design
-                                </p>
-                              </li>
-                              <li ref={addToListRef}>
-                                <p 
-                                  className="anim-uni-in-up"
-                                  style={getAnimationStyle('list-9', 0.5, 'fade-up-fast')}
-                                >
-                                  Development
-                                </p>
-                              </li>
-                              <li ref={addToListRef}>
-                                <p 
-                                  className="anim-uni-in-up"
-                                  style={getAnimationStyle('list-10', 0.6, 'fade-up-fast')}
-                                >
-                                  Branding
-                                </p>
-                              </li>
-                              <li ref={addToListRef}>
-                                <p 
-                                  className="anim-uni-in-up"
-                                  style={getAnimationStyle('list-11', 0.7, 'fade-up-fast')}
-                                >
-                                  Motion
-                                </p>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
+
+              {/* CONTENT */}
+              <div className={`s5-left-content s5-content-anim ${animating ? 'animating' : ''}`}>
+                <h3>{content.heading}</h3>
+                <p>{content.description}</p>
+
+                <div className="s5-points">
+                  {content.points.map((point, i) => (
+                    <div className="s5-point" key={i}>
+                      <div className="s5-check">
+                        <svg viewBox="0 0 16 16">
+                          <polyline points="2,8 6,12 14,4" />
+                        </svg>
                       </div>
+                      {point}
                     </div>
-                    <div className="mxd-paragraph__controls anim-uni-in-up">
-                      <div className="mxd-btngroup">
-                        <a 
-                          className="btn-anim btn btn-anim btn-default btn-accent slide-down" 
-                          aria-label="Download CV" 
-                          href="#"
-                          ref={addToButtonRef}
-                          style={getAnimationStyle('button-0', 0.4, 'fade-up')}
-                        >
-                          <span className="btn-caption">
-                            <div className="btn-anim__block">Download CV</div>
-                            <div className="btn-anim__block" aria-hidden="true">Download CV</div>
-                          </span>
-                          <i className="ph-bold ph-arrow-down"></i>
-                        </a>
-                        <a 
-                          className="btn-anim btn btn-anim btn-default btn-outline slide-right-up" 
-                          aria-label="Let's Meet Closer" 
-                          href="/about-me"
-                          ref={addToButtonRef}
-                          style={getAnimationStyle('button-1', 0.55, 'fade-up')}
-                        >
-                          <span className="btn-caption">
-                            <div className="btn-anim__block">Let's Meet Closer</div>
-                            <div className="btn-anim__block" aria-hidden="true">Let's Meet Closer</div>
-                          </span>
-                          <i className="ph-bold ph-arrow-up-right"></i>
-                        </a>
-                      </div>
-                    </div>
+                  ))}
+                </div>
+                <a class="btn btn-anim btn-default btn-outline slide-right-up" href="works-simple.html">
+                  <span class="btn-caption">
+                    <div class="btn-anim__block"><span class="btn-anim__letter">E</span><span class="btn-anim__letter">x</span>
+                      <span class="btn-anim__letter">p</span><span class="btn-anim__letter">l</span><span class="btn-anim__letter">o</span>
+                      <span class="btn-anim__letter">r</span><span class="btn-anim__letter">e</span></div><div class="btn-anim__block">
+                      <span class="btn-anim__letter">E</span><span class="btn-anim__letter">x</span><span class="btn-anim__letter">p</span>
+                      <span class="btn-anim__letter">l</span><span class="btn-anim__letter">o</span><span class="btn-anim__letter">r</span>
+                      <span class="btn-anim__letter">e</span></div>
+                  </span>
+                  <i class="ph-bold ph-arrow-up-right"></i></a> 
+              </div>
+            </div>
+
+            {/* RIGHT */}
+            <div className="s5-right">
+              <div className="s5-img-wrap">
+                <img
+                  src="https://templates.hibootstrap.com/finto/default/assets/images/service/service-image-8.jpg"
+                  alt="Financial advisor holding credit card"
+                />
+              </div>
+
+              <div className="s5-bank-card">
+                <div className="s5-card-top">
+                  <span className="s5-card-label">Balance</span>
+                  <div className="s5-mastercard">
+                    <div className="s5-mc-circle s5-mc-red"></div>
+                    <div className="s5-mc-circle s5-mc-orange"></div>
                   </div>
+                </div>
+
+                <div className="s5-card-amount">$ 3,403.09</div>
+
+                <div className="s5-card-meta">
+                  <div className="s5-card-meta-item">
+                    <span>$10,000</span> Card limit
+                  </div>
+                </div>
+
+                <div className="s5-card-footer">
+                  <span className="s5-card-name">Finto</span>
+                  <span className="s5-card-expiry">04/25</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
