@@ -18,28 +18,28 @@ export default function Section3() {
       title: "",
       mobileImg: "/img/works/Ndownload5.png",
       desktopImg: "/img/works/Ndownload9.png",
-      link: "/project-details"
+      link: "#"
     },
     {
       id: 2,
       title: " ",
       mobileImg: "/img/works/Ndownload8.png",
       desktopImg: "/img/works/Ndownload12.png",
-      link: "/project-details"
+      link: "#"
     },
     {
       id: 3,
       title: "",
       mobileImg: "/img/works/Ndownload6.png",
       desktopImg: "/img/works/Ndownload10.png",
-      link: "/project-details"
+      link: "#"
     },
     {
       id: 4,
       title: "",
       mobileImg: "/img/works/Ndownload7.png",
       desktopImg: "/img/works/Ndownload11.png",
-      link: "/project-details"
+      link: "#"
     }
   ];
 
@@ -101,8 +101,7 @@ export default function Section3() {
       <div className='container-fluid p-0'>
         <div ref={containerRef} style={containerStyle}>
           <div
-            ref={sectionRef} className='main-div-with-img' 
-          >
+            ref={sectionRef} className='main-div-with-img'>
             <div className='main-inside'>
               
               <div

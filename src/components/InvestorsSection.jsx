@@ -1,6 +1,9 @@
 'use client';
 
 import { useRef, useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
 
 const BASE = 'https://staticsource1.redotpay.com/web/img/brand';
 
@@ -32,32 +35,56 @@ const partners = [
   { id: 13, name: 'TON',           logo: `${BASE}/partners/ton.webp` },
 ];
 
-function LogoGrid({ items, visible, delay = 0 }) {
+function LogoSlider({ items, visible, delay = 0 }) {
   return (
-    <div className="ip-logo-grid">
-      {items.map((item, i) => (
-        <div
-          key={item.id}
-          className="ip-logo-item"
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? 'translateY(0)' : 'translateY(24px)',
-            transition: `opacity 0.55s ease ${delay + i * 0.06}s, transform 0.55s ease ${delay + i * 0.06}s`,
-          }}
-        >
-          <img
-            src={item.logo}
-            alt={item.name}
-            className="ip-logo-img"
-            onError={(e) => {
-              e.target.style.display = 'none';
-              e.target.nextSibling.style.display = 'block';
+    <Swiper
+      modules={[Autoplay]}
+      slidesPerView="auto"
+      spaceBetween={20}
+      autoplay={{
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      }}
+      speed={8000}
+      loop={true}
+      allowTouchMove={false}
+      centeredSlides={false}
+      cssMode={false}
+      breakpoints={{
+        640: { slidesPerView: "auto", spaceBetween: 20 },
+        768: { slidesPerView: "auto", spaceBetween: 24 },
+        1024: { slidesPerView: "auto", spaceBetween: 24 },
+        1280: { slidesPerView: "auto", spaceBetween: 30 },
+      }}
+      className="ip-logo-slider"
+    >
+      {[...items, ...items].map((item, i) => (
+        <SwiperSlide key={`${item.id}-${i}`} style={{ width: 'auto' }}>
+          <div
+            className="ip-logo-item"
+            style={{
+              opacity: visible ? 1 : 0,
+              transform: visible ? 'translateY(0)' : 'translateY(24px)',
+              transition: `opacity 0.55s ease ${delay + (i % items.length) * 0.03}s, transform 0.55s ease ${delay + (i % items.length) * 0.03}s`,
             }}
-          />
-          <span className="ip-logo-fallback">{item.name}</span>
-        </div>
+          >
+            <img
+              src={item.logo}
+              alt={item.name}
+              className="ip-logo-img"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                if (e.target.nextSibling) {
+                  e.target.nextSibling.style.display = 'block';
+                }
+              }}
+            />
+            <span className="ip-logo-fallback">{item.name}</span>
+          </div>
+        </SwiperSlide>
       ))}
-    </div>
+    </Swiper>
   );
 }
 
@@ -76,7 +103,7 @@ export default function InvestorsSection() {
 
   return (
     <> 
-      <section className="ip-section" ref={sectionRef}>
+      <section className="ip-section" style={{overflow:"hidden"}} ref={sectionRef}>
         <div className="ip-container">
 
           {/* Investors */}
@@ -86,7 +113,7 @@ export default function InvestorsSection() {
               <span className="anim-uni-in-up add-fonr-faimly">Our Investors</span>
               <span className="ip-block-heading-line"></span>
             </div>
-            <LogoGrid items={investors} visible={visible} delay={0.05} />
+            <LogoSlider items={investors} visible={visible} delay={0.05} />
           </div>
 
           {/* Partners */}
@@ -99,7 +126,7 @@ export default function InvestorsSection() {
               <span className="anim-uni-in-up add-fonr-faimly">Our Partners</span>
               <span className="ip-block-heading-line"></span>
             </div>
-            <LogoGrid items={partners} visible={visible} delay={0.2} />
+            <LogoSlider items={partners} visible={visible} delay={0.2} />
           </div>
  
         </div>

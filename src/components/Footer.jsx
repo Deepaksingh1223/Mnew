@@ -130,7 +130,7 @@ export default function Footer() {
                       transition: `all 1.2s cubic-bezier(0.4, 0, 0.2, 1) ${idx * 0.12}s`,
                     }}
                   >
-                    <a className="btn-anim footer-nav__link btn-anim" aria-label={item} href={idx === 0 ? "/home-main" : idx === 1 ? "/about-us" : idx === 2 ? "/works-simple" : idx === 3 ? "/services" : idx === 4 ? "/blog-standard" : "/contact"}>
+                    <a className="btn-anim footer-nav__link btn-anim" aria-label={item} href={idx === 0 ? "/home-main" : idx === 1 ? "/about-us" : idx === 2 ? "#" : idx === 3 ? "#" : idx === 4 ? "#" : "#"}>
                       <span className="btn-caption">
                         <div className="btn-anim__block">{item}</div>
                         <div className="btn-anim__block" aria-hidden="true">{item}</div>
@@ -294,7 +294,7 @@ export default function Footer() {
                       onMouseLeave={() => setHoveredSocial(null)}
                     >
                       <a 
-                        href={social === 'Dribbble' ? "https://dribbble.com/" : social === 'Behance' ? "https://www.behance.net/" : social === 'Instagram' ? "https://www.instagram.com/" : social === 'Github' ? "https://github.com/" : social === 'Codepen' ? "https://codepen.io/" : "https://www.figma.com/community"} 
+                        href={social === 'Dribbble' ? "#" : social === 'Behance' ? "#" : social === 'Instagram' ? "#" : social === 'Github' ? "#" : social === 'Codepen' ? "#" : "#"} 
                         className="footer-socials__link" 
                         target="_blank" 
                         rel="noopener noreferrer"

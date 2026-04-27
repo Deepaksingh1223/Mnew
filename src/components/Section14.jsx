@@ -180,7 +180,7 @@ export default function Section14() {
                     transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1)',
                   }}
                 >
-                  <Link href="/contact" className="btn-anim btn btn-anim btn-default btn-large btn-additional slide-right-up" aria-label="Get Started">
+                  <Link href="#" className="btn-anim btn btn-anim btn-default btn-large btn-additional slide-right-up" aria-label="Get Started">
                     <span className="btn-caption">
                       <div className="btn-anim__block">
                         <span className="btn-anim__letter">G</span>

@@ -407,13 +407,13 @@ export default function Header() {
                             </div>
                             <ul className="submenu" style={{ height: '0', paddingTop: '0', transition: 'all 0.3s ease' }}>
                               <li className="submenu__item">
-                                <Link href="/works-simple" onClick={closeMenu}>Portfolio</Link>
+                                <Link href="#" onClick={closeMenu}>Portfolio</Link>
                               </li>
                               <li className="submenu__item">
                                 <Link href="/works-masonry" onClick={closeMenu}>Works masonry</Link>
                               </li>
                               <li className="submenu__item">
-                                <Link href="/project-details" onClick={closeMenu}>Project details</Link>
+                                <Link href="#" onClick={closeMenu}>Project details</Link>
                               </li>
                             </ul>
                           </li>
@@ -449,7 +449,7 @@ export default function Header() {
                                 <Link href="/about-us" onClick={closeMenu}>About us</Link>
                               </li>
                               <li className="submenu__item">
-                                <Link href="/services" onClick={closeMenu}>Services</Link>
+                                <Link href="#" onClick={closeMenu}>Services</Link>
                               </li>
                               <li className="submenu__item">
                                 <Link href="/team" onClick={closeMenu}>Our team</Link>
@@ -500,18 +500,18 @@ export default function Header() {
                             </div>
                             <ul className="submenu" style={{ height: '0', paddingTop: '0', transition: 'all 0.3s ease' }}>
                               <li className="submenu__item">
-                                <Link href="/blog-standard" onClick={closeMenu}>Blog standard</Link>
+                                <Link href="#" onClick={closeMenu}>Blog standard</Link>
                               </li>
                               <li className="submenu__item">
                                 <Link href="/blog-creative" onClick={closeMenu}>Blog creative</Link>
                               </li>
                               <li className="submenu__item">
-                                <Link href="/blog-article" onClick={closeMenu}>Single post</Link>
+                                <Link href="#" onClick={closeMenu}>Single post</Link>
                               </li>
                             </ul>
                           </li>
                           <li className="main-menu__item fade-in-up-elm" style={{ transitionDelay: '0.4s' }}>
-                            <Link className="btn-anim main-menu__link btn btn-anim" aria-label="Contact" href="/contact" onClick={closeMenu}>
+                            <Link className="btn-anim main-menu__link btn btn-anim" aria-label="Contact" href="#" onClick={closeMenu}>
                               <span className="btn-caption">
                                 <div className="btn-anim__block">
                                   <span className="btn-anim__letter">C</span>
@@ -629,7 +629,7 @@ export default function Header() {
                   >
                     <p className="t-xsmall">
                       Made with <i className="ph-fill ph-heart t-additional" /> by
-                      <a className="no-effect" href="https://themeforest.net/user/ib-themes/portfolio" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                      <a className="no-effect" href="#" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
                         ib themes
                       </a>
                     </p>
@@ -697,7 +697,7 @@ export default function Header() {
           <motion.a
             className="btn-anim btn btn-anim btn-default btn-mobile-icon btn-outline slide-right"
             aria-label="Say Hello"
-            href="/contact"
+            href="#"
             onClick={closeMenu}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
