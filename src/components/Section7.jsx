@@ -9,40 +9,40 @@ const testimonialsData = [
     id: 1,
     avatar: "img/men.webp",
     logo: "img/mudra-logo.png",
-    text: "MUDRA's ecosystem gave me the tools to grow globally. The blockchain solutions are truly innovative and accessible for everyone.",
+    text: "MUDRA's crypto card is my go to for any payment online. The stablecoin integration makes global transactions seamless.",
     name: "Rajiv Sharma",
-    role: "Community Partner in",
-    company: "MUDRA World",
+    role: "Verified User on",
+    company: "Trustpilot",
     link: "#0",
   },
   {
     id: 2,
     avatar: "img/woman.webp",
     logo: "img/mudra-logo.png",
-    text: "The regular leader meetings and technology flow have transformed my business. I've built a strong international team with MUDRA.",
+    text: "The experience with MUDRA is really amazing. From fueling up my ride to late night online hauls, it's so smooth!",
     name: "Priya Kaur",
-    role: "Regional Leader in",
-    company: "MUDRA Community",
+    role: "Community Member on",
+    company: "X",
     link: "#0",
   },
   {
     id: 3,
     avatar: "img/men.webp",
     logo: "img/mudra-logo.png",
-    text: "Being part of MUDRA since 2022 has been life-changing. The token locking mechanism and cross-chain swaps provide unmatched transparency.",
+    text: "I've tried several crypto cards over the years and MUDRA is hands down the BEST one I've ever used!",
     name: "Amit Singh",
-    role: "Early Adopter in",
-    company: "MDR Holders",
+    role: "Top Reviewer on",
+    company: "Trustpilot",
     link: "#0",
   },
   {
     id: 4,
     avatar: "img/woman.webp",
     logo: "img/mudra-logo.png",
-    text: "From MUDRA Games to NFT platform, every feature is designed for real utility. This is the future of crypto communities.",
+    text: "MUDRA turned an ordinary day into something unforgettable. Their customer service resolves issues within reasonable time.",
     name: "Neha Verma",
-    role: "Blockchain Enthusiast in",
-    company: "MUDRA Ecosystem",
+    role: "Prize Winner & User of",
+    company: "MUDRA Card",
     link: "#0",
   },
 ];
@@ -123,22 +123,22 @@ export default function Expertise() {
                             >
                               <h2 className="reveal-type">
                                 <div className="word" style={{ display: "inline-block" }}>
-                                  {["J","o","i","n"].map((char, idx) => (
+                                  {["H","e","a","r"].map((char, idx) => (
                                     <div key={idx} className="char" style={{ display: "inline-block", opacity: 1 }}>{char}</div>
                                   ))}
                                 </div>{" "}
                                 <div className="word" style={{ display: "inline-block" }}>
-                                  {["t","h","e"].map((char, idx) => (
+                                  {["f","r","o","m"].map((char, idx) => (
                                     <div key={idx} className="char" style={{ display: "inline-block", opacity: 1 }}>{char}</div>
                                   ))}
                                 </div>{" "}
                                 <div className="word" style={{ display: "inline-block" }}>
-                                  {["M","U","D","R","A"].map((char, idx) => (
+                                  {["O","u","r"].map((char, idx) => (
                                     <div key={idx} className="char" style={{ display: "inline-block", opacity: 1 }}>{char}</div>
                                   ))}
                                 </div>{" "}
                                 <div className="word" style={{ display: "inline-block" }}>
-                                  {["W","o","r","l","d"].map((char, idx) => (
+                                  {["C","o","m","m","u","n","i","t","y"].map((char, idx) => (
                                     <div key={idx} className="char" style={{ display: "inline-block", opacity: 1 }}>{char}</div>
                                   ))}
                                 </div>
@@ -157,7 +157,7 @@ export default function Expertise() {
                                   opacity: 1,
                                 }}
                               >
-                                Your age, experience, level of education and wealth don't matter — we give everyone a chance to build a better future. Join 10,000+ members already growing with us!
+                                Join thousands of users who trust MUDRA for effortless, secure payments with stablecoins. Your age, experience, or location doesn't matter — we give everyone a chance to spend crypto in real life.
                               </p>
                             </div>
                           </div>
@@ -272,12 +272,12 @@ export default function Expertise() {
                                 >
                                   <span className="btn-caption">
                                     <div className="btn-anim__block">
-                                      {["J","o","i","n"," ","M","U","D","R","A"].map((letter, idx) => (
+                                      {["G","e","t"," ","M","U","D","R","A"].map((letter, idx) => (
                                         <span key={idx} className="btn-anim__letter">{letter}</span>
                                       ))}
                                     </div>
                                     <div className="btn-anim__block">
-                                      {["J","o","i","n"," ","M","U","D","R","A"].map((letter, idx) => (
+                                      {["G","e","t"," ","M","U","D","R","A"].map((letter, idx) => (
                                         <span key={idx} className="btn-anim__letter">{letter}</span>
                                       ))}
                                     </div>

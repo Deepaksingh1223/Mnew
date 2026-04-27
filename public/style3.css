@@ -298,7 +298,7 @@
 }
 
 .divider-image-5 {
-    background-image: url(img/2400x1350_divider-05.webp)
+    background-image: url(img/works/section12-img.png)
 }
 
 .divider-image-6 {
@@ -350,15 +350,15 @@
 }
 
 .blog-preview-image-1 {
-    background-image: url(img/1000x1250_prv-01.webp)
+    background-image: url(img/works/blog-img1.jpeg)
 }
 
 .blog-preview-image-2 {
-    background-image: url(img/1000x1250_prv-02.webp)
+    background-image: url(img/works/blog-img2.jpeg)
 }
 
 .blog-preview-image-3 {
-    background-image: url(img/1000x1250_prv-03.webp)
+    background-image: url(img/works/blog-img3.jpeg)
 }
 
 .headline-img-01:before {
@@ -5421,7 +5421,7 @@ form textarea:required:valid {
 }
 
 .mxd-promo__inner {
-    background-color: var(--base-opp);
+    background-color:#010101;
     flex-direction: column;
     width: 100%;
     padding-left: 3rem;
@@ -14578,7 +14578,7 @@ form textarea:required:valid {
     }
 
     .mxd-stats-cards__image.mxd-stats-cards-image-3 {
-      left: 53%;
+        left: 53%;
         top: 25%;
     }
 
@@ -18444,4 +18444,53 @@ form textarea:required:valid {
     .mxd-footer__fullwidth-text {
         padding: 5rem 3rem 0;
     }
+}
+
+button.mxd-color-switcher {
+    display: none !important;
+}
+
+.main-div-with-img {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    alignItems: center;
+    overflow: hidden;
+    backgroundColor: transform;
+
+}
+
+.main-inside {
+    maxWidth: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    alignItems: center;
+    margin-top: 50px;
+}
+
+@media(max-width:991px) {
+.main-inside{
+    padding: 0px;
+}
+    .main-div-with-img {
+        position: sticky;
+        top: 0;
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        alignItems: center;
+        overflow: hidden;
+        backgroundColor: var(--background)';
+
+    }img.ft-phone-back.phone-img2 {
+    opacity: 1 !important;
+    left: 35px !important;
+    top: -8px !important;
+    width: auto !important;
+}
 }

@@ -163,11 +163,12 @@ export default function Section14() {
                     <img alt="Illustration" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" style={{ color: 'transparent' }} src="/img/hrd.webp" />
                   </span>
                   <span className="reveal-type mxd-promo__caption">
-                    <span className="word"><span className="char">L</span><span className="char">e</span><span className="char">t</span><span className="char">'</span><span className="char">s</span></span>{' '}
-                    <span className="word"><span className="char">t</span><span className="char">a</span><span className="char">l</span><span className="char">k</span></span>{' '}
-                    <span className="word"><span className="char">a</span><span className="char">b</span><span className="char">o</span><span className="char">u</span><span className="char">t</span></span>{' '}
-                    <span className="word"><span className="char">y</span><span className="char">o</span><span className="char">u</span><span className="char">r</span></span>{' '}
-                    <span className="word"><span className="char">p</span><span className="char">r</span><span className="char">o</span><span className="char">j</span><span className="char">e</span><span className="char">c</span><span className="char">t</span><span className="char">!</span></span>
+                    <span className="word"><span className="char">U</span><span className="char">n</span><span className="char">l</span><span className="char">o</span><span className="char">c</span><span className="char">k</span></span>{' '}
+                    <span className="word"><span className="char">Y</span><span className="char">o</span><span className="char">u</span><span className="char">r</span></span>{' '}
+                    <span className="word"><span className="char">C</span><span className="char">r</span><span className="char">y</span><span className="char">p</span><span className="char">t</span><span className="char">o</span></span>{' '}
+                    <span className="word"><span className="char">P</span><span className="char">o</span><span className="char">w</span><span className="char">e</span><span className="char">r</span></span>{' '}
+                    <span className="word"><span className="char">W</span><span className="char">i</span><span className="char">t</span><span className="char">h</span></span>{' '}
+                    <span className="word"><span className="char">M</span><span className="char">U</span><span className="char">D</span><span className="char">R</span><span className="char">A</span><span className="char">!</span></span>
                   </span>
                 </p>
                 <div 
@@ -179,31 +180,33 @@ export default function Section14() {
                     transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1)',
                   }}
                 >
-                  <Link href="/contact" className="btn-anim btn btn-anim btn-default btn-large btn-additional slide-right-up" aria-label="Contact Me">
+                  <Link href="/contact" className="btn-anim btn btn-anim btn-default btn-large btn-additional slide-right-up" aria-label="Get Started">
                     <span className="btn-caption">
                       <div className="btn-anim__block">
-                        <span className="btn-anim__letter">C</span>
-                        <span className="btn-anim__letter">o</span>
-                        <span className="btn-anim__letter">n</span>
-                        <span className="btn-anim__letter">t</span>
-                        <span className="btn-anim__letter">a</span>
-                        <span className="btn-anim__letter">c</span>
+                        <span className="btn-anim__letter">G</span>
+                        <span className="btn-anim__letter">e</span>
                         <span className="btn-anim__letter">t</span>
                         <span className="btn-anim__letter">&nbsp;</span>
-                        <span className="btn-anim__letter">M</span>
+                        <span className="btn-anim__letter">S</span>
+                        <span className="btn-anim__letter">t</span>
+                        <span className="btn-anim__letter">a</span>
+                        <span className="btn-anim__letter">r</span>
+                        <span className="btn-anim__letter">t</span>
                         <span className="btn-anim__letter">e</span>
+                        <span className="btn-anim__letter">d</span>
                       </div>
                       <div className="btn-anim__block" aria-hidden="true">
-                        <span className="btn-anim__letter">C</span>
-                        <span className="btn-anim__letter">o</span>
-                        <span className="btn-anim__letter">n</span>
-                        <span className="btn-anim__letter">t</span>
-                        <span className="btn-anim__letter">a</span>
-                        <span className="btn-anim__letter">c</span>
+                        <span className="btn-anim__letter">G</span>
+                        <span className="btn-anim__letter">e</span>
                         <span className="btn-anim__letter">t</span>
                         <span className="btn-anim__letter">&nbsp;</span>
-                        <span className="btn-anim__letter">M</span>
+                        <span className="btn-anim__letter">S</span>
+                        <span className="btn-anim__letter">t</span>
+                        <span className="btn-anim__letter">a</span>
+                        <span className="btn-anim__letter">r</span>
+                        <span className="btn-anim__letter">t</span>
                         <span className="btn-anim__letter">e</span>
+                        <span className="btn-anim__letter">d</span>
                       </div>
                     </span>
                     <i className="ph-bold ph-arrow-up-right"></i>
@@ -214,7 +217,7 @@ export default function Section14() {
                 <img 
                   className="promo-image promo-image" 
                   ref={image1Ref}
-                  alt="Illustration" 
+                  alt="MUDRA Crypto Card" 
                   loading="lazy" 
                   width="800" 
                   height="912" 
@@ -227,14 +230,14 @@ export default function Section14() {
                     transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
                     ...(isImage1Hovered && { transform: 'scale(1.03) rotate(3deg)' })
                   }}
-                  src="/img/head-bg.webp" 
+                  src="/img/Works/section14-card.png" 
                   onMouseEnter={() => setIsImage1Hovered(true)}
                   onMouseLeave={() => setIsImage1Hovered(false)}
                 />
                 <img 
                   className="promo-image promo-image-1" 
                   ref={image2Ref}
-                  alt="Illustration" 
+                  alt="MUDRA Stablecoin" 
                   loading="lazy" 
                   width="600" 
                   height="601" 
@@ -247,7 +250,7 @@ export default function Section14() {
                     transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
                     ...(isImage2Hovered && { transform: 'scale(1.05) rotate(-3deg)' })
                   }}
-                  src="/img/head-bot2.webp" 
+                  src="/img/works/section14-card2.png" 
                   onMouseEnter={() => setIsImage2Hovered(true)}
                   onMouseLeave={() => setIsImage2Hovered(false)}
                 />

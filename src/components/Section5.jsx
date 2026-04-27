@@ -3,52 +3,54 @@
 import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 
+// ✅ RedotPay-style tabs
 const tabs = [
   { id: 'mission', label: 'Our Mission' },
-  { id: 'quality', label: 'Our Quality' },
+  { id: 'quality', label: 'Why MUDRA' },
   { id: 'vision', label: 'Our Vision' },
-  { id: 'security', label: 'Top Security' },
+  { id: 'security', label: 'Security' },
 ];
 
+// ✅ Crypto / stablecoin / global payments content (no loan)
 const tabContent = {
   mission: {
-    heading: 'Passionate For Your Financial Support Here',
+    heading: 'Where Crypto Meets Real Life',
     description:
-      'With a robust suite of products ranging from digital banking and payment processing to wealth management and blockchain applications.',
+      'MUDRA empowers global payments with stablecoins — seamless, fast, and built for everyday use.',
     points: [
-      'Pay Bills On Time Without Missing A Beat',
-      'Create And Send Invoices In Seconds',
-      'Control Your Cash Flow On Demand',
+      'Fast and Secure Stablecoin Transfers',
+      'Multi-Currencies, One App',
+      'Convenient Stablecoin Access via P2P',
     ],
   },
   quality: {
-    heading: 'Delivering Quality In Every Transaction',
+    heading: 'Digital-First Spending, Made Simple',
     description:
-      'We ensure every product and service meets the highest standards, giving you confidence and reliability in your financial journey.',
+      'Experience effortless, secure payments for subscriptions, travel, and everyday purchases.',
     points: [
-      'Industry-Leading Security Protocols',
-      'Real-Time Transaction Monitoring',
-      'Certified Financial Grade Infrastructure',
+      'Spend Stablecoins Instantly',
+      'Buy coffee, shop online or pay bills',
+      'No hidden fees, no delays',
     ],
   },
   vision: {
-    heading: 'A Vision For A Smarter Financial Future',
+    heading: 'Bridging Crypto and Everyday Life',
     description:
-      'Our vision is to democratize finance — making powerful tools accessible to everyone, regardless of background or location.',
+      'Crypto or local currency — jump straight into action and access your funds easily.',
     points: [
-      'Global Reach With Local Understanding',
-      'AI-Powered Financial Insights',
-      'Inclusive Banking For Everyone',
+      'Send crypto, receive local currency',
+      'Global reach with local settlement',
+      'Every transaction protected',
     ],
   },
   security: {
-    heading: 'Top-Tier Security You Can Trust',
+    heading: 'Enterprise-Grade Crypto Security',
     description:
-      'Your assets are protected by bank-grade encryption, multi-factor authentication, and 24/7 fraud monitoring systems.',
+      'Your digital assets and transactions are protected by multi-layer security and real-time monitoring.',
     points: [
-      '256-Bit Bank-Grade Encryption',
-      'Multi-Factor Authentication',
-      '24/7 Fraud Detection & Alerts',
+      'Bank-grade encryption',
+      'Non-custodial options available',
+      '24/7 fraud detection',
     ],
   },
 };
@@ -58,14 +60,28 @@ export default function Section5() {
   const [animating, setAnimating] = useState(false);
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setVisible(entry.isIntersecting),
       { threshold: 0.15 }
     );
+
     if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
+  // Auto-play video when component mounts
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log('Video autoplay failed:', error);
+      });
+    }
   }, []);
 
   const handleTabChange = (id) => {
@@ -80,112 +96,121 @@ export default function Section5() {
   const content = tabContent[activeTab];
 
   return (
-    <>
-
-
-      <section className="s5-section" ref={sectionRef}>
-        {/* TOP HEADER */}
-        <div className={`s5-top s5-fade-in mxd-hero-04__wrap loading-wrap ${visible ? 'visible' : ''}`}>
-          <div className="reveal-type">
-            <h2>
-              <span>Leveraging Technology For</span>
-              <span>
-                <span className="underline-green">Secure</span> &amp; Banking
-              </span>
-            </h2>
-          </div>
-          <div className="s5-top-right">
-            <p>
-              By integrating advanced technology with financial expertise we provide a comprehensive
-              suite of services that cater to both individuals and businesses.
-            </p>
-          </div>
+    <section className="s5-section relative" ref={sectionRef}>
+      
+      {/* 🔹 TOP HEADER — RedotPay style */}
+      <div className={`s5-top s5-fade-in mxd-hero-04__wrap loading-wrap ${visible ? 'visible' : ''}`}>
+        <div className="reveal-type">
+          <h2>
+            <span>MUDRA — Where Crypto Meets</span>
+            <span>
+              <span className="underline-green">Real Life</span>
+            </span>
+          </h2>
         </div>
 
-        {/* CARD SECTION */}
-        <div className="s5-card mxd-hero-04__wrap loading-wrap">
-          <div className={`s5-card-inner s5-fade-in ${visible ? 'visible' : ''}`} style={{ transitionDelay: '0.15s' }}>
+        <div className="s5-top-right">
+          <p>
+            Empowering global payments with stablecoins. Seamless, fast, and secure — 
+            built for everyday people and businesses.
+          </p>
+        </div>
+      </div>
 
-            {/* LEFT */}
-            <div>
-              {/* TABS */}
-              <div className="s5-tabs">
-                {tabs.map((tab) => (
-                  <button
-                    key={tab.id}
-                    className={`s5-tab ${activeTab === tab.id ? 'active' : ''}`}
-                    onClick={() => handleTabChange(tab.id)}
-                  >
-                    {tab.label}
-                  </button>
+      {/* 🔹 CARD SECTION */}
+      <div className="s5-card mxd-hero-04__wrap loading-wrap">
+        <div
+          className={`s5-card-inner s5-fade-in ${visible ? 'visible' : ''}`}
+          style={{ transitionDelay: '0.15s' }}
+        >
+
+          {/* LEFT SIDE — Tab Content */}
+          <div>
+            <div className="s5-tabs">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  className={`s5-tab ${activeTab === tab.id ? 'active' : ''}`}
+                  onClick={() => handleTabChange(tab.id)}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            <div className={`s5-left-content s5-content-anim ${animating ? 'animating' : ''}`}>
+              <h3>{content.heading}</h3>
+              <p>{content.description}</p>
+
+              <div className="s5-points">
+                {content.points.map((point, i) => (
+                  <div className="s5-point" key={i}>
+                    {point}
+                  </div>
                 ))}
               </div>
 
-              {/* CONTENT */}
-              <div className={`s5-left-content s5-content-anim ${animating ? 'animating' : ''}`}>
-                <h3>{content.heading}</h3>
-                <p>{content.description}</p>
-
-                <div className="s5-points">
-                  {content.points.map((point, i) => (
-                    <div className="s5-point" key={i}>
-                      <div className="s5-check">
-                        <svg viewBox="0 0 16 16">
-                          <polyline points="2,8 6,12 14,4" />
-                        </svg>
-                      </div>
-                      {point}
-                    </div>
-                  ))}
-                </div>
-                <a class="btn btn-anim btn-default btn-outline slide-right-up" href="works-simple.html">
-                  <span class="btn-caption">
-                    <div class="btn-anim__block"><span class="btn-anim__letter">E</span><span class="btn-anim__letter">x</span>
-                      <span class="btn-anim__letter">p</span><span class="btn-anim__letter">l</span><span class="btn-anim__letter">o</span>
-                      <span class="btn-anim__letter">r</span><span class="btn-anim__letter">e</span></div><div class="btn-anim__block">
-                      <span class="btn-anim__letter">E</span><span class="btn-anim__letter">x</span><span class="btn-anim__letter">p</span>
-                      <span class="btn-anim__letter">l</span><span class="btn-anim__letter">o</span><span class="btn-anim__letter">r</span>
-                      <span class="btn-anim__letter">e</span></div>
-                  </span>
-                  <i class="ph-bold ph-arrow-up-right"></i></a> 
-              </div>
-            </div>
-
-            {/* RIGHT */}
-            <div className="s5-right">
-              <div className="s5-img-wrap">
-                <img
-                  src="https://templates.hibootstrap.com/finto/default/assets/images/service/service-image-8.jpg"
-                  alt="Financial advisor holding credit card"
-                />
-              </div>
-
-              <div className="s5-bank-card">
-                <div className="s5-card-top">
-                  <span className="s5-card-label">Balance</span>
-                  <div className="s5-mastercard">
-                    <div className="s5-mc-circle s5-mc-red"></div>
-                    <div className="s5-mc-circle s5-mc-orange"></div>
+              {/* 🔹 BUTTON — Crypto style */}
+              <a
+                className="btn btn-anim btn-default btn-outline slide-right-up"
+                href="#"
+              >
+                <span className="btn-caption">
+                  <div className="btn-anim__block">
+                    <span className="btn-anim__letter">G</span>
+                    <span className="btn-anim__letter">e</span>
+                    <span className="btn-anim__letter">t</span>
+                    <span className="btn-anim__letter"> </span>
+                    <span className="btn-anim__letter">S</span>
+                    <span className="btn-anim__letter">t</span>
+                    <span className="btn-anim__letter">a</span>
+                    <span className="btn-anim__letter">r</span>
+                    <span className="btn-anim__letter">t</span>
+                    <span className="btn-anim__letter">e</span>
+                    <span className="btn-anim__letter">d</span>
                   </div>
-                </div>
-
-                <div className="s5-card-amount">$ 3,403.09</div>
-
-                <div className="s5-card-meta">
-                  <div className="s5-card-meta-item">
-                    <span>$10,000</span> Card limit
+                  <div className="btn-anim__block">
+                    <span className="btn-anim__letter">G</span>
+                    <span className="btn-anim__letter">e</span>
+                    <span className="btn-anim__letter">t</span>
+                    <span className="btn-anim__letter"> </span>
+                    <span className="btn-anim__letter">S</span>
+                    <span className="btn-anim__letter">t</span>
+                    <span className="btn-anim__letter">a</span>
+                    <span className="btn-anim__letter">r</span>
+                    <span className="btn-anim__letter">t</span>
+                    <span className="btn-anim__letter">e</span>
+                    <span className="btn-anim__letter">d</span>
                   </div>
-                </div>
-
-                <div className="s5-card-footer">
-                  <span className="s5-card-name">Finto</span>
-                  <span className="s5-card-expiry">04/25</span>
-                </div>
-              </div>
+                </span>
+                <i className="ph-bold ph-arrow-up-right"></i>
+              </a>
             </div>
           </div>
+
+          {/* 🔹 RIGHT SIDE — Crypto Card Preview (no loan) */}
+          <div className="s5-right">
+            <div className="s5-img-wrap" style={{position:'relative'}}>
+              <video 
+                ref={videoRef}
+                src="/img/works/animation-card.mp4"
+                className="parallax-img"
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{
+                  width: '100%',
+                  height: '700px',
+                  display: 'block',
+                  objectFit: 'cover'
+                }}
+              />
+            </div>
+          </div>
+
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

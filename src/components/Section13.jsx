@@ -99,18 +99,18 @@ export default function Section13() {
 
   const blogItems = [
     { 
-      title: 'Frontend innovations and user journeys', 
-      tags: ['Concept', 'Editorial'], 
+      title: 'Where Crypto Meets Real Life with MUDRA', 
+      tags: ['Stablecoin', 'Payments'], 
       image: 'blog-preview-image-1' 
     },
     { 
-      title: 'Branding in creating digital experiences', 
-      tags: ['UI/UX', 'Development'], 
+      title: 'Multi-Currency Wallet: Bridging Crypto and Everyday Life', 
+      tags: ['Wallet', 'Crypto'], 
       image: 'blog-preview-image-2' 
     },
     { 
-      title: 'Elevating digital workshops with engaging design', 
-      tags: ['News', 'AI'], 
+      title: 'Digital-First Spending Made Simple with MUDRA', 
+      tags: ['Card', 'Spending'], 
       image: 'blog-preview-image-3' 
     }
   ];
@@ -133,7 +133,7 @@ export default function Section13() {
                         transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1)'
                       }}
                     >
-                      Recent insights
+                      Latest from MUDRA
                     </h2>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export default function Section13() {
                         transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.1s'
                       }}
                     >
-                      Inspiring ideas, creative insights, and the latest in design and tech. Fueling innovation for your digital journey.
+                      Empowering global payments with stablecoins. Fast, secure, and seamless crypto-to-fiat solutions for your everyday financial needs.
                     </p>
                   </div>
                 </div>
@@ -164,8 +164,8 @@ export default function Section13() {
                   >
                     <a className="btn-anim btn btn-default btn-outline slide-right-up" aria-label="All Articles" href="/blog-standard">
                       <span className="btn-caption">
-                        <div className="btn-anim__block">All Articles</div>
-                        <div className="btn-anim__block" aria-hidden="true">All Articles</div>
+                        <div className="btn-anim__block">View All</div>
+                        <div className="btn-anim__block" aria-hidden="true">View All</div>
                       </span>
                       <i className="ph-bold ph-arrow-up-right"></i>
                     </a>
