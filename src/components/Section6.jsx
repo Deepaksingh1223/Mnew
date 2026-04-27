@@ -40,23 +40,23 @@ export default function Section6() {
     
     setCountersStarted(true);
     
-    // Counter 1: Assets managed (₹500Cr+)
-    animateCounter(500, 2000, (value) => {
+    // Counter 1: Annualized Payment Volume ($15B+)
+    animateCounter(15, 2000, (value) => {
       setCounters(prev => ({ ...prev, counter1: value }));
     });
     
-    // Counter 2: Client satisfaction (98%)
-    animateCounter(98, 2000, (value) => {
+    // Counter 2: Client satisfaction (99%)
+    animateCounter(99, 2000, (value) => {
       setCounters(prev => ({ ...prev, counter2: value }));
     });
     
-    // Counter 3: Years of experience (15)
-    animateCounter(15, 2000, (value) => {
+    // Counter 3: Global users (5M+)
+    animateCounter(5, 2000, (value) => {
       setCounters(prev => ({ ...prev, counter3: value }));
     });
     
-    // Counter 4: Active investors (10K+)
-    animateCounter(10000, 2000, (value) => {
+    // Counter 4: Countries served (130+)
+    animateCounter(130, 2000, (value) => {
       setCounters(prev => ({ ...prev, counter4: value }));
     });
   };
@@ -162,23 +162,23 @@ export default function Section6() {
                   >
                     <div className="mxd-counter">
                       <p id="stats-counter-1" className="mxd-counter__number mxd-stats-number opposite">
-                        <span className="mxd-counter__number mxd-stats-number opposite">₹{counters.counter1}</span>Cr+
+                        <span className="mxd-counter__number mxd-stats-number opposite">${counters.counter1}</span>B+
                       </p>
                       <p className="mxd-counter__descr t-140 t-bright opposite">
-                        Assets managed for<br />wealthy families & individuals
+                        Annualized payment volume<br />processed by MUDRA
                       </p>
                     </div>
                     <div className="mxd-stats-cards__btngroup">
                       <a className="btn-anim btn btn-anim btn-default btn-outline opposite slide-right-up" aria-label="Investment Plans" href="/investment-plans">
                         <span className="btn-caption">
-                          <div className="btn-anim__block">Invest Now</div>
-                          <div className="btn-anim__block" aria-hidden="true">Invest Now</div>
+                          <div className="btn-anim__block">Start Spending</div>
+                          <div className="btn-anim__block" aria-hidden="true">Start Spending</div>
                         </span>
                         <i className="ph-bold ph-arrow-up-right"></i>
                       </a>
                     </div>
                     <div className="mxd-stats-cards__image mxd-stats-cards-image-1">
-                      <img alt="Wealth Growth Illustration" loading="lazy" decoding="async" data-nimg="1"
+                      <img alt="Crypto Spending Illustration" loading="lazy" decoding="async" data-nimg="1"
                        style={{ color: 'transparent' }} src="/img/section6-img1.png" />
                     </div>
                   </div>
@@ -191,14 +191,14 @@ export default function Section6() {
                     <div className="mxd-stats-cards__btngroup">
                       <div className="mxd-avatars">
                         <div className="mxd-avatars__item">
-                          <img alt="Happy Investor" loading="lazy" width="300" height="300" decoding="async" data-nimg="1"
+                          <img alt="Happy User" loading="lazy" width="300" height="300" decoding="async" data-nimg="1"
                            style={{ color: 'transparent' }} src="/img/woman.webp" />
                         </div>
                         <div className="mxd-avatars__item bg-base-opp">
                           <FaStar className="mxd-avatars__icon icon-star" size={60} />
                         </div>
                         <div className="mxd-avatars__item">
-                          <img alt="Satisfied Client" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" 
+                          <img alt="Satisfied Customer" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" 
                           style={{ color: 'transparent' }} src="/img/man.webp" />
                         </div>
                       </div>
@@ -208,11 +208,11 @@ export default function Section6() {
                         <span className="mxd-counter__number mxd-stats-number">{counters.counter2}</span>%
                       </p>
                       <p className="mxd-counter__descr t-140 t-bright">
-                        Client satisfaction rate<br />with our investment strategies
+                        User satisfaction rate<br />with MUDRA's seamless experience
                       </p>
                     </div>
                     <div className="mxd-stats-cards__image mxd-stats-cards-image-2">
-                      <img alt="Investment Growth" loading="lazy" width="800" height="800" decoding="async" data-nimg="1" style={{ color: 'transparent' }} 
+                      <img alt="Happy Users" loading="lazy" width="800" height="800" decoding="async" data-nimg="1" style={{ color: 'transparent' }} 
                       src="/img/section6-img3.png" />
                     </div>
                   </div>
@@ -224,23 +224,23 @@ export default function Section6() {
                   >
                     <div className="mxd-counter">
                       <p id="stats-counter-3" className="mxd-counter__number mxd-stats-number">
-                        <span className="mxd-counter__number mxd-stats-number">{counters.counter3}</span>+
+                        <span className="mxd-counter__number mxd-stats-number">{counters.counter3}</span>M+
                       </p>
                       <p className="mxd-counter__descr t-140 t-bright">
-                        Years of expertise in wealth management & financial planning
+                        Global users trusting<br />MUDRA for daily crypto spending
                       </p>
                     </div>
                     <div className="mxd-stats-cards__btngroup">
                       <a className="btn-anim btn btn-anim btn-default btn-outline slide-right-down" aria-label="Start Investment" href="/contact">
                         <span className="btn-caption">
-                          <div className="btn-anim__block">Start Your Journey</div>
-                          <div className="btn-anim__block" aria-hidden="true">Start Your Journey</div>
+                          <div className="btn-anim__block">Get Your Card</div>
+                          <div className="btn-anim__block" aria-hidden="true">Get Your Card</div>
                         </span>
                         <i className="ph-bold ph-arrow-down-right"></i>
                       </a>
                     </div>
                     <div className="mxd-stats-cards__image mxd-stats-cards-image-3">
-                      <img alt="Financial Planning" loading="lazy"  decoding="async" data-nimg="1" style={{ color: 'transparent' }} 
+                      <img alt="Global Payments" loading="lazy"  decoding="async" data-nimg="1" style={{ color: 'transparent' }} 
                       src="/img/section6-img2.png" />
                     </div>
                   </div>
@@ -252,23 +252,23 @@ export default function Section6() {
                   >
                     <div className="mxd-counter">
                       <p id="stats-counter-4" className="mxd-counter__number mxd-stats-number">
-                        <span className="mxd-counter__number mxd-stats-number">{counters.counter4.toLocaleString()}</span>+
+                        <span className="mxd-counter__number mxd-stats-number">{counters.counter4}</span>+
                       </p>
                       <p className="mxd-counter__descr t-140 t-bright">
-                        Active investors building<br />wealth with MudraPro
+                        Countries where you can<br />spend stablecoins with MUDRA
                       </p>
                     </div>
                     <div className="mxd-stats-cards__btngroup">
                       <a className="btn-anim btn btn-anim btn-default btn-outline slide-right-up" aria-label="Portfolio" href="/portfolio">
                         <span className="btn-caption">
-                          <div className="btn-anim__block">Our Portfolio</div>
-                          <div className="btn-anim__block" aria-hidden="true">Our Portfolio</div>
+                          <div className="btn-anim__block">Learn More</div>
+                          <div className="btn-anim__block" aria-hidden="true">Learn More</div>
                         </span>
                         <i className="ph-bold ph-arrow-up-right"></i>
                       </a>
                     </div>
                     <div className="mxd-stats-cards__image mxd-stats-cards-image-4">
-                      <img alt="Wealth Building" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" style={{ color: 'transparent' }}
+                      <img alt="Global Reach" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" style={{ color: 'transparent' }}
                          src="/img/section6-img4.png" />
                     </div>
                   </div>

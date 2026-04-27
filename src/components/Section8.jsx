@@ -39,30 +39,32 @@ export default function Section8() {
               <img 
                 className="mxd-move" 
                 src="img/section8-img1.png" 
-                alt="Hero image"
+                alt="MUDRA Crypto Card"
                 loading="lazy"
               />
               <div className="hero-05-worksblock__descr">
-                <p className="t-large t-caption t-bright">Blending creativity with practical design</p>
+                <p className="t-large t-caption t-bright">Spend stablecoins instantly — buy coffee, shop online, or pay bills with MUDRA</p>
                 <a className="btn btn-anim btn-default btn-outline slide-right-up" href="works-simple.html">
                   <span className="btn-caption">
                     <div className="btn-anim__block">
-                      <span className="btn-anim__letter">E</span>
-                      <span className="btn-anim__letter">x</span>
-                      <span className="btn-anim__letter">p</span>
-                      <span className="btn-anim__letter">l</span>
-                      <span className="btn-anim__letter">o</span>
-                      <span className="btn-anim__letter">r</span>
+                      <span className="btn-anim__letter">G</span>
                       <span className="btn-anim__letter">e</span>
+                      <span className="btn-anim__letter">t</span>
+                      <span className="btn-anim__letter"> </span>
+                      <span className="btn-anim__letter">C</span>
+                      <span className="btn-anim__letter">a</span>
+                      <span className="btn-anim__letter">r</span>
+                      <span className="btn-anim__letter">d</span>
                     </div>
                     <div className="btn-anim__block">
-                      <span className="btn-anim__letter">E</span>
-                      <span className="btn-anim__letter">x</span>
-                      <span className="btn-anim__letter">p</span>
-                      <span className="btn-anim__letter">l</span>
-                      <span className="btn-anim__letter">o</span>
-                      <span className="btn-anim__letter">r</span>
+                      <span className="btn-anim__letter">G</span>
                       <span className="btn-anim__letter">e</span>
+                      <span className="btn-anim__letter">t</span>
+                      <span className="btn-anim__letter"> </span>
+                      <span className="btn-anim__letter">C</span>
+                      <span className="btn-anim__letter">a</span>
+                      <span className="btn-anim__letter">r</span>
+                      <span className="btn-anim__letter">d</span>
                     </div>
                   </span>
                   <i className="ph-bold ph-arrow-up-right"></i>
@@ -97,8 +99,7 @@ export default function Section8() {
             />
               </div>
               <div className="mxd-hero-05-videoblock__descr">
-                <p className="t-large t-caption t-bright">We are a creative digital agency specializing in 
-                  innovative design and cutting-edge development.</p>
+                <p className="t-large t-caption t-bright">Where crypto meets real life — empowering global payments with stablecoins</p>
               </div>
             </div>
           </div>

@@ -366,7 +366,7 @@ html {
 }
 
 .ft-card-green {
-    background: #72c229;
+    background: #0c3a30;
 }
 
 .ft-icon-wrap {
@@ -682,9 +682,7 @@ img.ft-phone-back.phone-img2 {
         }
 
         .s5-card-inner {
-          background: #fdfbfb;
-          border-radius: 24px;
-          padding: 48px;
+          background: #fdfbfb; 
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 48px;
@@ -757,6 +755,7 @@ img.ft-phone-back.phone-img2 {
     color: #151615;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     font-family: 'Inter';
+        padding-bottom: 0;
         }
 
         .s5-point:hover {
@@ -826,8 +825,7 @@ img.ft-phone-back.phone-img2 {
 
         .s5-img-wrap {
           border-radius: 18px;
-          overflow: hidden;
-          height: 400px;
+          overflow: hidden; 
           position: relative;
         }
 
@@ -1069,7 +1067,7 @@ img.ft-phone-back.phone-img2 {
         }
 
         .pricing-card.featured {
-          background: #8dc63f;
+          background: #ffdfbc;
         }
 
         .pricing-card-header {
@@ -1158,7 +1156,7 @@ img.ft-phone-back.phone-img2 {
           gap: 12px;
           font-size: 14px;
           font-weight: 500;
-          color: #1a3a22;font-family: 'Inter';
+          color: #000000;font-family: 'Inter';
         }
 
         .feature-icon {
@@ -1172,7 +1170,7 @@ img.ft-phone-back.phone-img2 {
         }
 
         .pricing-card.featured .feature-icon {
-          background:#e6eddc;
+          background:#ffffff;
         }
 
         .feature-icon svg {
@@ -1184,7 +1182,7 @@ img.ft-phone-back.phone-img2 {
         }
 
         .pricing-card.featured .feature-icon svg {
-          stroke:#2e7d9d;
+          stroke:#000;
         }
 
         .pricing-btn-wrap {
@@ -1266,4 +1264,192 @@ img.ft-phone-back.phone-img2 {
           .pricing-btn-wrap {
             padding: 4px 20px 24px;
           }
+        }
+             /* ── Section wrapper ── */
+        .ip-section {
+          background: #ffffff;
+          padding: 88px 0 100px;
+          font-family: 'DM Sans', 'Segoe UI', sans-serif;
+          border-top: 1px solid #f1f5f9;
+        }
+
+        .ip-container {
+             margin: 100px auto;
+        }
+
+        /* ── Block (investors / partners) ── */
+        .ip-block {
+          margin-bottom: 72px;
+        }
+        .ip-block:last-child {
+          margin-bottom: 0;
+        }
+
+        /* ── Section heading ── */
+        .ip-block-heading {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-bottom: 40px;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .ip-block-heading.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .ip-block-heading-line {
+          flex: 1;
+          height: 1px;
+          background: #ffffff;
+        }
+
+        .ip-block-heading-text {
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: #94a3b8;
+          white-space: nowrap;
+          padding: 0 4px;
+        }
+
+        /* ── Logo grid ── */
+        .ip-logo-grid {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          gap: 8px 0;
+        }
+
+        .ip-logo-item {
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-right: 1px solid #f1f5f9;
+    position: relative;
+        }
+
+        .ip-logo-item:last-child {
+          border-right: none;
+        }
+
+        /* On smaller screens remove border-right for last in row */
+        @media (max-width: 768px) {
+          .ip-logo-item {
+            padding: 16px 24px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .ip-logo-item {
+            padding: 14px 20px;
+          }
+        }
+
+        .ip-logo-img {
+          height: 40px;
+          width: auto;
+          max-width: 120px;
+          object-fit: contain;
+          filter: grayscale(100%);
+          opacity: 0.55;
+          transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+          display: block;
+        }
+
+        .ip-logo-item:hover .ip-logo-img {
+          filter: grayscale(0%);
+          opacity: 1;
+          transform: scale(1.06);
+        }
+
+        .ip-logo-fallback {
+          display: none;
+          font-size: 13px;
+          font-weight: 600;
+          color: #94a3b8;
+          letter-spacing: 0.03em;
+        }
+
+        /* ── Divider between sections ── */
+        .ip-section-divider {
+          height: 1px;
+          background: #f1f5f9;
+          margin-bottom: 72px;
+        }
+
+        /* ── Trusted stats strip ── */
+        .ip-stats-strip {
+          margin-top: 72px;
+          padding-top: 48px;
+          border-top: 1px solid #f1f5f9;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0;
+          flex-wrap: wrap;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+        }
+        .ip-stats-strip.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .ip-stat {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 0 56px;
+          border-right: 1px solid #e2e8f0;
+        }
+        .ip-stat:last-child {
+          border-right: none;
+        }
+
+        @media (max-width: 640px) {
+          .ip-stat {
+            padding: 16px 28px;
+            border-right: none;
+            border-bottom: 1px solid #f1f5f9;
+            width: 50%;
+          }
+          .ip-stat:nth-child(odd) {
+            border-right: 1px solid #e2e8f0;
+          }
+          .ip-stat:last-child,
+          .ip-stat:nth-last-child(2):nth-child(odd) {
+            border-bottom: none;
+          }
+        }
+
+        .ip-stat-num {
+          font-size: 28px;
+          font-weight: 800;
+          letter-spacing: -0.03em;
+          color: #0f172a;
+          line-height: 1;
+          margin-bottom: 6px;
+          background: linear-gradient(135deg, #059669, #6c63ff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .ip-stat-label {
+          font-size: 12px;
+          color: #94a3b8;
+          font-weight: 500;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+        .add-fonr-faimly{
+font-family: 'Inter';
         }

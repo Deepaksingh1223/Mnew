@@ -147,55 +147,48 @@ export default function Section9() {
   };
 
   // Updated content based on https://www.redotpay.com/
-  // Company name remains MUDRA
+  // Company name remains MUDRA - streamlined to 6 key features
   const experienceItems = [
     {
       title: 'Fast & Secure Stablecoin Transfers',
       source: 'MUDRA',
       sourceLabel: 'Transfers',
-      descr: 'Send and receive funds using secure stablecoin rails for near-instant, low-cost global payments.',
+      descr: 'Send and receive funds instantly using secure stablecoin rails with low-cost global payments.',
       year: 'Active'
     },
     {
       title: 'Multi-Currency Wallet',
       source: 'MUDRA',
       sourceLabel: 'Wallet',
-      descr: 'Manage your stablecoins and local currency all in one app, bridging crypto and everyday life.',
+      descr: 'Manage stablecoins and local currency in one app — bridging crypto and everyday life.',
       year: 'Available'
-    },
-    {
-      title: 'Convenient Stablecoin Access',
-      source: 'MUDRA',
-      sourceLabel: 'P2P',
-      descr: 'Get stablecoins easily via a peer-to-peer marketplace powered by real-time settlements.',
-      year: 'Buy & Sell'
     },
     {
       title: 'Spend Stablecoins Instantly',
       source: 'MUDRA',
       sourceLabel: 'Card',
-      descr: 'Buy coffee, shop online or pay bills with your stablecoins using our digital-first spending card.',
+      descr: 'Buy coffee, shop online or pay bills with stablecoins using our digital-first spending card.',
       year: 'Everyday'
     },
     {
       title: 'International Transfer',
       source: 'MUDRA',
       sourceLabel: 'Send',
-      descr: 'Send crypto, receive local currency. Hassle-free sending with protected transactions to recipients anywhere.',
+      descr: 'Send crypto, receive local currency. Hassle-free protected transactions to any recipient.',
       year: 'Global'
     },
     {
-      title: 'Credit (Crypto-Backed)',
+      title: 'Crypto-Backed Credit',
       source: 'MUDRA',
       sourceLabel: 'Credit',
-      descr: 'Access instant funds using your crypto as collateral, with flexible repayment options and no credit checks.',
-      year: 'Unlock Power'
+      descr: 'Access instant funds using crypto as collateral with flexible repayment and no credit checks.',
+      year: 'Unlock'
     },
     {
-      title: 'Earn & Swap',
+      title: 'Earn, Swap & P2P',
       source: 'MUDRA',
       sourceLabel: 'Grow',
-      descr: 'Put your crypto to work with daily rewards and convert assets with competitive rates and minimal friction.',
+      descr: 'Earn daily rewards, swap assets easily, or use P2P marketplace for low-cost stablecoin access.',
       year: 'Rewards'
     }
   ];
@@ -226,7 +219,7 @@ export default function Section9() {
                                 ref={headingRef}
                                 style={getAnimationStyle('heading', 0, 'fade-up')}
                               >
-                                Our Features
+                                Your Everyday Benefits
                               </h2>
                             </div>
                           </div>

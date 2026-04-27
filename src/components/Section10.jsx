@@ -5,44 +5,44 @@ import { useRef, useEffect, useState } from 'react';
 const plans = [
   {
     id: 'essentials',
-    name: 'Essentials Plan',
-    price: '$140',
-    period: 'Per Month',
+    name: 'Digital Card',
+    price: 'Free',
+    period: 'Start Now',
     featured: false,
     features: [
-      'Global Corporate Cards',
-      'Business Account And Bill Pay',
-      'Real-Time Spend Reporting',
-      'Billing In 50+ Countries',
-      'Dedicated Support For Admins',
+      'Digital-First Spending, Made Simple',
+      'Secure payments for subscriptions & travel',
+      'Tap into everyday spending globally',
+      'Shop, withdraw & manage funds easily',
+      'Multi-currency support',
     ],
   },
   {
     id: 'premium',
-    name: 'Premium Plan',
-    price: '$160',
-    period: 'Per Month',
+    name: 'Stablecoin Card',
+    price: '$0',
+    period: '+ Gas Fees',
     featured: true,
     features: [
-      'Up To 10 Team Members',
-      'Unlimited Usage',
-      'Unlimited Drive Storage',
-      'Concierge Help Center',
-      'Custom AI Brand Models',
+      'Spend stablecoins instantly anywhere',
+      'Buy coffee, shop online or pay bills',
+      'Effortless, secure global payments',
+      'P2P Marketplace for easy access',
+      'No hidden fees, full transparency',
     ],
   },
   {
     id: 'enterprise',
-    name: 'Enterprise Plan',
-    price: '$180',
-    period: 'Per Month',
+    name: 'MUDRA Ecosystem',
+    price: 'Earn',
+    period: 'Daily Rewards',
     featured: false,
     features: [
-      'Wallet management',
-      'Secure protocols',
-      'Transaction editing',
-      'Enhanced security',
-      'Advanced reporting',
+      'Access instant funds with crypto credit',
+      'Earn daily rewards on your crypto',
+      'Swap assets with competitive rates',
+      'Crypto conversions, made easy',
+      'Low-cost peer-to-peer trading',
     ],
   },
 ];
@@ -67,12 +67,12 @@ function BankCardMini({ featured }) {
       </div>
       <div style={{ fontSize: '12px', fontWeight: 800, color: '#fff', marginBottom: '4px', letterSpacing: '-0.3px' }}>$ 3,403.09</div>
       <div style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
-        <span style={{ fontSize: '8px', color: '#fff' }}>$10,000</span>
-        <span style={{ fontSize: '8px', color: '#fff' }}>Card limit</span>
+        <span style={{ fontSize: '8px', color: '#fff' }}>MUDRA</span>
+        <span style={{ fontSize: '8px', color: '#fff' }}>Crypto Card</span>
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <span style={{ fontSize: '9px', color: '#fff', fontWeight: 700 }}>Finto</span>
-        <span style={{ fontSize: '9px', color: '#fff' }}>04/25</span>
+        <span style={{ fontSize: '9px', color: '#fff', fontWeight: 700 }}>MUDRA</span>
+        <span style={{ fontSize: '9px', color: '#fff' }}>12/27</span>
       </div>
       <div style={{
         position: 'absolute', right: '-14px', bottom: '-14px',
@@ -122,10 +122,10 @@ export default function PricingSection() {
       <section className="pricing-section" ref={sectionRef}>
         {/* HEADER */}
         <div className={`pricing-header ${visible ? 'visible' : ''}`}>
-          <p className="pricing-label">Pricing Plan</p>
+          <p className="pricing-label">Our Cards</p>
           <h2 className="pricing-title">
-            Choose The Best <span className="highlight">Plans</span><br />
-            Which For You
+            Choose The Best <span className="highlight">Ways</span><br />
+            To Spend Crypto
           </h2>
         </div>
 
@@ -170,12 +170,13 @@ export default function PricingSection() {
 
               {/* BUTTON */}
               <div className="pricing-btn-wrap">
-<a class="btn-anim btn btn-anim btn-default btn-outline slide-right-up w-100" aria-label="Portfolio" href="/portfolio">
-<span class="btn-caption"><div class="btn-anim__block"> Get Started</div>
-<div class="btn-anim__block" aria-hidden="true"> Get Started</div>
-</span><i class="ph-bold ph-arrow-up-right"></i></a>
-
-                
+                <a className="btn-anim btn btn-anim btn-default btn-outline slide-right-up w-100" aria-label="Get MUDRA Card" href="/get-card">
+                  <span className="btn-caption">
+                    <div className="btn-anim__block">Get Card</div>
+                    <div className="btn-anim__block" aria-hidden="true">Get Card</div>
+                  </span>
+                  <i className="ph-bold ph-arrow-up-right"></i>
+                </a>
               </div>
             </div>
           ))}

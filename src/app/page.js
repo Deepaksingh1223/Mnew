@@ -14,6 +14,7 @@ import Section10 from "../components/Section10";
 import Section12 from "../components/Section12";
 import Section13 from "../components/Section13";
 import Section14 from "../components/Section14";
+import InvestorsSection from "..//components/InvestorsSection";
 
 
 export default function Home() {
@@ -34,7 +35,10 @@ export default function Home() {
         <Section10 />
         {/* <Section11 /> */}
         <Section12 /> 
+            <InvestorsSection/>
         <Section13 />
+
+    
         <Section14 /> 
       </main> 
     </div>
