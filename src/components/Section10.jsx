@@ -170,7 +170,7 @@ export default function PricingSection() {
 
               {/* BUTTON */}
               <div className="pricing-btn-wrap">
-                <a className="btn-anim btn btn-anim btn-default btn-outline slide-right-up w-100" aria-label="Get MUDRA Card" href="/get-card">
+                <a className="btn-anim btn btn-anim btn-default btn-outline slide-right-up w-100" aria-label="Get MUDRA Card" href="#">
                   <span className="btn-caption">
                     <div className="btn-anim__block">Get Card</div>
                     <div className="btn-anim__block" aria-hidden="true">Get Card</div>

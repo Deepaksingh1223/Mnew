@@ -969,7 +969,7 @@ img.ft-phone-back.phone-img2 {
           }
 
           .s5-img-wrap {
-            height: 200px;
+            height: auto;
           }
         }
 
@@ -1426,6 +1426,11 @@ img.ft-phone-back.phone-img2 {
           .ip-stat:last-child,
           .ip-stat:nth-last-child(2):nth-child(odd) {
             border-bottom: none;
+          } .s5-left-content h3 {
+            
+    font-size: 40px;
+          }.mxd-grid-item{
+                padding: 0;
           }
         }
 
@@ -1453,3 +1458,106 @@ img.ft-phone-back.phone-img2 {
         .add-fonr-faimly{
 font-family: 'Inter';
         }
+          @media (max-width: 900px) {
+.ip-section {
+    background: #ffffff;
+    padding: 15px 0 80px;
+    font-family: 'DM Sans', 'Segoe UI', sans-serif;
+    border-top: 1px solid #f1f5f9;
+}
+.ip-container {
+    margin: 100px auto;
+    margin-bottom: 0px;
+}.mxd-promo__images{
+  display: block;
+}.mxd-promo__content {
+    flex-direction: column;
+    gap: 6rem;
+    margin: 12.2rem 0 0rem;
+    display: flex;
+    position: relative;
+}
+}
+/* Remove all default Swiper margins and padding */
+.ip-logo-slider {
+  width: 100%;
+  overflow: visible;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.ip-logo-slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+  align-items: center !important;
+}
+
+.ip-logo-slider .swiper-slide {
+  width: auto !important;
+  height: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Logo item container */
+.ip-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  min-height: 100px;
+}
+
+/* Image styling */
+.ip-logo-img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Fallback text styling */
+.ip-logo-fallback {
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+
+/* Hover effect */
+.ip-logo-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .ip-logo-item {
+    padding: 12px 20px;
+    min-width: 120px;
+    min-height: 70px;
+  }
+  
+  .ip-logo-img {
+    max-height: 35px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .ip-logo-item {
+    padding: 15px 25px;
+    min-width: 130px;
+    min-height: 80px;
+  }
+  
+  .ip-logo-img {
+    max-height: 40px;
+  }
+}

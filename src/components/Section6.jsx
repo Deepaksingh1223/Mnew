@@ -169,7 +169,7 @@ export default function Section6() {
                       </p>
                     </div>
                     <div className="mxd-stats-cards__btngroup">
-                      <a className="btn-anim btn btn-anim btn-default btn-outline opposite slide-right-up" aria-label="Investment Plans" href="/investment-plans">
+                      <a className="btn-anim btn btn-anim btn-default btn-outline opposite slide-right-up" aria-label="Investment Plans" href="#">
                         <span className="btn-caption">
                           <div className="btn-anim__block">Start Spending</div>
                           <div className="btn-anim__block" aria-hidden="true">Start Spending</div>
@@ -231,7 +231,7 @@ export default function Section6() {
                       </p>
                     </div>
                     <div className="mxd-stats-cards__btngroup">
-                      <a className="btn-anim btn btn-anim btn-default btn-outline slide-right-down" aria-label="Start Investment" href="/contact">
+                      <a className="btn-anim btn btn-anim btn-default btn-outline slide-right-down" aria-label="Start Investment" href="#">
                         <span className="btn-caption">
                           <div className="btn-anim__block">Get Your Card</div>
                           <div className="btn-anim__block" aria-hidden="true">Get Your Card</div>
@@ -259,7 +259,7 @@ export default function Section6() {
                       </p>
                     </div>
                     <div className="mxd-stats-cards__btngroup">
-                      <a className="btn-anim btn btn-anim btn-default btn-outline slide-right-up" aria-label="Portfolio" href="/portfolio">
+                      <a className="btn-anim btn btn-anim btn-default btn-outline slide-right-up" aria-label="Portfolio" href="#">
                         <span className="btn-caption">
                           <div className="btn-anim__block">Learn More</div>
                           <div className="btn-anim__block" aria-hidden="true">Learn More</div>

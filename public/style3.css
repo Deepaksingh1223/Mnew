@@ -16661,8 +16661,7 @@ form textarea:required:valid {
     }
 }
 
-.swiper-slide {
-    filter: blur(4px);
+.swiper-slide { 
     width: 100%;
     -webkit-transition: -webkit-filter var(--_animspeed-slow) var(--_animbezier);
     transition: -webkit-filter var(--_animspeed-slow) var(--_animbezier);

@@ -160,7 +160,7 @@ export default function Section2() {
                                   id="button"
                                   className="btn-anim btn btn-anim btn-default btn-outline slide-right-up text-animate"
                                   aria-label="All Works"
-                                  href="/works-simple"
+                                  href="#"
                                   style={{
                                     opacity: visibleTexts.button ? 1 : 0,
                                     transform: visibleTexts.button 
@@ -231,7 +231,7 @@ export default function Section2() {
                         >
                           <Link
                             className="mxd-project-item__media block group"
-                            href="/project-details"
+                            href="#"
                           >
                             <div
                               className={`mxd-project-item__preview preview-image-${project.id} relative overflow-hidden rounded-xl`}
@@ -273,7 +273,7 @@ export default function Section2() {
                             <div className="mxd-project-item__name">
                               <Link
                                 className="block group"
-                                href="/project-details"
+                                href="#"
                               >
                                 <span className="inline-block transition-all duration-300 group-hover:translate-x-1">
                                   {project.title}

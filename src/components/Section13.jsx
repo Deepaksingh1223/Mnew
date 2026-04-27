@@ -162,7 +162,7 @@ export default function Section13() {
                       transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s'
                     }}
                   >
-                    <a className="btn-anim btn btn-default btn-outline slide-right-up" aria-label="All Articles" href="/blog-standard">
+                    <a className="btn-anim btn btn-default btn-outline slide-right-up" aria-label="All Articles" href="#">
                       <span className="btn-caption">
                         <div className="btn-anim__block">View All</div>
                         <div className="btn-anim__block" aria-hidden="true">View All</div>
@@ -192,7 +192,7 @@ export default function Section13() {
                       transition: `all 1s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.15}s`
                     }}
                   >
-                    <a className="mxd-blog-preview__media" href="/blog-article">
+                    <a className="mxd-blog-preview__media" href="#">
                       <div 
                         className={`mxd-blog-preview__image ${item.image} parallax-img-small`}
                         style={{
@@ -208,7 +208,7 @@ export default function Section13() {
                       </div>
                     </a>
                     <div className="mxd-blog-preview__data">
-                      <a className="anim-uni-in-up" href="/blog-article">{item.title}</a>
+                      <a className="anim-uni-in-up" href="#">{item.title}</a>
                     </div>
                   </div>
                 ))}
