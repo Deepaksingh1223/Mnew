@@ -5747,14 +5747,14 @@ form textarea:required:valid {
     gap: 3rem;
     width: 100%;
     max-width: 1920px;
-    padding: 0 3rem;
+    padding: 3rem;
     display: flex;
     position: relative
 }
 
 @media only screen and (min-width: 768px) {
     .mxd-footer__footer-blocks {
-        padding: 0 6rem
+        padding: 3rem 6rem
     }
 }
 
@@ -5766,7 +5766,7 @@ form textarea:required:valid {
 
 @media only screen and (min-width: 1600px) {
     .mxd-footer__footer-blocks {
-        padding: 0 9rem
+        padding: 3rem 9rem
     }
 }
 
