@@ -485,7 +485,7 @@ export default function Header() {
                               loop
                               muted
                               playsInline
-                              poster="/img/menu-video-poster.jpg"
+                              poster="/img/works/MudraCrad1.mp4"
                               style={{
                                 width: '100%',
                                 height: 'auto',
@@ -500,9 +500,9 @@ export default function Header() {
                                 setVideoError(false);
                               }}
                             >
-                              <source src="/img/menu-video.mp4" type="video/mp4" />
-                              <source src="/menu-video.mp4" type="video/mp4" />
-                              <source src="img/menu-video.mp4" type="video/mp4" />
+                              <source src="/img/works/MudraCrad1.mp4" type="video/mp4" />
+                              <source src="/img/works/MudraCrad1.mp4" type="video/mp4" />
+                              <source src="/img/works/MudraCrad1.mp4" type="video/mp4" />
                             </video>
                           ) : (
                             <div style={{
@@ -537,9 +537,9 @@ export default function Header() {
                     transition={{ delay: 0.4 }}
                   >
                     <p className="t-xsmall">
-                      Made with <i className="ph-fill ph-heart t-additional" /> by
-                      <a className="no-effect" href="#" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                        ib themes
+                      Made with <i className="ph-fill ph-heart t-additional" />  
+                      <a className="no-effect" href="/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+                    BY MUDRA
                       </a>
                     </p>
                     <p className="t-xsmall">
