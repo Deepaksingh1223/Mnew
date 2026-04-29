@@ -250,7 +250,7 @@ export default function CardSection1() {
           border: none; border-radius: 50px; padding: 11px 18px;
           font-size: 12.5px; font-weight: 600; cursor: pointer;
           display: flex; align-items: center; justify-content: center; gap: 6px;
-          font-family: inherit;
+          
           transition: background 0.2s, transform 0.15s;
         }
         .btn-apply:hover { background: #2a3a6a; transform: scale(1.02); }

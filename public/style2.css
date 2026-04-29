@@ -2678,8 +2678,7 @@ img.ft-phone-back.phone-img2 {
 }
 .width-auto{
   width: auto !important;
-}
-
+} 
 @media(max-width:991px) {
   .banner-bg {
     position: absolute;
