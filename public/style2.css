@@ -2691,14 +2691,8 @@ img.ft-phone-back.phone-img2 {
 }
 
 @media(max-width:991px) {
-  .banner-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url(Mudra-card-videos/card01.png);
-    background-size: contain;
-    background-position: top;
-    background-repeat: no-repeat;
-    transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+  .banner-bg{
+        background-size: cover;
   }
 
   .banner-heading {
