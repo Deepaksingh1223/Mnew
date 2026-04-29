@@ -7,70 +7,70 @@ const cards = [
     id: 1,
     tag: "Proprietary",
     tagClass: "tag-prop",
-    title: "Axis MyZone Mudra Credit Card",
-    img: "https://www.rupay.co.in/uploads/axis_myzone4_08f3070f4a.webp",
+    title: "MUDRA World Cashback Card",
+    img: "/img/new-theme-img/service-image-1.png",
     features: [
-      "Complimentary SonyLIV Annual Premium Subscription worth ₹999 on first spends within 30 days of card issuance*",
-      "Flat ₹120 off* on Swiggy food delivery. Applicable 2 times a month, min. txn of ₹500",
-      "Buy One Get One Free* on Paytm Movies. Applicable once a month, max discount ₹200",
+      "Unlimited 1.5% cashback on all online & offline spends with MUDRA Network",
+      "Pay bills, shop, or travel – earn on every transaction",
+      "Zero forex markup on international online purchases",
     ],
   },
   {
     id: 2,
     tag: null,
-    title: "Kotak Cashback+ Mudra Credit Card",
-    img: "https://www.rupay.co.in/uploads/kotak_cashback_plus_8dd5b07ae2.webp",
+    title: "MUDRA NCMC Transit Card",
+    img: "/img/new-theme-img/service-image-1.png",
     features: [
-      "5% cashback on online food deliveries, groceries and entertainment",
-      "3% cashback on all fuel spends + 1% fuel surcharge waiver",
-      "0.5% unlimited cashback on other eligible spends",
+      "Tap & pay for metro, bus, and parking across India",
+      "Automatic reload from your MUDRA wallet for seamless travel",
+      "Earn reward points on every transit & fuel spend",
     ],
   },
   {
     id: 3,
     tag: "Proprietary",
     tagClass: "tag-prop",
-    title: "BOBCARD Premier Mudra Credit Card",
-    img: "https://www.rupay.co.in/uploads/bobcard_premier_2c94a75e9b.webp",
+    title: "MUDRA Sterling Credit Card",
+    img: "/img/new-theme-img/service-image-1.png",
     features: [
-      "Lifetime Free Offer till 31st March 2026",
-      "No Joining Fee. No Annual Fees.",
-      "5X Reward Points on every ₹100 Spent on Travel, Dining & International Spends",
+      "Designed for global citizens – spend in INR, settle in any currency",
+      "Complimentary international airport lounge access (2 per quarter)",
+      "Zero lost card liability and 24/7 global concierge",
     ],
   },
   {
     id: 4,
     tag: null,
-    title: "HSBC Mudra Cashback Credit Card",
-    img: "https://www.rupay.co.in/uploads/hsbc_cashback_rupay_d7a1b3c9e5.webp",
+    title: "MUDRA Digital UPI Card",
+    img: "/img/new-theme-img/service-image-1.png",
     features: [
-      "1.5% cashback on all online spends with no upper limit",
-      "Complimentary airport lounge access in India",
-      "Zero lost card liability and zero fuel surcharge",
+      "Link directly to your MUDRA UPI ID – scan & pay anywhere",
+      "Get 2% cashback as MUDRA coins on all UPI transactions",
+      "No annual fee – a truly digital-first spending companion",
     ],
   },
   {
     id: 5,
     tag: "Proprietary",
     tagClass: "tag-prop",
-    title: "IndusInd Platinum Mudra Credit Card",
-    img: "https://www.rupay.co.in/uploads/indusind_platinum_rupay_6f2c4b8a91.webp",
+    title: "MUDRA Select Rewards Card",
+    img: "/img/new-theme-img/service-image-1.png",
     features: [
-      "Earn 1 Reward Point per ₹150 spent on all retail purchases",
-      "Zero joining fee and zero annual fee for lifetime",
-      "Complimentary personal accident cover worth ₹2.5 lakh",
+      "Earn up to 5x rewards on dining, entertainment, and subscriptions",
+      "Redeem points instantly for flights, shopping, or statement credit",
+      "Milestone benefits – get a bonus ₹2,000 voucher every quarter",
     ],
   },
   {
     id: 6,
     tag: "Select",
     tagClass: "tag-sel",
-    title: "IRCTC RBL Bank Mudra Credit Card",
-    img: "https://www.rupay.co.in/uploads/irctc_rbl_rupay_select_3a9d7f2e14.webp",
+    title: "MUDRA Business Karobar Card",
+    img: "/img/new-theme-img/service-image-1.png",
     features: [
-      "Earn up to 10% value back on railway ticket bookings via IRCTC",
-      "2 free railway lounge visits per quarter at select stations",
-      "Zero transaction fee on IRCTC ticket bookings",
+      "Manage team expenses with 10 free virtual cards for employees",
+      "GST invoice generation and automated expense tracking",
+      "Higher spend limits and 45-day interest-free credit period",
     ],
   },
 ];
@@ -206,8 +206,7 @@ export default function CardSection1() {
           width: 100%; max-width: 268px;
           aspect-ratio: 16 / 10;
           border-radius: 13px;
-          object-fit: cover;
-          box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+          object-fit: cover; 
           display: block;
           transition: transform 0.3s ease;
         }
@@ -271,10 +270,9 @@ export default function CardSection1() {
             <span className="rupay-badge-dot" />
             Mudra Network
           </div>
-          <h2 className="section-title">Mudra Credit Cards</h2>
+          <h2 className="section-title">Spend Anywhere with MUDRA</h2>
           <p className="section-subtitle">
-            India's own payment network — choose from a curated range of premium
-            credit cards tailored to your lifestyle.
+            Where India's own payment network meets real life. Spend, travel, and pay bills seamlessly with stable, secure, and rewarding credit cards.
           </p>
         </div>
 
