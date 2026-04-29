@@ -180,7 +180,7 @@ export default function HeroBanner() {
             
             <div className="ft-card1-img">
               <img
-                src={`${BASE}/service/service-image-1.png`}
+                src="/img/new-theme-img/service-image-1.png"
                 alt="Credit Card"
               />
             </div>
@@ -190,7 +190,7 @@ export default function HeroBanner() {
 
           {/* Card 2 — Transfers (green, featured) */}
           <motion.div
-            className="ft-card ft-card-green"
+            className="ft-card ft-card-green pb-0"
             variants={fadeUp(0.38)}
             initial="hidden"
             animate={controls}
@@ -204,13 +204,9 @@ export default function HeroBanner() {
             </p>
             <div className="ft-card2-visual">
               <img
-                src={`${BASE}/service/service-image-2.png`}
-                alt="Transfer illustration"  className="banner-men-img"
-              />
-              <div className="ft-balance">
-                <p className="ft-balance-label">Total Balance</p>
-                <p className="ft-balance-amount">$9,647.00</p>
-              </div>
+              src="/img/new-theme-img/service-image-2.png"
+                alt="Transfer illustration"  className="banner-men-img w-auto-add"
+              /> 
             </div>
           </motion.div>
 

@@ -2187,7 +2187,7 @@ p.t-semibold {
     }
 
     p.t-large {
-        font-size: 3rem
+        font-size: 2rem
     }
 
     p.t-small {
@@ -4668,7 +4668,7 @@ form textarea:required:valid {
 }
 
 .bg-accent {
-    background-color: #72c229
+    background-color:#0C3A30
 }
 
 .bg-additional {
@@ -14544,7 +14544,7 @@ form textarea:required:valid {
 
     .mxd-stats-cards__image.mxd-stats-cards-image-3 {
         width: 450px;
-        inset: auto -4rem 0 auto
+        inset:auto 4rem 0 auto
     }
 
     .mxd-stats-cards__image.mxd-stats-cards-image-4 {
@@ -14571,10 +14571,10 @@ form textarea:required:valid {
     }
 
     .mxd-stats-cards__image.mxd-stats-cards-image-2 {
-        width: 620px;
-        padding-top: 0;
-        top: 4rem;
-        bottom: auto
+       padding-top: 0;
+        top: 18rem;
+        bottom: auto;
+        left: 5rem;
     }
 
     .mxd-stats-cards__image.mxd-stats-cards-image-3 {
@@ -14583,7 +14583,9 @@ form textarea:required:valid {
     }
 
     .mxd-stats-cards__image.mxd-stats-cards-image-4 {
-        width: 400px
+              width: 500px;
+        left: 200px;
+        top: 120px;
     }
 }
 
