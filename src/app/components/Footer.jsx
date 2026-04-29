@@ -119,7 +119,7 @@ export default function Footer() {
           <div className="footer-blocks__card fullheight-card">
             <div className="footer-blocks__nav">
               <ul className="footer-nav">
-                {['Home', 'About us', 'Works', 'Services', 'Insights', 'Contact'].map((item, idx) => (
+                {['Home', 'About us', 'Community', 'Card', 'Contact'].map((item, idx) => (
                   <li 
                     key={idx}
                     className="footer-nav__item anim-uni-in-up" 
@@ -130,7 +130,8 @@ export default function Footer() {
                       transition: `all 1.2s cubic-bezier(0.4, 0, 0.2, 1) ${idx * 0.12}s`,
                     }}
                   >
-                    <a className="btn-anim footer-nav__link btn-anim" aria-label={item} href={idx === 0 ? "/" : idx === 1 ? "/about-us" : idx === 2 ? "#" : idx === 3 ? "#" : idx === 4 ? "#" : "#"}>
+                    <a className="btn-anim footer-nav__link btn-anim" aria-label={item} href={idx === 0 ? "/" : idx === 1 ? 
+                      "/about" : idx === 2 ? "/community" : idx === 3 ? "/card" : idx === 4 ? "/Contact" : "/"}>
                       <span className="btn-caption">
                         <div className="btn-anim__block">{item}</div>
                         <div className="btn-anim__block" aria-hidden="true">{item}</div>
@@ -158,15 +159,15 @@ export default function Footer() {
             >
               <a className="btn-anim btn btn-line-xsmall btn-muted slide-right anim-no-delay" aria-label="Privacy Policy" href="#">
                 <span className="btn-caption">
-                  <div className="btn-anim__block">Privacy Policy</div>
-                  <div className="btn-anim__block" aria-hidden="true">Privacy Policy</div>
+                  <div className="btn-anim__block">Login</div>  
+                  <div className="btn-anim__block" aria-hidden="true">Login</div>
                 </span>
                 <i className="ph ph-arrow-right"></i>
               </a>
               <a className="btn-anim btn btn-line-xsmall btn-muted slide-right anim-no-delay" aria-label="Terms &amp; conditions" href="#">
                 <span className="btn-caption">
-                  <div className="btn-anim__block">Terms &amp;conditions</div>
-                  <div className="btn-anim__block" aria-hidden="true">Terms &amp;conditions</div>
+                  <div className="btn-anim__block">Register</div>
+                  <div className="btn-anim__block" aria-hidden="true">Register</div>
                 </span>
                 <i className="ph ph-arrow-right"></i>
               </a>
@@ -198,21 +199,7 @@ export default function Footer() {
               <a href="mailto:hello@mudrapro.com?subject=Message%20from%20your%20site">hello@mudrapro.com</a>
             </p>
           </div>
-          <div className="footer-blocks__card">
-            <p 
-              className="mxd-point-subtitle anim-uni-in-up"
-              style={{
-                opacity: visibleElements['card-1'] ? 1 : 0,
-                transform: visibleElements['card-1'] ? 'translateY(0)' : 'translateY(80px)',
-                transition: `all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.45s`,
-              }}
-            >
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" fill="currentColor">
-                <path fill="currentColor" d="M19.6,9.6c0,0-3,0-4,0c-0.4,0-1.8-0.2-1.8-0.2c-0.6-0.1-1.1-0.2-1.6-0.6c-0.5-0.3-0.9-0.8-1.2-1.2 c-0.3-0.4-0.4-0.9-0.5-1.4c0,0-0.1-1.1-0.2-1.5c-0.1-1.1,0-4.4,0-4.4C10.4,0.2,10.2,0,10,0S9.6,0.2,9.6,0.4c0,0,0.1,3.3,0,4.4 c0,0.4-0.2,1.5-0.2,1.5C9.4,6.7,9.2,7.2,9,7.6C8.7,8.1,8.2,8.5,7.8,8.9c-0.5,0.3-1,0.5-1.6,0.6c0,0-1.2,0.1-1.7,0.2 c-1,0.1-4.2,0-4.2,0C0.2,9.6,0,9.8,0,10c0,0.2,0.2,0.4,0.4,0.4c0,0,3.1-0.1,4.2,0c0.4,0,1.7,0.2,1.7,0.2c0.6,0.1,1.1,0.2,1.6,0.6 c0.4,0.3,0.8,0.7,1.1,1.1c0.3,0.5,0.5,1,0.6,1.6c0,0,0.1,1.3,0.2,1.7c0,1,0,4.1,0,4.1c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4 c0,0,0-3.1,0-4.1c0-0.4,0.2-1.7,0.2-1.7c0.1-0.6,0.2-1.1,0.6-1.6c0.3-0.4,0.7-0.8,1.1-1.1c0.5-0.3,1-0.5,1.6-0.6 c0,0,1.3-0.1,1.8-0.2c1,0,4,0,4,0c0.2,0,0.4-0.2,0.4-0.4C20,9.8,19.8,9.6,19.6,9.6L19.6,9.6z"></path>
-              </svg>
-              <a href="tel:+12127089400">+1 212-708-9400</a>
-            </p>
-          </div>
+         
           <div className="footer-blocks__card fill-card notify">
             <div 
               className="footer-blocks__title anim-uni-in-up"
@@ -294,7 +281,7 @@ export default function Footer() {
                       onMouseLeave={() => setHoveredSocial(null)}
                     >
                       <a 
-                        href={social === 'Dribbble' ? "#" : social === 'Behance' ? "#" : social === 'Instagram' ? "#" : social === 'Github' ? "#" : social === 'Codepen' ? "#" : "#"} 
+                        href={social === 'Dribbble' ? "/" : social === 'Behance' ? "/" : social === 'Instagram' ? "/" : social === 'Github' ? "/" : social === 'Codepen' ? "#" : "/"} 
                         className="footer-socials__link" 
                         target="_blank" 
                         rel="noopener noreferrer"

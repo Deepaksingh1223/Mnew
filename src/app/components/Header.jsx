@@ -451,7 +451,7 @@ export default function Header() {
                                   <span className="btn-caption">
                                     <div className="btn-anim__block">
                                       <span className="btn-anim__letter">C</span>
-                                      <span className="btn-anim__letter">A</span>
+                                      <span className="btn-anim__letter">O</span>
                                       <span className="btn-anim__letter">N</span>
                                       <span className="btn-anim__letter">T</span>
                                       <span className="btn-anim__letter">A</span>
@@ -460,7 +460,7 @@ export default function Header() {
                                     </div>
                                     <div className="btn-anim__block" aria-hidden="true">
                                       <span className="btn-anim__letter">C</span>
-                                      <span className="btn-anim__letter">A</span>
+                                      <span className="btn-anim__letter">O</span>
                                       <span className="btn-anim__letter">N</span>
                                       <span className="btn-anim__letter">T</span>
                                       <span className="btn-anim__letter">A</span>
