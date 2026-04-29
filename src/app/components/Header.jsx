@@ -443,6 +443,40 @@ export default function Header() {
                             </Link>
                           </li>
 
+
+                          <li className="main-menu__item fade-in-up-elm" style={{ transitionDelay: '2s' }}>
+                            <Link href="/Contact" onClick={closeMenu}>
+                              <div className="main-menu__toggle">
+                                <span className="btn-anim main-menu__link btn btn-anim" aria-label="Home">
+                                  <span className="btn-caption">
+                                    <div className="btn-anim__block">
+                                      <span className="btn-anim__letter">C</span>
+                                      <span className="btn-anim__letter">A</span>
+                                      <span className="btn-anim__letter">N</span>
+                                      <span className="btn-anim__letter">T</span>
+                                      <span className="btn-anim__letter">A</span>
+                                      <span className="btn-anim__letter">C</span>
+                                      <span className="btn-anim__letter">T</span>
+                                    </div>
+                                    <div className="btn-anim__block" aria-hidden="true">
+                                      <span className="btn-anim__letter">C</span>
+                                      <span className="btn-anim__letter">A</span>
+                                      <span className="btn-anim__letter">N</span>
+                                      <span className="btn-anim__letter">T</span>
+                                      <span className="btn-anim__letter">A</span>
+                                      <span className="btn-anim__letter">C</span>
+                                      <span className="btn-anim__letter">T</span>
+                                    </div>
+                                  </span>
+                                </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                  <path d="M19.6,9.6h-3.9c-.4,0-1.8-.2-1.8-.2-.6,0-1.1-.2-1.6-.6-.5-.3-.9-.8-1.2-1.2-.3-.4-.4-.9-.5-1.4,0,0,0-1.1-.2-1.5V.4c0-.2-.2-.4-.4-.4s-.4.2-.4.4v4.4c0,.4-.2,1.5-.2,1.5,0,.5-.2,1-.5,1.4-.3.5-.7.9-1.2,1.2s-1,.5-1.6.6c0,0-1.2,0-1.7.2H.4c-.2,0-.4.2-.4.4s.2.4.4.4h4.1c.4,0,1.7.2,1.7.2.6,0,1.1.2,1.6.6.4.3.8.7,1.1,1.1.3.5.5,1,.6,1.6,0,0,0,1.3.2,1.7v4.1c0,.2.2.4.4.4s.4-.2.4-.4v-4.1c0-.4.2-1.7.2-1.7,0-.6.2-1.1.6-1.6.3-.4.7-.8,1.1-1.1.5-.3,1-.5,1.6-.6,0,0,1.3,0,1.8-.2h3.9c.2,0,.4-.2.4-.4s-.2-.4-.4-.4Z" />
+                                </svg>
+                              </div>
+                            </Link>
+                          </li>
+
+
                         </ul>
                       </nav>
                     </div>
@@ -537,9 +571,9 @@ export default function Header() {
                     transition={{ delay: 0.4 }}
                   >
                     <p className="t-xsmall">
-                      Made with <i className="ph-fill ph-heart t-additional" />  
+                      Made with <i className="ph-fill ph-heart t-additional" />
                       <a className="no-effect" href="/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                    BY MUDRA
+                        BY MUDRA
                       </a>
                     </p>
                     <p className="t-xsmall">
