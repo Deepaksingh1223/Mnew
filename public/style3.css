@@ -18473,8 +18473,9 @@ button.mxd-color-switcher {
     alignItems: center;
     margin-top: 50px;
 }
-
+ 
 @media(max-width:991px) {
+ 
 .main-inside{
     padding: 0px;
 }
