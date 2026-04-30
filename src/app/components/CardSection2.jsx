@@ -7,10 +7,10 @@ const cards = [
     id: 1,
     tag: "Proprietary",
     tagClass: "tag-prop",
-    title: "MUDRA World Cashback Card",
+    title: "MDR Futuristics World Cashback Card",
     img: "/img/new-theme-img/service-image-1.png",
     features: [
-      "Unlimited 1.5% cashback on all online & offline spends with MUDRA Network",
+      "Unlimited 1.5% cashback on all online & offline spends with MDR Futuristics Network",
       "Pay bills, shop, or travel – earn on every transaction",
       "Zero forex markup on international online purchases",
     ],
@@ -18,11 +18,11 @@ const cards = [
   {
     id: 2,
     tag: null,
-    title: "MUDRA NCMC Transit Card",
+    title: "MDR Futuristics NCMC Transit Card",
     img: "/img/new-theme-img/service-image-1.png",
     features: [
       "Tap & pay for metro, bus, and parking across India",
-      "Automatic reload from your MUDRA wallet for seamless travel",
+      "Automatic reload from your MDR Futuristics wallet for seamless travel",
       "Earn reward points on every transit & fuel spend",
     ],
   }  
@@ -221,9 +221,9 @@ export default function CardSection1() {
         <div className="section-header">
           <div className="rupay-badge">
             <span className="rupay-badge-dot" />
-            Mudra Network
+            MDR Futuristics Network
           </div>
-          <h2 className="section-title">Spend Anywhere with MUDRA</h2>
+          <h2 className="section-title">Spend Anywhere with MDR Futuristics </h2>
           <p className="section-subtitle">
             Where India's own payment network meets real life. Spend, travel, and pay bills seamlessly with stable, secure, and rewarding credit cards.
           </p>

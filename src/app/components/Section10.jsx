@@ -33,7 +33,7 @@ const plans = [
   },
   {
     id: 'enterprise',
-    name: 'MUDRA Ecosystem',
+    name: 'MDR Futuristics Ecosystem',
     price: 'Earn',
     period: 'Daily Rewards',
     featured: false,
@@ -67,11 +67,11 @@ function BankCardMini({ featured }) {
       </div>
       <div style={{ fontSize: '12px', fontWeight: 800, color: '#fff', marginBottom: '4px', letterSpacing: '-0.3px' }}>$ 3,403.09</div>
       <div style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
-        <span style={{ fontSize: '8px', color: '#fff' }}>MUDRA</span>
+        <span style={{ fontSize: '8px', color: '#fff' }}>MDR Futuristics </span>
         <span style={{ fontSize: '8px', color: '#fff' }}>Crypto Card</span>
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <span style={{ fontSize: '9px', color: '#fff', fontWeight: 700 }}>MUDRA</span>
+        <span style={{ fontSize: '9px', color: '#fff', fontWeight: 700 }}>MDR Futuristics </span>
         <span style={{ fontSize: '9px', color: '#fff' }}>12/27</span>
       </div>
       <div style={{
@@ -170,7 +170,7 @@ export default function PricingSection() {
 
               {/* BUTTON */}
               <div className="pricing-btn-wrap">
-                <a className="btn-anim btn btn-anim btn-default btn-outline slide-right-up w-100" aria-label="Get MUDRA Card" href="#">
+                <a className="btn-anim btn btn-anim btn-default btn-outline slide-right-up w-100" aria-label="Get MDR Futuristics Card" href="#">
                   <span className="btn-caption">
                     <div className="btn-anim__block">Get Card</div>
                     <div className="btn-anim__block" aria-hidden="true">Get Card</div>

@@ -42,7 +42,7 @@ export default function VisionMissionSection() {
             
               <h2 className="vm-title-one">Global Payouts, Powered by Stablecoins</h2>
               <p className="vm-text">
-            Our proprietary payout infrastructure enables users to send and receive funds worldwide through secure, stablecoin-powered rails. Now live in Brazil, Mudra will soon expand to new global corridors. Making fast, reliable payouts accessible to more markets than ever.
+            Our proprietary payout infrastructure enables users to send and receive funds worldwide through secure, stablecoin-powered rails. Now live in Brazil, MDR Futuristics will soon expand to new global corridors. Making fast, reliable payouts accessible to more markets than ever.
               </p>
               <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="#">
                 <span class="btn-caption">
@@ -121,7 +121,7 @@ export default function VisionMissionSection() {
               
               <h2 className="vm-title-one">Global Stablecoin Access From Your Fingertips</h2>
               <p className="vm-text">
-             Mudra bridges traditional finance and digital assets, enabling anyone to access and use stablecoins. Our multi-currency accounts and P2P Marketplace enables users without traditional finances to access stablecoins directly - expanding global access for all.
+             MDR Futuristics bridges traditional finance and digital assets, enabling anyone to access and use stablecoins. Our multi-currency accounts and P2P Marketplace enables users without traditional finances to access stablecoins directly - expanding global access for all.
               </p>
               <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="#">
                 <span class="btn-caption">
@@ -162,7 +162,7 @@ export default function VisionMissionSection() {
               
               <h2 className="vm-title-one">Global Stablecoin Access From Your Fingertips</h2>
               <p className="vm-text">
-             Mudra bridges traditional finance and digital assets, enabling anyone to access and use stablecoins. Our multi-currency accounts and P2P Marketplace enables users without traditional finances to access stablecoins directly - expanding global access for all.
+             MDR Futuristics bridges traditional finance and digital assets, enabling anyone to access and use stablecoins. Our multi-currency accounts and P2P Marketplace enables users without traditional finances to access stablecoins directly - expanding global access for all.
               </p>
               <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="#">
                 <span class="btn-caption">

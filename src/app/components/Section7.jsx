@@ -8,8 +8,8 @@ const testimonialsData = [
   {
     id: 1,
     avatar: "img/men.webp",
-    logo: "img/mudra-logo.png",
-    text: "MUDRA's crypto card is my go to for any payment online. The stablecoin integration makes global transactions seamless.",
+    logo: "img/MDR Futuristics -logo.png",
+    text: "MDR Futuristics  crypto card is my go to for any payment online. The stablecoin integration makes global transactions seamless.",
     name: "Rajiv Sharma",
     role: "Verified User on",
     company: "Trustpilot",
@@ -18,8 +18,8 @@ const testimonialsData = [
   {
     id: 2,
     avatar: "img/woman.webp",
-    logo: "img/mudra-logo.png",
-    text: "The experience with MUDRA is really amazing. From fueling up my ride to late night online hauls, it's so smooth!",
+    logo: "img/MDR Futuristics -logo.png",
+    text: "The experience with MDR Futuristics is really amazing. From fueling up my ride to late night online hauls, it's so smooth!",
     name: "Priya Kaur",
     role: "Community Member on",
     company: "X",
@@ -28,8 +28,8 @@ const testimonialsData = [
   {
     id: 3,
     avatar: "img/men.webp",
-    logo: "img/mudra-logo.png",
-    text: "I've tried several crypto cards over the years and MUDRA is hands down the BEST one I've ever used!",
+    logo: "img/MDR Futuristics -logo.png",
+    text: "I've tried several crypto cards over the years and MDR Futuristics is hands down the BEST one I've ever used!",
     name: "Amit Singh",
     role: "Top Reviewer on",
     company: "Trustpilot",
@@ -38,11 +38,11 @@ const testimonialsData = [
   {
     id: 4,
     avatar: "img/woman.webp",
-    logo: "img/mudra-logo.png",
-    text: "MUDRA turned an ordinary day into something unforgettable. Their customer service resolves issues within reasonable time.",
+    logo: "img/MDR Futuristics -logo.png",
+    text: "MDR Futuristics turned an ordinary day into something unforgettable. Their customer service resolves issues within reasonable time.",
     name: "Neha Verma",
     role: "Prize Winner & User of",
-    company: "MUDRA Card",
+    company: "MDR Futuristics Card",
     link: "#0",
   },
 ];
@@ -157,7 +157,7 @@ export default function Expertise() {
                                   opacity: 1,
                                 }}
                               >
-                                Join thousands of users who trust MUDRA for effortless, secure payments with stablecoins. Your age, experience, or location doesn't matter — we give everyone a chance to spend crypto in real life.
+                                Join thousands of users who trust MDR Futuristics for effortless, secure payments with stablecoins. Your age, experience, or location doesn't matter — we give everyone a chance to spend crypto in real life.
                               </p>
                             </div>
                           </div>
@@ -168,7 +168,7 @@ export default function Expertise() {
                                 href="#"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="MUDRA Social Link"
+                                aria-label="MDR Futuristics Social Link"
                               >
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
@@ -243,7 +243,7 @@ export default function Expertise() {
                                   />
                                 </div>
                                 <div className="mxd-testimonials-card__company">
-                                  <img src={testimonial.logo} alt="MUDRA Logo" />
+                                  <img src={testimonial.logo} alt="MDR Futuristics Logo" />
                                 </div>
                               </div>
                               <div className="mxd-testimonials-card__text">

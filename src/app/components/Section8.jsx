@@ -39,11 +39,11 @@ export default function Section8() {
               <img
                 className="mxd-move"
                 src="img/section8-img1.png"
-                alt="MUDRA Crypto Card"
+                alt="MDR Futuristics Crypto Card"
                 loading="lazy"
               />
               <div className="hero-05-worksblock__descr">
-                <p className="t-large t-caption t-bright">Spend stablecoins instantly — buy coffee, shop online, or pay bills with MUDRA</p>
+                <p className="t-large t-caption t-bright">Spend stablecoins instantly — buy coffee, shop online, or pay bills with MDR Futuristics </p>
                 <a className="btn btn-anim btn-default btn-outline slide-right-up" href="#">
                   <span className="btn-caption">
                     <div className="btn-anim__block">

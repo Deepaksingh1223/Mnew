@@ -22,7 +22,7 @@ export default function SimpleBanner() {
           <h1 className="banner-heading">About Us</h1>
 
           <p className="banner-description">
-            At Mudra, we believe finance should be accessible, empowering,
+            At MDR Futuristics , we believe finance should be accessible, empowering,
             and inclusive. We bridge the world of crypto and traditional money
             through real, practical, and relevant solutions — helping individuals
             and businesses take control of their financial lives.

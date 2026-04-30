@@ -146,47 +146,47 @@ export default function Section9() {
     return {};
   };
 
-  // Updated content based on https://www.Mudra.com/
-  // Company name remains MUDRA - streamlined to 6 key features
+  // Updated content based on https://www.MDR Futuristics .com/
+  // Company name remains MDR Futuristics - streamlined to 6 key features
   const experienceItems = [
     {
       title: 'Fast & Secure Stablecoin Transfers',
-      source: 'MUDRA',
+      source: 'MDR Futuristics ',
       sourceLabel: 'Transfers',
       descr: 'Send and receive funds instantly using secure stablecoin rails with low-cost global payments.',
       year: 'Active'
     },
     {
       title: 'Multi-Currency Wallet',
-      source: 'MUDRA',
+      source: 'MDR Futuristics ',
       sourceLabel: 'Wallet',
       descr: 'Manage stablecoins and local currency in one app — bridging crypto and everyday life.',
       year: 'Available'
     },
     {
       title: 'Spend Stablecoins Instantly',
-      source: 'MUDRA',
+      source: 'MDR Futuristics ',
       sourceLabel: 'Card',
       descr: 'Buy coffee, shop online or pay bills with stablecoins using our digital-first spending card.',
       year: 'Everyday'
     },
     {
       title: 'International Transfer',
-      source: 'MUDRA',
+      source: 'MDR Futuristics ',
       sourceLabel: 'Send',
       descr: 'Send crypto, receive local currency. Hassle-free protected transactions to any recipient.',
       year: 'Global'
     },
     {
       title: 'Crypto-Backed Credit',
-      source: 'MUDRA',
+      source: 'MDR Futuristics ',
       sourceLabel: 'Credit',
       descr: 'Access instant funds using crypto as collateral with flexible repayment and no credit checks.',
       year: 'Unlock'
     },
     {
       title: 'Earn, Swap & P2P',
-      source: 'MUDRA',
+      source: 'MDR Futuristics ',
       sourceLabel: 'Grow',
       descr: 'Earn daily rewards, swap assets easily, or use P2P marketplace for low-cost stablecoin access.',
       year: 'Rewards'

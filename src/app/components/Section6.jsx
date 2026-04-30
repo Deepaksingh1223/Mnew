@@ -165,7 +165,7 @@ export default function Section6() {
                         <span className="mxd-counter__number mxd-stats-number opposite">${counters.counter1}</span>B+
                       </p>
                       <p className="mxd-counter__descr t-140 t-bright opposite">
-                        Annualized payment volume<br />processed by MUDRA
+                        Annualized payment volume<br />processed by MDR Futuristics 
                       </p>
                     </div>
                     <div className="mxd-stats-cards__btngroup">
@@ -208,7 +208,7 @@ export default function Section6() {
                         <span className="mxd-counter__number mxd-stats-number">{counters.counter2}</span>%
                       </p>
                       <p className="mxd-counter__descr t-140 t-bright">
-                        User satisfaction rate<br />with MUDRA's seamless experience
+                        User satisfaction rate<br />with MDR Futuristics  seamless experience
                       </p>
                     </div>
                     <div className="mxd-stats-cards__image mxd-stats-cards-image-2">
@@ -227,7 +227,7 @@ export default function Section6() {
                         <span className="mxd-counter__number mxd-stats-number">{counters.counter3}</span>M+
                       </p>
                       <p className="mxd-counter__descr t-140 t-bright">
-                        Global users trusting<br />MUDRA for daily crypto spending
+                        Global users trusting<br />MDR Futuristics for daily crypto spending
                       </p>
                     </div>
                     <div className="mxd-stats-cards__btngroup">
@@ -255,7 +255,7 @@ export default function Section6() {
                         <span className="mxd-counter__number mxd-stats-number">{counters.counter4}</span>+
                       </p>
                       <p className="mxd-counter__descr t-140 t-bright">
-                        Countries where you can<br />spend stablecoins with MUDRA
+                        Countries where you can<br />spend stablecoins with MDR Futuristics 
                       </p>
                     </div>
                     <div className="mxd-stats-cards__btngroup">

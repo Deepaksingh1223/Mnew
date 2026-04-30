@@ -168,7 +168,7 @@ export default function aboutSection3() {
                     <span className="word"><span className="char">P</span><span className="char">a</span><span className="char">y</span><span className="char">m</span><span className="char">e</span><span className="char">n</span><span className="char">t</span><span className="char">s</span></span>
                   </span>
                 </p>
-                   <p class="banner-description  text-white">Mudra empowers seamless, global payments with the stability and flexibility of digital dollars. Our stablecoin-based solutions let you pay, send, and receive near-instantly. Making everyday transactions easy and multi-market payouts accessible, secure, and efficient for everyone.</p>
+                   <p class="banner-description  text-white">MDR Futuristics empowers seamless, global payments with the stability and flexibility of digital dollars. Our stablecoin-based solutions let you pay, send, and receive near-instantly. Making everyday transactions easy and multi-market payouts accessible, secure, and efficient for everyone.</p>
                 <div 
                   className="mxd-promo__controls anim-uni-in-up" 
                   ref={buttonRef}
@@ -216,7 +216,7 @@ export default function aboutSection3() {
                 <img 
                   className="promo-image promo-image" 
                   ref={image1Ref}
-                  alt="Mudra Crypto Card" 
+                  alt="MDR Futuristics Crypto Card" 
                   loading="lazy" 
                   width="800" 
                   height="912" 
@@ -236,7 +236,7 @@ export default function aboutSection3() {
                 <img 
                   className="promo-image promo-image-1" 
                   ref={image2Ref}
-                  alt="Mudra Stablecoin" 
+                  alt="MDR Futuristics Stablecoin" 
                   loading="lazy" 
                   width="600" 
                   height="601" 

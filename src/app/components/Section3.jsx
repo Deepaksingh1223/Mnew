@@ -134,7 +134,7 @@ export default function SectionRoadmap() {
                 <rect x="20" y="0" width="7" height="24" rx="1" fill="none" stroke="#00B4A0" strokeWidth="1.5" />
               </g>
               <text x="28" y="333" fontFamily="Poppins,sans-serif" fontSize="11" fontWeight="700" fill="#00B4A0" letterSpacing="0.5">MARKET ENTRY</text>
-              <text x="28" y="348" fontFamily="Poppins,sans-serif" fontSize="9" fill="#666">Launch MUDRA digital</text>
+              <text x="28" y="348" fontFamily="Poppins,sans-serif" fontSize="9" fill="#666">Launch MDR Futuristics digital</text>
               <text x="28" y="361" fontFamily="Poppins,sans-serif" fontSize="9" fill="#666">wallet with basic</text>
               <text x="28" y="374" fontFamily="Poppins,sans-serif" fontSize="9" fill="#666">payment features.</text>
 
@@ -158,7 +158,7 @@ export default function SectionRoadmap() {
               <text x="180" y="162" fontFamily="Poppins,sans-serif" fontSize="11" fontWeight="700" fill="#00AACC" letterSpacing="0.5">INNOVATION</text>
               <text x="180" y="177" fontFamily="Poppins,sans-serif" fontSize="9" className="text1">Integrate AI-driven</text>
               <text x="180" y="190" fontFamily="Poppins,sans-serif" fontSize="9" className="text1">financial insights</text>
-              <text x="180" y="203" fontFamily="Poppins,sans-serif" fontSize="9" className="text1">for MUDRA users.</text>
+              <text x="180" y="203" fontFamily="Poppins,sans-serif" fontSize="9" className="text1">for MDR Futuristics users.</text>
 
               {/* ══════════════════════════════════════ */}
               {/* STEP 03 — BLUE — TOP — x=430 */}
@@ -181,7 +181,7 @@ export default function SectionRoadmap() {
                 <circle cx="7" cy="21" r="2.5" fill="none" stroke="#2244CC" strokeWidth="1.5" />
               </g>
               <text x="358" y="342" fontFamily="Poppins,sans-serif" fontSize="11" fontWeight="700" fill="#2244CC" letterSpacing="0.5">SCALING</text>
-              <text x="358" y="357" fontFamily="Poppins,sans-serif" fontSize="9" fill="#666">Expand MUDRA</text>
+              <text x="358" y="357" fontFamily="Poppins,sans-serif" fontSize="9" fill="#666">Expand MDR Futuristics </text>
               <text x="358" y="370" fontFamily="Poppins,sans-serif" fontSize="9" fill="#666">to international</text>
               <text x="358" y="383" fontFamily="Poppins,sans-serif" fontSize="9" fill="#666">markets & currencies.</text>
 
@@ -205,7 +205,7 @@ export default function SectionRoadmap() {
               <text x="550" y="155" fontFamily="Poppins,sans-serif" fontSize="11" fontWeight="700" fill="#CC2288" letterSpacing="0.5">PARTNERSHIPS</text>
               <text x="550" y="170" fontFamily="Poppins,sans-serif" fontSize="9" fill="#666">Onboard merchants</text>
               <text x="550" y="183" fontFamily="Poppins,sans-serif" fontSize="9" fill="#666">& financial institutions</text>
-              <text x="550" y="196" fontFamily="Poppins,sans-serif" fontSize="9" fill="#666">to MUDRA network.</text>
+              <text x="550" y="196" fontFamily="Poppins,sans-serif" fontSize="9" fill="#666">to MDR Futuristics network.</text>
 
               {/* ══════════════════════════════════════ */}
               {/* STEP 05 — ORANGE — TOP — x=760 */}
