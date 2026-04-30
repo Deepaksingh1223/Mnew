@@ -64,7 +64,7 @@ export default function HeroBanner() {
               initial="hidden"
               animate={controls}
             >
-              Welcome to Finto
+              Welcome to MDR Futuristics
             </motion.p>
 
             <h1 className="ft-h1">
@@ -74,13 +74,13 @@ export default function HeroBanner() {
                 initial="hidden"
                 animate={controls}
               >
-                Secure
+                Modern & 
                 <span className="ft-pill">
                   {/* sparkle star SVG */}
                   <svg className="ft-pill-star" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.6,9.6h-3.9c-.4,0-1.8-.2-1.8-.2-.6,0-1.1-.2-1.6-.6-.5-.3-.9-.8-1.2-1.2-.3-.4-.4-.9-.5-1.4,0,0,0-1.1-.2-1.5V.4c0-.2-.2-.4-.4-.4s-.4.2-.4.4v4.4c0,.4-.2,1.5-.2,1.5,0,.5-.2,1-.5,1.4-.3.5-.7.9-1.2,1.2s-1,.5-1.6.6c0,0-1.2,0-1.7.2H.4c-.2,0-.4.2-.4.4s.2.4.4.4h4.1c.4,0,1.7.2,1.7.2.6,0,1.1.2,1.6.6.4.3.8.7,1.1,1.1.3.5.5,1,.6,1.6,0,0,0,1.3.2,1.7v4.1c0,.2.2.4.4.4s.4-.2.4-.4v-4.1c0-.4.2-1.7.2-1.7,0-.6.2-1.1.6-1.6.3-.4.7-.8,1.1-1.1.5-.3,1-.5,1.6-.6,0,0,1.3,0,1.8-.2h3.9c.2,0,.4-.2.4-.4s-.2-.4-.4-.4h0Z"/>
                   </svg>
-                  <span>Your</span>
+                  <span>Tech Driven</span>
                 </span>
               </motion.span>
               <motion.span
@@ -89,7 +89,7 @@ export default function HeroBanner() {
                 initial="hidden"
                 animate={controls}
               >
-                Fintech Success
+               Ideal For Debit Card
               </motion.span>
               <motion.span
                 style={{ display: 'block' }}
@@ -97,7 +97,7 @@ export default function HeroBanner() {
                 initial="hidden"
                 animate={controls}
               >
-                For The Future
+               Online Payment Solutions
               </motion.span>
             </h1>
           </div>
