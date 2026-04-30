@@ -25,54 +25,7 @@ const cards = [
       "Automatic reload from your MUDRA wallet for seamless travel",
       "Earn reward points on every transit & fuel spend",
     ],
-  },
-  {
-    id: 3,
-    tag: "Proprietary",
-    tagClass: "tag-prop",
-    title: "MUDRA Sterling Credit Card",
-    img: "/img/new-theme-img/service-image-1.png",
-    features: [
-      "Designed for global citizens – spend in INR, settle in any currency",
-      "Complimentary international airport lounge access (2 per quarter)",
-      "Zero lost card liability and 24/7 global concierge",
-    ],
-  },
-  {
-    id: 4,
-    tag: null,
-    title: "MUDRA Digital UPI Card",
-    img: "/img/new-theme-img/service-image-1.png",
-    features: [
-      "Link directly to your MUDRA UPI ID – scan & pay anywhere",
-      "Get 2% cashback as MUDRA coins on all UPI transactions",
-      "No annual fee – a truly digital-first spending companion",
-    ],
-  },
-  {
-    id: 5,
-    tag: "Proprietary",
-    tagClass: "tag-prop",
-    title: "MUDRA Select Rewards Card",
-    img: "/img/new-theme-img/service-image-1.png",
-    features: [
-      "Earn up to 5x rewards on dining, entertainment, and subscriptions",
-      "Redeem points instantly for flights, shopping, or statement credit",
-      "Milestone benefits – get a bonus ₹2,000 voucher every quarter",
-    ],
-  },
-  {
-    id: 6,
-    tag: "Select",
-    tagClass: "tag-sel",
-    title: "MUDRA Business Karobar Card",
-    img: "/img/new-theme-img/service-image-1.png",
-    features: [
-      "Manage team expenses with 10 free virtual cards for employees",
-      "GST invoice generation and automated expense tracking",
-      "Higher spend limits and 45-day interest-free credit period",
-    ],
-  },
+  }  
 ];
 
 function CreditCard({ card, index }) {
@@ -159,7 +112,7 @@ export default function CardSection1() {
         /* Grid */
         .cards-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 22px;
           max-width: 1160px;
           margin: 0 auto;
@@ -203,7 +156,7 @@ export default function CardSection1() {
           background: linear-gradient(160deg, #fff 60%, #fdf0e5 100%);
         }
         .card-img {
-          width: 100%; max-width: 268px;
+          width: 100%; 
           aspect-ratio: 16 / 10;
           border-radius: 13px;
           object-fit: cover; 
