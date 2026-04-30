@@ -99,7 +99,7 @@ export default function Section13() {
 
   const blogItems = [
     { 
-      title: 'Where Crypto Meets Real Life with MUDRA', 
+      title: 'Where Crypto Meets Real Life with MDR Futuristics ', 
       tags: ['Stablecoin', 'Payments'], 
       image: 'blog-preview-image-1' 
     },
@@ -109,7 +109,7 @@ export default function Section13() {
       image: 'blog-preview-image-2' 
     },
     { 
-      title: 'Digital-First Spending Made Simple with MUDRA', 
+      title: 'Digital-First Spending Made Simple with MDR Futuristics ', 
       tags: ['Card', 'Spending'], 
       image: 'blog-preview-image-3' 
     }
@@ -133,7 +133,7 @@ export default function Section13() {
                         transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1)'
                       }}
                     >
-                      Latest from MUDRA
+                      Latest from MDR Futuristics 
                     </h2>
                   </div>
                 </div>

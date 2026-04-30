@@ -3,10 +3,10 @@
 import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 
-// ✅ Mudra-style tabs
+// ✅ MDR Futuristics -style tabs
 const tabs = [
   { id: 'mission', label: 'Our Mission' },
-  { id: 'quality', label: 'Why MUDRA' },
+  { id: 'quality', label: 'Why MDR Futuristics ' },
   { id: 'vision', label: 'Our Vision' },
   { id: 'security', label: 'Security' },
 ];
@@ -16,7 +16,7 @@ const tabContent = {
   mission: {
     heading: 'Where Crypto Meets Real Life',
     description:
-      'MUDRA empowers global payments with stablecoins — seamless, fast, and built for everyday use.',
+      'MDR Futuristics empowers global payments with stablecoins — seamless, fast, and built for everyday use.',
     points: [
       'Fast and Secure Stablecoin Transfers',
       'Multi-Currencies, One App',
@@ -98,11 +98,11 @@ export default function Section5() {
   return (
     <section className="s5-section relative" ref={sectionRef}>
       
-      {/* 🔹 TOP HEADER — Mudra style */}
+      {/* 🔹 TOP HEADER — MDR Futuristics style */}
       <div className={`s5-top s5-fade-in mxd-hero-04__wrap loading-wrap ${visible ? 'visible' : ''}`}>
         <div className="reveal-type">
           <h2>
-            <span>MUDRA — Where Crypto Meets</span>
+            <span>MDR Futuristics — Where Crypto Meets</span>
             <span>
               <span className="underline-green">Real Life</span>
             </span>
@@ -193,7 +193,7 @@ export default function Section5() {
             <div className="s5-img-wrap" style={{position:'relative'}}>
               <video 
                 ref={videoRef}
-                src="/img/works/MudraCrad1.mp4"
+                src="/img/works/MDR Futuristics Crad1.mp4"
                 className="parallax-img"
                 autoPlay
                 loop

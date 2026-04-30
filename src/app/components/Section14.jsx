@@ -217,7 +217,7 @@ export default function Section14() {
                 <img 
                   className="promo-image promo-image" 
                   ref={image1Ref}
-                  alt="MUDRA Crypto Card" 
+                  alt="MDR Futuristics Crypto Card" 
                   loading="lazy" 
                   width="800" 
                   height="912" 
@@ -237,7 +237,7 @@ export default function Section14() {
                 <img 
                   className="promo-image promo-image-1" 
                   ref={image2Ref}
-                  alt="MUDRA Stablecoin" 
+                  alt="MDR Futuristics Stablecoin" 
                   loading="lazy" 
                   width="600" 
                   height="601" 

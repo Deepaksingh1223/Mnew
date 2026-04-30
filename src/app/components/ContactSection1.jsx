@@ -83,7 +83,7 @@ const styles = `
 const cards = [
   {
     title: 'Global Payouts, Powered by Stablecoins',
-    text: 'Our proprietary payout infrastructure enables users to send and receive funds worldwide through secure, stablecoin-powered rails. Now live in Brazil, Mudra will soon expand to new global corridors — making fast, reliable payouts accessible to more markets than ever.',
+    text: 'Our proprietary payout infrastructure enables users to send and receive funds worldwide through secure, stablecoin-powered rails. Now live in Brazil, MDR Futuristics will soon expand to new global corridors — making fast, reliable payouts accessible to more markets than ever.',
     cta: 'Get Started',
   },
   {
@@ -93,7 +93,7 @@ const cards = [
   },
   {
     title: 'Global Stablecoin Access From Your Fingertips',
-    text: 'Mudra bridges traditional finance and digital assets, enabling anyone to access and use stablecoins. Our multi-currency accounts and P2P Marketplace enable users without traditional banking to access stablecoins directly — expanding global access for all.',
+    text: 'MDR Futuristics bridges traditional finance and digital assets, enabling anyone to access and use stablecoins. Our multi-currency accounts and P2P Marketplace enable users without traditional banking to access stablecoins directly — expanding global access for all.',
     cta: 'Get Started',
   }, 
 ];

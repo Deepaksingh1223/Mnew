@@ -519,7 +519,7 @@ export default function Header() {
                               loop
                               muted
                               playsInline
-                              poster="/img/works/MudraCrad1.mp4"
+                              poster="/img/works/MDR Futuristics Crad1.mp4"
                               style={{
                                 width: '100%',
                                 height: 'auto',
@@ -534,9 +534,9 @@ export default function Header() {
                                 setVideoError(false);
                               }}
                             >
-                              <source src="/img/works/MudraCrad1.mp4" type="video/mp4" />
-                              <source src="/img/works/MudraCrad1.mp4" type="video/mp4" />
-                              <source src="/img/works/MudraCrad1.mp4" type="video/mp4" />
+                              <source src="/img/works/MDR Futuristics Crad1.mp4" type="video/mp4" />
+                              <source src="/img/works/MDR Futuristics Crad1.mp4" type="video/mp4" />
+                              <source src="/img/works/MDR Futuristics Crad1.mp4" type="video/mp4" />
                             </video>
                           ) : (
                             <div style={{
@@ -573,7 +573,7 @@ export default function Header() {
                     <p className="t-xsmall">
                       Made with <i className="ph-fill ph-heart t-additional" />
                       <a className="no-effect" href="/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                        BY MUDRA
+                        BY MDR Futuristics 
                       </a>
                     </p>
                     <p className="t-xsmall">

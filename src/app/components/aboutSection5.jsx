@@ -121,7 +121,7 @@ export default function AboutSection5() {
               className={`about-section-5__description ${visibleElements['description'] ? 'visible' : ''}`}
               ref={descriptionRef}
             >
-              Trust and safety are core to everything we do. Mudra meets rigorous compliance standards, 
+              Trust and safety are core to everything we do. MDR Futuristics meets rigorous compliance standards, 
               ensuring your funds and data remain protected at every step.
             </p>
 
