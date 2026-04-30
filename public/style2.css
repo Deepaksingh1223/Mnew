@@ -1614,7 +1614,7 @@ img.ft-phone-back.phone-img2 {
 .banner-bg {
   position: absolute;
   inset: 0;
-  background-image: url(Mudra-card-videos/card01.png);
+  background-image: url(img/about-us.png);
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
@@ -1918,7 +1918,7 @@ img.ft-phone-back.phone-img2 {
   z-index: 2;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 50px 24px;
   width: 100%;
 }
 
@@ -2253,7 +2253,7 @@ img.ft-phone-back.phone-img2 {
   }
 
   .about-section-5__container {
-    padding: 0 16px;
+    padding: 50px 24px;
   }
 
   .about-section-5__content {
@@ -2309,7 +2309,7 @@ img.ft-phone-back.phone-img2 {
 .CommunitySection1 {
   position: absolute;
   inset: 0;
-  background-image: url(community/community.jpg);
+  background-image: url(img/community.png);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;

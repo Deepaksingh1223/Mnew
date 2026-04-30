@@ -193,7 +193,7 @@ export default function Section5() {
             <div className="s5-img-wrap" style={{position:'relative'}}>
               <video 
                 ref={videoRef}
-                src="/img/works/MDR Futuristics Crad1.mp4"
+                src="/img/works/MudraCrad1.mp4"
                 className="parallax-img"
                 autoPlay
                 loop
