@@ -21,7 +21,14 @@ export default function SimpleBanner() {
         <div className="banner-content">
           <h1 className="banner-heading">Community</h1>
 
-         
+          <p className="banner-description phone-view-show">
+            At Mudra, we believe finance should be accessible, 
+          </p>
+          <p className="banner-description"> empowering,
+            and inclusive. We bridge the world of crypto and  </p>
+      
+            <p className="banner-description"> traditional money
+            through real, practical, and relevant solutions .</p>
         </div>
       </div>
     </>
