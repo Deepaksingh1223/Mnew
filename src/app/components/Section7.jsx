@@ -243,7 +243,7 @@ export default function Expertise() {
                                   />
                                 </div>
                                 <div className="mxd-testimonials-card__company">
-                                  <img src={testimonial.logo} alt="MDR Futuristics Logo" />
+                                  <img src="/img/mudra-logo.png" alt="MDR Futuristics Logo" />
                                 </div>
                               </div>
                               <div className="mxd-testimonials-card__text">

@@ -1920,7 +1920,7 @@ h2.permanent-dark {
 
 @media only screen and (min-width: 768px) {
     h2 {
-        font-size: 7rem
+        font-size: 5rem
     }
 
     h2.h2-small {
@@ -4668,7 +4668,7 @@ form textarea:required:valid {
 }
 
 .bg-accent {
-    background-color:#0C3A30
+    background-color: #0C3A30
 }
 
 .bg-additional {
@@ -5421,7 +5421,7 @@ form textarea:required:valid {
 }
 
 .mxd-promo__inner {
-    background-color:#010101;
+    background-color: #010101;
     flex-direction: column;
     width: 100%;
     padding-left: 3rem;
@@ -14544,7 +14544,7 @@ form textarea:required:valid {
 
     .mxd-stats-cards__image.mxd-stats-cards-image-3 {
         width: 450px;
-        inset:auto 4rem 0 auto
+        inset: auto 4rem 0 auto
     }
 
     .mxd-stats-cards__image.mxd-stats-cards-image-4 {
@@ -14571,7 +14571,7 @@ form textarea:required:valid {
     }
 
     .mxd-stats-cards__image.mxd-stats-cards-image-2 {
-       padding-top: 0;
+        padding-top: 0;
         top: 18rem;
         bottom: auto;
         left: 5rem;
@@ -14583,7 +14583,7 @@ form textarea:required:valid {
     }
 
     .mxd-stats-cards__image.mxd-stats-cards-image-4 {
-              width: 500px;
+        width: 500px;
         left: 200px;
         top: 120px;
     }
@@ -16663,7 +16663,7 @@ form textarea:required:valid {
     }
 }
 
-.swiper-slide { 
+.swiper-slide {
     width: 100%;
     -webkit-transition: -webkit-filter var(--_animspeed-slow) var(--_animbezier);
     transition: -webkit-filter var(--_animspeed-slow) var(--_animbezier);
@@ -18473,12 +18473,17 @@ button.mxd-color-switcher {
     alignItems: center;
     margin-top: 50px;
 }
- 
+
 @media(max-width:991px) {
- 
-.main-inside{
-    padding: 0px;
-}
+
+    .main-inside {
+        padding: 0px;
+    }
+
+    .ft-phone-front.phone-img1 {
+        right: -105px !important;
+    }
+
     .main-div-with-img {
         position: sticky;
         top: 0;
@@ -18489,12 +18494,16 @@ button.mxd-color-switcher {
         overflow: hidden;
         backgroundColor: var(--background)';
 
-    }img.ft-phone-back.phone-img2 {
-    opacity: 1 !important;
-    left: 35px !important;
-    top: -8px !important;
-    width: auto !important;
+    }
+
+    img.ft-phone-back.phone-img2 {
+        opacity: 1 !important;
+        left: 25px !important;
+        top: 10px !important;
+        width: 145px !important;
+    }
 }
-}text.text1 {
+
+text.text1 {
     fill: #fff !important;
 }

@@ -537,14 +537,14 @@ html {
 }
 
 .ft-phone-front.phone-img1 {
-  right: -90px !important;
+  right: -135px !important;
 }
 
 img.ft-phone-back.phone-img2 {
-  opacity: 1 !important;
-  left: 35px !important;
-  top: -75px !important;
-  width: auto !important;
+    opacity: 1 !important;
+    left: 20px !important;
+    top: 0px !important;
+    width: 200px !important;
 }
 
 .banner-men-img {

@@ -223,12 +223,12 @@ export default function HeroBanner() {
             <h3 className="ft-card-title">Personalized Insights And Financial Goals</h3>
             <div className="ft-card3-phones">
               <img
-                src={`${BASE}/service/service-image-4.png`}
+                src="/service-image-4.png"
                 alt="App screenshot back"
                 className="ft-phone-back phone-img2"
               />
               <img
-                src={`${BASE}/service/service-image-3.png`}
+                src="/service-image-3.png"
                 alt="App screenshot front"
                 className="ft-phone-front phone-img1"
               />
