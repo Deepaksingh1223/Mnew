@@ -18871,3 +18871,8 @@ text.text1 {
     transform: rotate(18deg);
     opacity: 0.5;
 }
+@media(max-width:991px){
+.tc-content{
+    padding: 0px 25px;
+}
+}

@@ -640,7 +640,7 @@ export default function Header() {
           <motion.a
             className="btn-anim btn btn-anim btn-default btn-mobile-icon btn-outline slide-right next-page"
             aria-label="Say Hello"
-            href="#"
+            href="/Contact"
             onClick={closeMenu}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
