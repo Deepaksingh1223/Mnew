@@ -157,17 +157,17 @@ export default function Footer() {
                 transition: `all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.72s`,
               }}
             >
-              <a className="btn-anim btn btn-line-xsmall btn-muted slide-right anim-no-delay" aria-label="Privacy Policy" href="#">
+              <a className="btn-anim btn btn-line-xsmall btn-muted slide-right anim-no-delay" aria-label="Privacy Policy" href="/Condition">
                 <span className="btn-caption">
-                  <div className="btn-anim__block">Login</div>  
-                  <div className="btn-anim__block" aria-hidden="true">Login</div>
+                  <div className="btn-anim__block">Term condition</div>  
+                  <div className="btn-anim__block" aria-hidden="true">Term condition</div>
                 </span>
                 <i className="ph ph-arrow-right"></i>
               </a>
-              <a className="btn-anim btn btn-line-xsmall btn-muted slide-right anim-no-delay" aria-label="Terms &amp; conditions" href="#">
+              <a className="btn-anim btn btn-line-xsmall btn-muted slide-right anim-no-delay" aria-label="Privacy Policy" href="/privacy">
                 <span className="btn-caption">
-                  <div className="btn-anim__block">Register</div>
-                  <div className="btn-anim__block" aria-hidden="true">Register</div>
+                  <div className="btn-anim__block">privacy policy</div>
+                  <div className="btn-anim__block" aria-hidden="true">privacy policy</div>
                 </span>
                 <i className="ph ph-arrow-right"></i>
               </a>
