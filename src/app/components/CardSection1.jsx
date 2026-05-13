@@ -28,7 +28,7 @@ export default function SimpleBanner() {
           </p>
 
 
-          <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="#">
+          <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="/Login">
             <span class="btn-caption">
               <div class="btn-anim__block">
                 <span class="btn-anim__letter">G</span>

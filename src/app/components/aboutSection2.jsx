@@ -45,7 +45,7 @@ export default function VisionMissionSection() {
                 Accelerate financial access globally through the mass adoption
                 of stablecoin-based payments.
               </p>
-              <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="#">
+              <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="/Login">
                 <span class="btn-caption">
                   <div class="btn-anim__block">
                     <span class="btn-anim__letter">G</span>
@@ -84,7 +84,7 @@ export default function VisionMissionSection() {
               <p className="vm-text">
                 Make digital finance accessible, secure, and efficient for everyone.
               </p>
-              <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="#">
+              <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="/Login">
                 <span class="btn-caption">
                   <div class="btn-anim__block">
                     <span class="btn-anim__letter">G</span>

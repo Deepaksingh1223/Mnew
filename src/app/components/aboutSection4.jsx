@@ -44,7 +44,7 @@ export default function VisionMissionSection() {
               <p className="vm-text">
             Our proprietary payout infrastructure enables users to send and receive funds worldwide through secure, stablecoin-powered rails. Now live in Brazil, MDR Futuristics will soon expand to new global corridors. Making fast, reliable payouts accessible to more markets than ever.
               </p>
-              <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="#">
+              <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="/Login">
                 <span class="btn-caption">
                   <div class="btn-anim__block">
                     <span class="btn-anim__letter">G</span>
@@ -83,7 +83,7 @@ export default function VisionMissionSection() {
               <p className="vm-text">
                We empower stablecoin holders to access USD payouts worldwide with seamless card payments through top global networks. As a leading crypto payments fintech, we provide unmatched reach and reliability. We making spending stablecoins simple, secure and truly borderless.
               </p>
-              <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="#">
+              <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="/Login">
                 <span class="btn-caption">
                   <div class="btn-anim__block">
                     <span class="btn-anim__letter">G</span>
@@ -123,7 +123,7 @@ export default function VisionMissionSection() {
               <p className="vm-text">
              MDR Futuristics bridges traditional finance and digital assets, enabling anyone to access and use stablecoins. Our multi-currency accounts and P2P Marketplace enables users without traditional finances to access stablecoins directly - expanding global access for all.
               </p>
-              <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="#">
+              <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="/Login">
                 <span class="btn-caption">
                   <div class="btn-anim__block">
                     <span class="btn-anim__letter">G</span>
@@ -164,7 +164,7 @@ export default function VisionMissionSection() {
               <p className="vm-text">
              MDR Futuristics bridges traditional finance and digital assets, enabling anyone to access and use stablecoins. Our multi-currency accounts and P2P Marketplace enables users without traditional finances to access stablecoins directly - expanding global access for all.
               </p>
-              <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="#">
+              <a class="btn btn-anim btn-default btn-outline slide-right-up mt-5" href="/Login">
                 <span class="btn-caption">
                   <div class="btn-anim__block">
                     <span class="btn-anim__letter">G</span>
