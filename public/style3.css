@@ -1936,7 +1936,7 @@ h2.permanent-dark {
 
     h2,
     h2.h2-small {
-        font-size: 7rem
+        font-size: 6rem
     }
 
     h2.h2-large {
@@ -18879,5 +18879,8 @@ text.text1 {
 
     p.t-large {
         font-size: 1.5rem;
+    }
+    .inside-pricing-card{
+        display: none;
     }
 }

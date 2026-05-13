@@ -49,7 +49,7 @@ const plans = [
 
 function BankCardMini({ featured }) {
   return (
-    <div style={{
+    <div className='inside-pricing-card' style={{
       background: '#198754',
       borderRadius: '10px',
       padding: '10px 14px',

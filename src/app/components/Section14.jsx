@@ -225,12 +225,12 @@ export default function Section14() {
                   data-nimg="1" 
                   style={{ 
                     color: 'transparent',
-                    opacity: visibleElements['image1'] ? 1 : 0,
+                    opacity: visibleElements['image1'] ? 1 : 1,
                     transform: visibleElements['image1'] ? 'translateX(0) rotate(0deg) scale(1)' : 'translateX(-200px) rotate(-10deg) scale(0.8)',
                     transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
                     ...(isImage1Hovered && { transform: 'scale(1.03) rotate(3deg)' })
                   }}
-                  src="/img/Works/section14-card.png" 
+                  src="/img/section14-card.png" 
                   onMouseEnter={() => setIsImage1Hovered(true)}
                   onMouseLeave={() => setIsImage1Hovered(false)}
                 />
@@ -245,12 +245,12 @@ export default function Section14() {
                   data-nimg="1" 
                   style={{ 
                     color: 'transparent',
-                    opacity: visibleElements['image2'] ? 1 : 0,
+                    opacity: visibleElements['image2'] ? 1 : 1,
                     transform: visibleElements['image2'] ? 'translateX(0) rotate(0deg) scale(1)' : 'translateX(200px) rotate(10deg) scale(0.8)',
                     transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
                     ...(isImage2Hovered && { transform: 'scale(1.05) rotate(-3deg)' })
                   }}
-                  src="/img/works/section14-card2.png" 
+                  src="/img/section14-card2.png" 
                   onMouseEnter={() => setIsImage2Hovered(true)}
                   onMouseLeave={() => setIsImage2Hovered(false)}
                 />

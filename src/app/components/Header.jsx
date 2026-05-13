@@ -597,9 +597,9 @@ export default function Header() {
       >
         <div className="mxd-header__logo ">
           <Link className="mxd-logo" href="/" >
-            <Image
+              <Image
               alt="Object"
-              loading="lazy"
+              loading="eager"
               width={300}
               height={300}
               className="btn-rotating__image"
