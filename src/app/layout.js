@@ -1,7 +1,7 @@
  
 import './globals.css'
-import Header from './components/Header'
-import Footer from './components/Footer' 
+import RouteChrome from './RouteChrome'
+
  
 export const metadata = {
   title: 'Rayo Template',
@@ -24,10 +24,7 @@ export default function RootLayout({ children }) {
 
       </head>
       <body>
-        <Header />
-        {children}
-        <Footer />
-
+        <RouteChrome>{children}</RouteChrome>
       </body>
     </html>
   )
