@@ -6,11 +6,18 @@ import { FaLock, FaShieldAlt, FaBolt } from "react-icons/fa";
 
 export default function CryptoLogin() {
 
+  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
   const [loading, setLoading] = useState(false);
   const [focused, setFocused] = useState(null);
+
 
 
   const handleSubmit = async () => {
@@ -209,7 +216,7 @@ export default function CryptoLogin() {
         }
         .cx-brand-name { color: #a87820; font-size: 13px; font-weight: 700; letter-spacing: 4px; font-family: 'DM Mono', monospace; }
 
-        .cx-h1 { color: #1c1a10; font-size: 30px; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 6px; line-height: 1.15; }
+        .cx-h1 {    font-family: 'Funnel Display'; color: #1c1a10; font-size: 30px; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 6px; line-height: 1.15; }
         .cx-sub { color: #9a8460; font-size: 14px; margin-bottom: 34px; line-height: 1.5; }
 
         .cx-field { margin-bottom: 18px; }
@@ -323,8 +330,28 @@ export default function CryptoLogin() {
                 <span className="cx-brand-name">MUDRA</span>
               </div>
 
-              <a href="/Forget" className="cx-h1">Forgot Password?</a>
-              <p className="cx-sub">To recover your password, enter your user id and click Send. Then, follow the instructions in the message.</p>
+              <a href="/Forget" className="cx-h1">Register</a>
+              <p className="cx-sub">Hello, Create a new account</p>
+
+              {/* Full Name */}
+              <div className="cx-field">
+                <label className="cx-lbl">Full name</label>
+                <div className={`cx-inp-wrap${focused === "fullName" ? " focused" : ""}`}>
+                  <svg className="cx-inp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                  <input
+                    type="text"
+                    placeholder="John Doe"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    onFocus={() => setFocused("fullName")}
+                    onBlur={() => setFocused(null)}
+                    className="cx-input"
+                  />
+                </div>
+              </div>
 
               {/* Email */}
               <div className="cx-field">
@@ -346,7 +373,106 @@ export default function CryptoLogin() {
                 </div>
               </div>
 
+              {/* Phone */}
+              <div className="cx-field">
+                <label className="cx-lbl">Phone</label>
+                <div className={`cx-inp-wrap${focused === "phone" ? " focused" : ""}`}>
+                  <svg className="cx-inp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.8 19.8 0 012.08 4.18 2 2 0 014.06 2h3a2 2 0 012 1.72c.12.86.32 1.7.59 2.5a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.58-1.11a2 2 0 012.11-.45c.8.27 1.64.47 2.5.59A2 2 0 0122 16.92z" />
+                  </svg>
+                  <input
+                    type="tel"
+                    placeholder="+1 234 567 890"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    onFocus={() => setFocused("phone")}
+                    onBlur={() => setFocused(null)}
+                    className="cx-input"
+                  />
+                </div>
+              </div>
 
+              {/* Password */}
+              <div className="cx-field">
+                <div className="cx-lbl-row">
+                  <label className="cx-lbl" style={{ marginBottom: 0 }}>Password</label>
+                </div>
+                <div className={`cx-inp-wrap${focused === "password" ? " focused" : ""}`} style={{ marginTop: 8 }}>
+                  <svg className="cx-inp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <rect x="5" y="11" width="14" height="10" rx="2" />
+                    <path d="M8 11V7a4 4 0 018 0v4" />
+                  </svg>
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    placeholder="••••••••••"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    onFocus={() => setFocused("password")}
+                    onBlur={() => setFocused(null)}
+                    className="cx-input"
+                  />
+                  <button
+                    className="cx-eye"
+                    onClick={() => setShowPassword(!showPassword)}
+                    type="button"
+                    aria-label="Toggle password"
+                  >
+                    {showPassword ? (
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94" />
+                        <path d="M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19" />
+                        <line x1="1" y1="1" x2="23" y2="23" />
+                      </svg>
+                    ) : (
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                        <circle cx="12" cy="12" r="3" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
+
+              {/* Confirm Password */}
+              <div className="cx-field">
+                <div className="cx-lbl-row">
+                  <label className="cx-lbl" style={{ marginBottom: 0 }}>Confirm Password</label>
+                </div>
+                <div className={`cx-inp-wrap${focused === "confirmPassword" ? " focused" : ""}`} style={{ marginTop: 8 }}>
+                  <svg className="cx-inp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <rect x="5" y="11" width="14" height="10" rx="2" />
+                    <path d="M8 11V7a4 4 0 018 0v4" />
+                  </svg>
+                  <input
+                    type={showConfirmPassword ? "text" : "password"}
+                    placeholder="••••••••••"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    onFocus={() => setFocused("confirmPassword")}
+                    onBlur={() => setFocused(null)}
+                    className="cx-input"
+                  />
+                  <button
+                    className="cx-eye"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    type="button"
+                    aria-label="Toggle confirm password"
+                  >
+                    {showConfirmPassword ? (
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94" />
+                        <path d="M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19" />
+                        <line x1="1" y1="1" x2="23" y2="23" />
+                      </svg>
+                    ) : (
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                        <circle cx="12" cy="12" r="3" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
 
               {/* Submit */}
               <button className="cx-submit" onClick={handleSubmit} disabled={loading}>
@@ -372,13 +498,13 @@ export default function CryptoLogin() {
               {/* Social */}
               <div className="cx-social-row">
                 <button className="cx-social">
-                  <svg width="18" height="18" viewBox="0 0 24 24">
-                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
-                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
-                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
-                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3v10" stroke="#C9A32A" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M8 11l4 4 4-4" stroke="#C9A32A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M5 20h14" stroke="#C9A32A" strokeWidth="2" strokeLinecap="round" />
                   </svg>
-                  <span>Google</span>
+<span>Download</span>
+                  <span style={{ fontWeight: 700, marginLeft: 6 }}>APK</span>
                 </button>
                 <button className="cx-social">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="#1c1a10">
