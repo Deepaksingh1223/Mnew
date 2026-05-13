@@ -639,16 +639,16 @@ export default function Header() {
           </motion.button>
           <motion.a
             className="btn-anim btn btn-anim btn-default btn-mobile-icon btn-outline slide-right next-page"
-            aria-label="Say Hello"
-            href="/Contact"
+            aria-label="Login"
+            href="/Login"
             onClick={closeMenu}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <span className="btn-caption">
-              <div className="btn-anim__block">Say Hello</div>
-              <div className="btn-anim__block" aria-hidden="true">Say Hello</div>
+              <div className="btn-anim__block">Login</div>
+              <div className="btn-anim__block" aria-hidden="true">Login</div>
             </span>
             <i className="ph-bold ph-arrow-up-right"></i>
           </motion.a>
