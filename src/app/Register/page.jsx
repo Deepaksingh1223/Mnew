@@ -1,10 +1,10 @@
 "use client"; 
-import Forget from "../components/Forget"; 
+import Register from "../components/Register"; 
 
 export default function Loginpage() {
   return (
     <div className="flex flex-col min-h-screen">
-     <Forget/>
+     <Register/>
     </div>
   );
 }

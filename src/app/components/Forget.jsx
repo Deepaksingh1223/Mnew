@@ -3,10 +3,7 @@
 import { useState } from "react";
 import { FaLock, FaShieldAlt, FaBolt } from "react-icons/fa";
 
-const LockIcon = FaLock;
-const ShieldIcon = FaShieldAlt;
-const LightningIcon = FaBolt;
-
+ 
 export default function CryptoLogin() {
 
   const [email, setEmail] = useState("");
@@ -23,14 +20,7 @@ export default function CryptoLogin() {
     setLoading(false);
   };
 
-  const tickers = [
-    { sym: "BTC", val: "$43,210", chg: "+2.4%", up: true },
-    { sym: "ETH", val: "$2,890",  chg: "+1.8%", up: true },
-    { sym: "SOL", val: "$98.40",  chg: "-0.6%", up: false },
-    { sym: "BNB", val: "$412",    chg: "+0.9%", up: true },
-    { sym: "XRP", val: "$0.64",   chg: "-1.2%", up: false },
-  ];
-
+ 
   return (
     <>
       <style>{`
@@ -96,7 +86,7 @@ export default function CryptoLogin() {
           display: flex;
           align-items: center;
           gap: 56px;
-          max-width: 980px;
+          max-width: 1320px;
           width: 100%;
           position: relative;
           z-index: 1;
@@ -204,7 +194,7 @@ export default function CryptoLogin() {
         .cx-badge-text { color: #8b6a30; font-size: 9px; font-weight: 600; letter-spacing: 0.7px; text-transform: uppercase; text-align: center; }
 
         /* ── Right panel / form ──────────────────── */
-        .cx-right { flex: 1; max-width: 420px; width: 100%; }
+        .cx-right { flex: 1; max-width: 520px; width: 100%; }
         .cx-form-card {
           background: #fff; border: 1px solid #e4d8c0;
           border-radius: 28px; padding: 44px 40px;
@@ -315,37 +305,11 @@ export default function CryptoLogin() {
 
             {/* Floating card */}
             <div className="cx-card-wrap">
-<img src="/img/new-theme-img/service-image-1.png" alt="Crypto Card" />
+            <img src="/img/login-card-img.png" alt="Crypto Card" />
             </div>
 
-            {/* Price ticker */}
-            <div className="cx-ticker">
-              <div className="cx-ticker-track">
-                {[...tickers, ...tickers].map((t, i) => (
-                  <div className="cx-tick-item" key={i}>
-                    <span className="cx-tick-sym">{t.sym}</span>
-                    <span className="cx-tick-val">{t.val}</span>
-                    <span className={t.up ? "cx-up" : "cx-down"}>{t.chg}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Trust badges */}
-            <div className="cx-badges">
-              {[
-                { Icon: LockIcon, text: "256-bit SSL" },
-                { Icon: ShieldIcon, text: "FDIC Insured" },
-                { Icon: LightningIcon, text: "Instant Pay" },
-              ].map(({ Icon, text }) => (
-                <div className="cx-badge" key={text}>
-                  <span className="cx-badge-icon">
-                    <Icon size={20} />
-                  </span>
-                  <span className="cx-badge-text">{text}</span>
-                </div>
-              ))}
-            </div>
+          
+ 
           </div>
 
           {/* ── Right panel ── */}
@@ -354,13 +318,13 @@ export default function CryptoLogin() {
 
               <div className="cx-brand">
                 <div className="cx-brand-icon">
-<img src="/img/mudra-logo.png" alt="Crypto Card" />
+            <img src="/img/mudra-logo.png" alt="Crypto Card" />
                 </div>
                 <span className="cx-brand-name">MUDRA</span>
               </div>
 
-              <h1 className="cx-h1">Welcome back</h1>
-              <p className="cx-sub">Sign in to manage your crypto debit card</p>
+              <a href="/Login" className="cx-h1">Login</a>
+              <p className="cx-sub">To recover your password, enter your user id and click Send. Then, follow the instructions in the message.</p>
 
               {/* Email */}
               <div className="cx-field">
@@ -382,42 +346,7 @@ export default function CryptoLogin() {
                 </div>
               </div>
 
-              {/* Password */}
-              <div className="cx-field">
-                <div className="cx-lbl-row">
-                  <label className="cx-lbl" style={{ marginBottom: 0 }}>Password</label>
-                  <a href="#" className="cx-forgot">Forgot password?</a>
-                </div>
-                <div className={`cx-inp-wrap${focused === "password" ? " focused" : ""}`} style={{ marginTop: 8 }}>
-                  <svg className="cx-inp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <rect x="5" y="11" width="14" height="10" rx="2" />
-                    <path d="M8 11V7a4 4 0 018 0v4" />
-                  </svg>
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    placeholder="••••••••••"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    onFocus={() => setFocused("password")}
-                    onBlur={() => setFocused(null)}
-                    className="cx-input"
-                  />
-                  <button className="cx-eye" onClick={() => setShowPassword(!showPassword)} type="button" aria-label="Toggle password">
-                    {showPassword ? (
-                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94" />
-                        <path d="M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19" />
-                        <line x1="1" y1="1" x2="23" y2="23" />
-                      </svg>
-                    ) : (
-                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                        <circle cx="12" cy="12" r="3" />
-                      </svg>
-                    )}
-                  </button>
-                </div>
-              </div>
+             
 
               {/* Submit */}
               <button className="cx-submit" onClick={handleSubmit} disabled={loading}>
