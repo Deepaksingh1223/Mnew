@@ -3,14 +3,17 @@
 export default function SidebarNav({ page, onGo }) {
   return (
     <nav className="sb">
-      <div className="logo-row">
-        <div className="gem">M</div>
-        <div>
-          <div className="brand">MUDRA</div>
-          <div className="brand-sub">Financial Platform</div>
-        </div>
+      <div className="logo-row"> 
+          <img 
+                  className="Dashboard-img"  
+                  alt="MDR Futuristics Crypto Card" 
+                  loading="lazy" 
+                  width="150" 
+                  height="150"  
+                  src="/img/dashboard-logo.png" 
+                /> 
       </div>
-
+ 
       <div className="nav">
         <span className="nav-sec">Overview</span>
 
@@ -20,7 +23,7 @@ export default function SidebarNav({ page, onGo }) {
         >
           <i className="ti ti-layout-dashboard" aria-hidden="true" />Dashboard
         </a>
-
+ 
         <a
           className={"ni " + (page === "cards" ? "on" : "")}
           href="/dashboard/my-card" 
