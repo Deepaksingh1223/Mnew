@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function SidebarNav({ page, onGo }) {
   return (
     <nav className="sb">
@@ -17,85 +19,85 @@ export default function SidebarNav({ page, onGo }) {
       <div className="nav">
         <span className="nav-sec">Overview</span>
 
-        <a
+        <Link
           className={"ni " + (page === "home" ? "on" : "")}
           href="/dashboard"
         >
           <i className="ti ti-layout-dashboard" aria-hidden="true" />Dashboard
-        </a>
+        </Link>
  
-        <a
+        <Link
           className={"ni " + (page === "cards" ? "on" : "")}
           href="/dashboard/my-card" 
         >
           <i className="ti ti-credit-card" aria-hidden="true" />My Cards
-        </a> 
-        <a
+        </Link> 
+        <Link
           className={"ni " + (page === "payments" ? "on" : "")}
           href="/dashboard/payment"
         >
           <i className="ti ti-send" aria-hidden="true" />Payments<span className="nb">3</span>
-        </a>
+        </Link>
 
         <span className="nav-sec">Finance</span>
 
-        <a
+        <Link
           className={"ni " + (page === "exchange" ? "on" : "")}
           href="/dashboard/exchange" 
         >
           <i className="ti ti-arrows-right-left" aria-hidden="true" />Crypto Exchange
-        </a>
+        </Link>
 
-        <a
+        <Link
           className={"ni " + (page === "tasks" ? "on" : "")}
           href="/dashboard/tasks" 
         >
           <i className="ti ti-checklist" aria-hidden="true" />Loyalty Tasks<span className="nb">8</span>
-        </a>
+        </Link>
 
-        <a
+        <Link
           className={"ni " + (page === "rewards" ? "on" : "")}
           href="/dashboard/rewards" 
         >
           <i className="ti ti-star" aria-hidden="true" />Rewards Wallet
-        </a>
+        </Link>
 
-        <a
+        <Link
           className={"ni " + (page === "mdr" ? "on" : "")}
           href="/dashboard/mdr-token" 
         >
           <i className="ti ti-coin" aria-hidden="true" />MDR Token
-        </a>
+        </Link>
 
         <span className="nav-sec">Account</span>
 
-        <a
+        <Link
           className={"ni " + (page === "membership" ? "on" : "")}
           href="/dashboard/membership-plan" 
         >
           <i className="ti ti-award" aria-hidden="true" />Membership Plans
-        </a>
+        </Link>
 
-        <a
+        <Link
           className={"ni " + (page === "transactions" ? "on" : "")}
           href="/dashboard/transaction"
         >
           <i className="ti ti-receipt" aria-hidden="true" />Transactions
-        </a>
+        </Link>
 
-        <a
+        <Link
           className={"ni " + (page === "support" ? "on" : "")}
           href="/dashboard/support"
         >
           <i className="ti ti-help-circle" aria-hidden="true" />Support
-        </a>
+        </Link>
 
-        <a
+        <Link
           className={"ni " + (page === "settings" ? "on" : "")}
           href="/dashboard/settings" 
         >
           <i className="ti ti-settings" aria-hidden="true" />Settings
-        </a>
+        </Link>
       </div>
 
       <div className="sb-foot">
