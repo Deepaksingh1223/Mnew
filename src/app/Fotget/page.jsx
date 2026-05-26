@@ -1,11 +1,15 @@
 "use client"; 
-import Forget from "../components/Forget"; 
+import Forget from "../components/Forget";
+import LoginRegisterLayout from "../login-register-layout";
 
 export default function Loginpage() {
   return (
-    <div className="flex flex-col min-h-screen">
-     <Forget/>
-    </div>
+    <LoginRegisterLayout>
+      <div className="flex flex-col min-h-screen">
+        <Forget />
+      </div>
+    </LoginRegisterLayout>
   );
 }
+
  

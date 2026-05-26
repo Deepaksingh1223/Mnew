@@ -1,11 +1,15 @@
 "use client";
-import Login from "../components/Login"; 
+import Login from "../components/Login";
+import LoginRegisterLayout from "../login-register-layout";
+
 export default function Loginpage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Login />
-      
-    </div>
+    <LoginRegisterLayout>
+      <div className="flex flex-col min-h-screen">
+        <Login />
+      </div>
+    </LoginRegisterLayout>
   );
 }
+
  
