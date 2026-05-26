@@ -34,7 +34,8 @@ export default function CryptoLogin() {
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap');
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+body {
+        min-width: auto;}
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(-4deg); }
           50%       { transform: translateY(-14px) rotate(-4deg); }
@@ -274,7 +275,7 @@ export default function CryptoLogin() {
           flex: 1; height: 48px; background: #faf7f0;
           border: 1.5px solid #ddd0b0; border-radius: 13px;
           color: #3c2e10; font-size: 13px; font-weight: 600; font-family: 'Syne', sans-serif;
-          cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+          cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0px;
           transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
         }
         .cx-social:hover { background: #fff; border-color: #c9a32a; box-shadow: 0 2px 14px rgba(201,163,42,0.13); }
@@ -323,12 +324,12 @@ export default function CryptoLogin() {
           <div className="cx-right">
             <div className="cx-form-card">
 
-              <div className="cx-brand">
+              <a className="cx-brand" href="/">
                 <div className="cx-brand-icon">
                   <img src="/img/mudra-logo.png" alt="Crypto Card" />
                 </div>
                 <span className="cx-brand-name">MUDRA</span>
-              </div>
+              </a>
 
               <a href="/Forget" className="cx-h1">Register</a>
               <p className="cx-sub">Hello, Create a new account</p>

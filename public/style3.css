@@ -482,7 +482,7 @@ html {
 
 body {
     width: 100%;
-    min-width: 360px;
+    min-width: 340px;
     font: normal 400 var(--_size) / 1.6 var(--_font-default);
     text-rendering: optimizelegibility;
     background-color: var(--base);

@@ -14,23 +14,19 @@ import InvestorsSection from "./components/InvestorsSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-     
+    <div className="flex flex-col min-h-screen"> 
       <main id="mxd-page-content" className="mxd-page-content">
-        <Sectionnew />
-
+        <Sectionnew /> 
         <Section5 />
         <Section6 />
-                <Section3 />
+        <Section3 />
         <Section7 />
         <Section8 /> 
         <Section9 /> 
         <Section10 />
         <Section12 /> 
         <InvestorsSection/>
-        <Section13 />
-
-    
+        <Section13 /> 
         <Section14 /> 
       </main> 
     </div>

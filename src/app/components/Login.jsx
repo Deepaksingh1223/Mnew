@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FaLock, FaShieldAlt, FaBolt } from "react-icons/fa";
 
- 
+
 export default function CryptoLogin() {
 
   const [email, setEmail] = useState("");
@@ -20,14 +20,15 @@ export default function CryptoLogin() {
     setLoading(false);
   };
 
- 
+
   return (
     <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap');
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+body {
+        min-width: auto;}
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(-4deg); }
           50%       { transform: translateY(-14px) rotate(-4deg); }
@@ -267,7 +268,7 @@ export default function CryptoLogin() {
           flex: 1; height: 48px; background: #faf7f0;
           border: 1.5px solid #ddd0b0; border-radius: 13px;
           color: #3c2e10; font-size: 13px; font-weight: 600; font-family: 'Syne', sans-serif;
-          cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+          cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0px;
           transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
         }
         .cx-social:hover { background: #fff; border-color: #c9a32a; box-shadow: 0 2px 14px rgba(201,163,42,0.13); }
@@ -298,35 +299,23 @@ export default function CryptoLogin() {
       <div className="cx-page">
         <div className="cx-blob-1" />
         <div className="cx-blob-2" />
-
-        <div className="cx-wrap"> 
-          {/* ── Left panel ── */}
+        <div className="cx-wrap">
           <div className="cx-left">
-
-            {/* Floating card */}
             <div className="cx-card-wrap">
-            <img src="/img/login-card-img.png" alt="Crypto Card" />
+              <img src="/img/login-card-img.png" alt="Crypto Card" />
             </div>
-
-          
- 
           </div>
-
-          {/* ── Right panel ── */}
           <div className="cx-right">
             <div className="cx-form-card">
-
-              <div className="cx-brand">
+              <a className="cx-brand" href="/">
                 <div className="cx-brand-icon">
-<img src="/img/mudra-logo.png" alt="Crypto Card" />
+                  <img src="/img/mudra-logo.png" alt="Crypto Card" />
                 </div>
                 <span className="cx-brand-name">MUDRA</span>
-              </div>
+              </a>
 
               <h1 className="cx-h1">Sign In</h1>
               <p className="cx-sub">Hello, Welcome back to your account!</p>
-
-              {/* Email */}
               <div className="cx-field">
                 <label className="cx-lbl">Email address</label>
                 <div className={`cx-inp-wrap${focused === "email" ? " focused" : ""}`}>
@@ -407,17 +396,17 @@ export default function CryptoLogin() {
               {/* Social */}
               <div className="cx-social-row">
                 <button className="cx-social">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 3v10" stroke="#C9A32A" strokeWidth="2" strokeLinecap="round" />
                     <path d="M8 11l4 4 4-4" stroke="#C9A32A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M5 20h14" stroke="#C9A32A" strokeWidth="2" strokeLinecap="round" />
                   </svg>
-<span>Download</span>
+                  <span>Download</span>
                   <span style={{ fontWeight: 700, marginLeft: 6 }}>APK</span>
                 </button>
                 <button className="cx-social">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="#1c1a10">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                   </svg>
                   <span>Apple</span>
                 </button>
