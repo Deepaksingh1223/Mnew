@@ -7,10 +7,6 @@ import "../dashboard/mudra-dashboard.css";
 // }
 
 export default function DashboardPage() {
-  return (
-    <HomePage/>
-  )
+  return <HomePage />;
 }
-
-
 

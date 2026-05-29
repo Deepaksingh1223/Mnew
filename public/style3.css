@@ -2537,7 +2537,7 @@ p.t-semibold {
 }
 
 .btn {
-    font: inherit;
+    /* font: inherit;
     cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
@@ -2551,6 +2551,23 @@ p.t-semibold {
     text-decoration: none;
     display: inline-flex;
     position: relative
+     */
+         display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: none;
+    border-radius: 7px;
+    padding: 7px 13px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    transition: all .12s;
+    line-height: 1;
+    white-space: nowrap;
+    flex-shrink: 0;
+
 }
 
 .btn-to-top {
