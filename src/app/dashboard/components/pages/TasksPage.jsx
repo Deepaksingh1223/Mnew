@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function TasksPage({ onGo, onToast }) {
   return (
     <div className="pad">
@@ -50,6 +52,7 @@ export default function TasksPage({ onGo, onToast }) {
           <div className="ct">Select Platform</div>
         </div>
         <div className="g5">
+          <Link href="/dashboard/youtube">
           <div className="plat hot" onClick={() => onGo("yt")}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
               <div style={{ width: 32, height: 32, borderRadius: 7, background: "#FF0000", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
@@ -70,7 +73,8 @@ export default function TasksPage({ onGo, onToast }) {
               <span style={{ color: "var(--glt)" }}>+79 pts</span>
             </div>
           </div>
-
+</Link>
+      <Link href="/dashboard/Facebook">
           <div className="plat" onClick={() => onGo("fb")}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
               <div style={{ width: 32, height: 32, borderRadius: 7, background: "#1877F2", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, fontWeight: 700, color: "#fff" }}>f</div>
@@ -87,7 +91,8 @@ export default function TasksPage({ onGo, onToast }) {
               <span style={{ color: "var(--glt)" }}>+10 pts</span>
             </div>
           </div>
-
+</Link>
+  <Link href="/dashboard/Instagram">
           <div className="plat" onClick={() => onGo("ig")}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
               <div style={{ width: 32, height: 32, borderRadius: 7, background: "linear-gradient(135deg,#f58529,#dd2a7b)", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -110,7 +115,8 @@ export default function TasksPage({ onGo, onToast }) {
               <span style={{ color: "var(--glt)" }}>+15 pts</span>
             </div>
           </div>
-
+</Link>
+  <Link href="/dashboard/Twitter">
           <div className="plat" onClick={() => onGo("tw")}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
               <div style={{ width: 32, height: 32, borderRadius: 7, background: "#1DA1F2", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700, color: "#fff" }}>𝑂</div>
@@ -127,7 +133,8 @@ export default function TasksPage({ onGo, onToast }) {
               <span style={{ color: "var(--glt)" }}>+18 pts</span>
             </div>
           </div>
-
+</Link>
+  <Link href="/dashboard/LinkedIn">
           <div className="plat" onClick={() => onGo("li")}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
               <div style={{ width: 32, height: 32, borderRadius: 7, background: "#0077B5", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, color: "#fff" }}>in</div>
@@ -144,6 +151,7 @@ export default function TasksPage({ onGo, onToast }) {
               <span style={{ color: "var(--glt)" }}>+10 pts</span>
             </div>
           </div>
+          </Link>
         </div>
       </div>
     </div>
