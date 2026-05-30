@@ -20,7 +20,7 @@
   --bd2: rgba(0, 0, 0, 0.15);
   --tx: #1A1D2E;
   --tx2: #5A6178;
-  --tx3: #9AA3BC;
+  --tx3: #515358;
   --gr: #0B6B4E;
   --grbg: rgba(11, 107, 78, 0.09);
   --grd: rgba(11, 107, 78, 0.22);
@@ -45,9 +45,9 @@
   --sf3: #1A2235;
   --bd: rgba(255, 255, 255, 0.07);
   --bd2: rgba(255, 255, 255, 0.14);
-  --tx: #8B92A8;
-  --tx2: #8B92A8;
-  --tx3: #716767;
+  --tx: #d1d6e5;
+  --tx2: #d1d6e5;
+  --tx3: #fdf7f7;
   --gr: #2DD4A0;
   --grbg: rgba(45, 212, 160, 0.10);
   --grd: rgba(45, 212, 160, 0.28);
@@ -103,6 +103,10 @@
   align-items: center;
   gap: 9px;
   flex-shrink: 0
+}
+
+.logo-row img {
+  width: 100px;
 }
 
 .gem {
@@ -255,7 +259,8 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-  overflow: hidden
+  overflow: hidden;
+  background: var(--sf);
 }
 
 .topbar {
@@ -784,8 +789,8 @@ select.fi {
   position: relative;
   overflow: hidden;
   display: flex;
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 [data-dk] .hero {
@@ -1098,7 +1103,7 @@ select.fi {
 }
 
 [data-dk] .tr.act {
-  background: rgba(201, 168, 76, .04)
+  background: var(--sf)
 }
 
 .tr.dn2 {
@@ -1107,7 +1112,7 @@ select.fi {
 }
 
 [data-dk] .tr.dn2 {
-  background: rgba(45, 212, 160, .04)
+  background: var(--sf)
 }
 
 .tico {
@@ -1462,7 +1467,7 @@ select.fi {
   gap: 7px;
   font-size: 12px;
   color: var(--tx2);
-      padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .chk-c {
