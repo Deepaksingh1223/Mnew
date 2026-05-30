@@ -12,24 +12,68 @@ export default function YouTubeTask() {
   const [showPlayer, setShowPlayer] = useState(false);
   
   const videoRef = useRef(null);
-  const animationIdRef = useRef(null);
+  const intervalRef = useRef(null);
 
-  // Video data
+  // Video data with WORKING video URLs (public sample videos that definitely work)
   const videos = {
-    v1: { title: "Mudra Platform Overview", duration: "4:00", durationSec: 240, points: 12, progress: 100, status: "done", type: "video" },
-    v2: { title: "How to Convert Crypto to Fiat", duration: "6:00", durationSec: 360, points: 15, progress: 60, status: "progress", type: "video" },
-    v3: { title: "MDR Token Explained", duration: "5:00", durationSec: 300, points: 12, progress: 0, status: "new", type: "video" },
-    v4: { title: "Loyalty Rewards Deep Dive", duration: "7:00", durationSec: 420, points: 15, progress: 0, status: "new", type: "video" },
-    v5: { title: "Subscribe to Mudra Channel", duration: "N/A", durationSec: 0, points: 20, progress: 100, status: "done", type: "subscribe" },
-    v6: { title: "Like: Mudra Launch Video", duration: "N/A", durationSec: 0, points: 5, progress: 100, status: "done", type: "like" }
-  };
-
-  // Sample video URLs (replace with your actual video URLs)
-  const videoUrls = {
-    v1: "https://sample-videos.com/video123/mp4/240/big_buck_bunny_240p_1mb.mp4",
-    v2: "https://sample-videos.com/video123/mp4/240/big_buck_bunny_240p_2mb.mp4",
-    v3: "https://sample-videos.com/video123/mp4/240/big_buck_bunny_240p_3mb.mp4",
-    v4: "https://sample-videos.com/video123/mp4/240/big_buck_bunny_240p_4mb.mp4"
+    v1: { 
+      title: "Mudra Platform Overview", 
+      duration: "0:30", 
+      durationSec: 30, 
+      points: 12, 
+      progress: 100, 
+      status: "done", 
+      type: "video",
+      videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+    },
+    v2: { 
+      title: "How to Convert Crypto to Fiat", 
+      duration: "0:30", 
+      durationSec: 30, 
+      points: 15, 
+      progress: 60, 
+      status: "progress", 
+      type: "video",
+      videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+    },
+    v3: { 
+      title: "MDR Token Explained", 
+      duration: "0:30", 
+      durationSec: 30, 
+      points: 12, 
+      progress: 0, 
+      status: "new", 
+      type: "video",
+      videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+    },
+    v4: { 
+      title: "Loyalty Rewards Deep Dive", 
+      duration: "0:30", 
+      durationSec: 30, 
+      points: 15, 
+      progress: 0, 
+      status: "new", 
+      type: "video",
+      videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+    },
+    v5: { 
+      title: "Subscribe to Mudra Channel", 
+      duration: "N/A", 
+      durationSec: 0, 
+      points: 20, 
+      progress: 100, 
+      status: "done", 
+      type: "subscribe" 
+    },
+    v6: { 
+      title: "Like: Mudra Launch Video", 
+      duration: "N/A", 
+      durationSec: 0, 
+      points: 5, 
+      progress: 100, 
+      status: "done", 
+      type: "like" 
+    }
   };
 
   const go = (page) => {
@@ -37,6 +81,7 @@ export default function YouTubeTask() {
   };
 
   const formatTime = (seconds) => {
+    if (isNaN(seconds)) return "0:00";
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
     return `${mins}:${secs.toString().padStart(2, '0')}`;
@@ -45,17 +90,16 @@ export default function YouTubeTask() {
   const openVid = (videoId) => {
     const video = videos[videoId];
     if (video && video.type === "video") {
+      // Clear existing interval
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+      
       setCurrentVideo({ id: videoId, ...video });
       setCurrentTime((video.progress / 100) * video.durationSec);
       setWatchedPercent(video.progress);
       setIsPlaying(false);
       setShowPlayer(true);
-      
-      setTimeout(() => {
-        if (videoRef.current) {
-          videoRef.current.currentTime = (video.progress / 100) * video.durationSec;
-        }
-      }, 100);
     }
   };
 
@@ -66,8 +110,8 @@ export default function YouTubeTask() {
     if (videoRef.current) {
       videoRef.current.pause();
     }
-    if (animationIdRef.current) {
-      cancelAnimationFrame(animationIdRef.current);
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
     }
   };
 
@@ -88,6 +132,12 @@ export default function YouTubeTask() {
     }
   };
 
+  const skipBack = () => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = Math.max(videoRef.current.currentTime - 10, 0);
+    }
+  };
+
   const seekV = (event, element) => {
     if (!videoRef.current || !currentVideo) return;
     
@@ -104,16 +154,17 @@ export default function YouTubeTask() {
       const time = videoRef.current.currentTime;
       setCurrentTime(time);
       const percent = (time / currentVideo.durationSec) * 100;
-      setWatchedPercent(Math.min(percent, 100));
+      const newPercent = Math.min(percent, 100);
+      setWatchedPercent(newPercent);
       
-      if (percent > videos[currentVideo.id].progress) {
-        videos[currentVideo.id].progress = Math.floor(percent);
-        if (videos[currentVideo.id].progress > 0 && videos[currentVideo.id].status === "new") {
+      if (newPercent > videos[currentVideo.id].progress) {
+        videos[currentVideo.id].progress = Math.floor(newPercent);
+        if (newPercent > 0 && videos[currentVideo.id].status === "new") {
           videos[currentVideo.id].status = "progress";
         }
       }
       
-      if (percent >= 80 && videos[currentVideo.id].progress < 100) {
+      if (newPercent >= 80 && videos[currentVideo.id].progress < 100 && videos[currentVideo.id].status !== "done") {
         videos[currentVideo.id].progress = 100;
         videos[currentVideo.id].status = "done";
         setCompletedCount(prev => prev + 1);
@@ -139,29 +190,47 @@ export default function YouTubeTask() {
         }
       };
       
+      const handlePlay = () => setIsPlaying(true);
+      const handlePause = () => setIsPlaying(false);
+      
       video.addEventListener('timeupdate', handleTimeUpdate);
       video.addEventListener('ended', handleEnded);
+      video.addEventListener('play', handlePlay);
+      video.addEventListener('pause', handlePause);
+      
+      // Set initial time
+      const startTime = (currentVideo.progress / 100) * currentVideo.durationSec;
+      video.currentTime = startTime;
       
       return () => {
         video.removeEventListener('timeupdate', handleTimeUpdate);
         video.removeEventListener('ended', handleEnded);
+        video.removeEventListener('play', handlePlay);
+        video.removeEventListener('pause', handlePause);
       };
     }
   }, [currentVideo]);
 
   const claimReward = () => {
-    if (watchedPercent >= 80 && currentVideo) {
-      alert(`You earned +${currentVideo.points} points!`);
+    if (watchedPercent >= 80 && currentVideo && videos[currentVideo.id].status !== "done") {
+      alert(`🎉 You earned +${currentVideo.points} points!`);
       videos[currentVideo.id].status = "done";
       videos[currentVideo.id].progress = 100;
       setCompletedCount(prev => prev + 1);
+      setWatchedPercent(100);
       closeVid();
+    } else if (watchedPercent >= 80 && currentVideo && videos[currentVideo.id].status === "done") {
+      alert("✅ Reward already claimed for this video!");
+      closeVid();
+    } else {
+      const remaining = Math.floor(80 - watchedPercent);
+      alert(`Watch ${remaining}% more to claim reward!`);
     }
   };
 
   const totalTasks = Object.keys(videos).length;
   const completedPercentage = (completedCount / totalTasks) * 100;
-  const remainingTime = currentVideo ? currentVideo.durationSec - currentTime : 0;
+  const remainingTime = currentVideo ? Math.max(0, currentVideo.durationSec - currentTime) : 0;
 
   return (
     <div className="pg on" id="pg-yt">
@@ -202,7 +271,7 @@ export default function YouTubeTask() {
             </div>
             <div className="tb">
               <div className="tt">Mudra Platform Overview</div>
-              <div className="td">Complete dashboard walkthrough · 4:00</div>
+              <div className="td">Complete dashboard walkthrough · 0:30</div>
               <div className="tpg">
                 <div className="bar" style={{flex:1}}>
                   <div className="bf" id="ybv1" style={{width:"100%"}}></div>
@@ -223,7 +292,7 @@ export default function YouTubeTask() {
             </div>
             <div className="tb">
               <div className="tt">How to Convert Crypto to Fiat</div>
-              <div className="td">Step-by-step exchange guide · 6:00</div>
+              <div className="td">Step-by-step exchange guide · 0:30</div>
               <div className="tpg">
                 <div className="bar" style={{flex:1}}>
                   <div className="bf" id="ybv2" style={{width:"60%"}}></div>
@@ -245,7 +314,7 @@ export default function YouTubeTask() {
             </div>
             <div className="tb">
               <div className="tt">MDR Token Explained</div>
-              <div className="td">MDR tokenomics and utility · 5:00</div>
+              <div className="td">MDR tokenomics and utility · 0:30</div>
               <div className="tpg">
                 <div className="bar" style={{flex:1}}>
                   <div className="bf" id="ybv3" style={{width:"0%"}}></div>
@@ -267,7 +336,7 @@ export default function YouTubeTask() {
             </div>
             <div className="tb">
               <div className="tt">Loyalty Rewards Deep Dive</div>
-              <div className="td">Earn and redeem points guide · 7:00</div>
+              <div className="td">Earn and redeem points guide · 0:30</div>
               <div className="tpg">
                 <div className="bar" style={{flex:1}}>
                   <div className="bf" id="ybv4" style={{width:"0%"}}></div>
@@ -336,14 +405,10 @@ export default function YouTubeTask() {
                 <div style={{fontSize:"13px", fontWeight:"600", color:"var(--tx)"}}>{currentVideo.title}</div>
               </div>
               
-              {/* Responsive grid - changes to single column on mobile */}
               <div style={{
                 display:"grid", 
                 gridTemplateColumns: "1.4fr 1fr", 
-                gap:"14px",
-                "@media (max-width: 768px)": {
-                  gridTemplateColumns: "1fr"
-                }
+                gap:"14px"
               }}>
                 <div>
                   <div className="vid-wrap">
@@ -352,7 +417,7 @@ export default function YouTubeTask() {
                       className="vid-screen"
                       style={{width:"100%", borderRadius:"10px", background:"#000"}}
                       onClick={togglePlay}
-                      src={videoUrls[currentVideo.id]}
+                      src={currentVideo.videoUrl}
                     />
                     <div className="vc">
                       <button className="vc-btn" onClick={togglePlay} aria-label="Play/Pause">
@@ -373,6 +438,9 @@ export default function YouTubeTask() {
                     <button className="btn bg bsm" onClick={togglePlay} id="ppb">
                       <i className={`ti ti-player-${isPlaying ? "pause" : "play"}`}></i>
                       {isPlaying ? "Pause" : "Play"}
+                    </button>
+                    <button className="btn bn bsm" onClick={skipBack}>
+                      <i className="ti ti-player-track-prev"></i>-10s
                     </button>
                     <button className="btn bn bsm" onClick={skipFwd}>
                       <i className="ti ti-player-track-next"></i>+10s
@@ -434,10 +502,29 @@ export default function YouTubeTask() {
                     </div>
                   </div>
                   
+                  {/* Up Next Section - Click any video to switch! */}
                   <div className="card">
                     <div style={{fontSize:"12px", fontWeight:"600", color:"var(--tx)", marginBottom:"9px"}}>Up Next</div>
-                    {Object.keys(videos).filter(id => id !== currentVideo.id && videos[id].type === "video").slice(0, 3).map(id => (
-                      <div key={id} style={{display:"flex", alignItems:"center", gap:"8px", cursor:"pointer", padding:"7px 9px", background:"var(--sf3)", borderRadius:"7px", border:"1px solid var(--bd)", marginBottom:"5px", flexWrap:"wrap"}} onClick={() => openVid(id)}>
+                    {Object.keys(videos).filter(id => id !== currentVideo.id && videos[id].type === "video").map(id => (
+                      <div 
+                        key={id} 
+                        style={{
+                          display:"flex", 
+                          alignItems:"center", 
+                          gap:"8px", 
+                          cursor:"pointer", 
+                          padding:"7px 9px", 
+                          background:"var(--sf3)", 
+                          borderRadius:"7px", 
+                          border:"1px solid var(--bd)", 
+                          marginBottom:"5px", 
+                          flexWrap:"wrap",
+                          transition: "all 0.2s ease"
+                        }}
+                        onClick={() => openVid(id)}
+                        onMouseEnter={(e) => e.currentTarget.style.background = "var(--sf4)"}
+                        onMouseLeave={(e) => e.currentTarget.style.background = "var(--sf3)"}
+                      >
                         <div style={{width:"24px", height:"24px", borderRadius:"5px", background:"#FF0000", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0}}>
                           <i className="ti ti-player-play" style={{fontSize:"12px", color:"#fff"}} aria-hidden="true"></i>
                         </div>
