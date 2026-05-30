@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css"></link>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"></link> 
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <RouteChrome>{children}</RouteChrome>
       </body>
     </html>
